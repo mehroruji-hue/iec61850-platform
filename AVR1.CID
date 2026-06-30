@@ -1,0 +1,3134 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<SCL xmlns="http://www.iec.ch/61850/2003/SCL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.iec.ch/61850/2003/SCL SCL.xsd">
+	<Private type="STRICTLY_LIMITED_EDITION">1</Private>
+	<Private type="GOOSE_OUTGOING_WITH_MMS_PATH"/>
+	<Header id="Eberle Regs 01" version="4" revision="7" toolID="SSI-Tool" nameStructure="IEDName">
+		<History>
+			<Hitem version="4" revision="7" when="2018-04-30" who="as/Support" why="enhancement and merging configuration ED1 with and without GOOSE"/>
+		</History>
+	</Header>
+	<Communication>
+		<SubNetwork name="SUBNETWORK1" type="8-MMS">
+			<BitRate unit="b/s">100</BitRate>
+			<ConnectedAP iedName="AVR1" apName="P1">
+				<Address>
+					<P type="IP">192.168.2.20</P>
+					<P type="IP-SUBNET">255.255.255.0</P>
+					<P type="OSI-PSEL">00000001</P>
+					<P type="OSI-SSEL">0001</P>
+					<P type="OSI-TSEL">0001</P>
+					<P type="OSI-AP-Title">1,1,9999,1</P>
+					<P type="OSI-AE-Qualifier">12</P>
+					<P type="IP-GATEWAY">192.168.1.254</P>
+				</Address>
+				<GSE ldInst="A" cbName="GoCb_RegATCC">
+					<Address>
+						<P type="MAC-Address" xsi:type="tP_MAC-Address">01-0C-CD-01-00-01</P>
+						<P type="APPID">0001</P>
+						<P type="VLAN-PRIORITY">4</P>
+						<P type="VLAN-ID">000</P>
+					</Address>
+					<MinTime unit="s" multiplier="m">0</MinTime>
+					<MaxTime unit="s" multiplier="m">4000</MaxTime>
+				</GSE>
+				<PhysConn type="Plug">
+					<P type="Type">FOC</P>
+					<P type="Plug">ST</P>
+				</PhysConn>
+			</ConnectedAP>
+		</SubNetwork>
+	</Communication>
+	<IED name="AVR1" desc="REG-D" type="REG_D" manufacturer="A.EBERLE" configVersion="1.0">
+		<Services>
+			<DynAssociation/>
+			<GetDirectory/>
+			<GetDataObjectDefinition/>
+			<GetDataSetValue/>
+			<DataSetDirectory/>
+			<DataObjectDirectory/>
+			<ReadWrite/>
+			<ConfLNs fixLnInst="true"/>
+			<GetCBValues/>
+			<GOOSE max="5"/>
+			<GSESettings cbName="Fix" datSet="Fix" appID="Conf"/>
+			<ConfDataSet max="14" maxAttributes="64" modify="false"/>
+			<ConfReportControl max="78"/>
+			<ReportSettings datSet="Dyn" rptID="Fix" optFields="Dyn" trgOps="Dyn" intgPd="Dyn"/>
+			<DynDataSet max="10"/>
+		</Services>
+		<AccessPoint name="P1">
+			<Server>
+				<Authentication none="true"/>
+				<LDevice inst="A" desc="A">
+					<LN0 inst="" desc="LLN0" lnClass="LLN0" lnType="AE_LNTYPE_LLN0_01">
+						<DataSet name="GoDs_RegATCC" desc="GOOSE ATCC Specific">
+							<FCDA ldInst="A" lnClass="ATCC" lnInst="1" doName="Loc" daName="stVal" fc="ST"/>
+							<FCDA ldInst="A" lnClass="ATCC" lnInst="1" doName="Loc" daName="q" fc="ST"/>
+							<FCDA ldInst="A" lnClass="GGIO" lnInst="3" doName="RemMode" daName="stVal" fc="ST"/>
+							<FCDA ldInst="A" lnClass="GGIO" lnInst="3" doName="RemMode" daName="q" fc="ST"/>
+							<FCDA ldInst="A" lnClass="ATCC" lnInst="1" doName="OpCntRs" daName="stVal" fc="ST"/>
+							<FCDA ldInst="A" lnClass="ATCC" lnInst="1" doName="OpCntRs" daName="q" fc="ST"/>
+							<FCDA ldInst="A" lnClass="ATCC" lnInst="1" doName="TapChg" daName="valWTr" fc="ST"/>
+							<FCDA ldInst="A" lnClass="ATCC" lnInst="1" doName="TapChg" daName="q" fc="ST"/>
+							<FCDA ldInst="A" lnClass="ATCC" lnInst="1" doName="Auto" daName="stVal" fc="ST"/>
+							<FCDA ldInst="A" lnClass="ATCC" lnInst="1" doName="Auto" daName="q" fc="ST"/>
+							<FCDA ldInst="A" lnClass="ATCC" lnInst="1" doName="LTCBlk" daName="stVal" fc="ST"/>
+							<FCDA ldInst="A" lnClass="ATCC" lnInst="1" doName="LTCBlk" daName="q" fc="ST"/>
+							<FCDA ldInst="A" lnClass="ATCC" lnInst="1" doName="Inh" daName="stVal" fc="ST"/>
+							<FCDA ldInst="A" lnClass="ATCC" lnInst="1" doName="Inh" daName="q" fc="ST"/>
+							<FCDA ldInst="A" lnClass="ATCC" lnInst="1" doName="ParOp" daName="stVal" fc="ST"/>
+							<FCDA ldInst="A" lnClass="ATCC" lnInst="1" doName="ParOp" daName="q" fc="ST"/>
+							<FCDA ldInst="A" lnClass="GGIO" lnInst="3" doName="CFlt" daName="stVal" fc="ST"/>
+							<FCDA ldInst="A" lnClass="GGIO" lnInst="3" doName="CFlt" daName="q" fc="ST"/>
+							<FCDA ldInst="A" lnClass="ATCC" lnInst="1" doName="FstDown" daName="stVal" fc="ST"/>
+							<FCDA ldInst="A" lnClass="ATCC" lnInst="1" doName="FstDown" daName="q" fc="ST"/>
+							<FCDA ldInst="A" lnClass="ATCC" lnInst="1" doName="FstUp" daName="stVal" fc="ST"/>
+							<FCDA ldInst="A" lnClass="ATCC" lnInst="1" doName="FstUp" daName="q" fc="ST"/>
+							<FCDA ldInst="A" lnClass="GGIO" lnInst="3" doName="TCPos" daName="stVal" fc="ST"/>
+							<FCDA ldInst="A" lnClass="GGIO" lnInst="3" doName="TCPos" daName="q" fc="ST"/>
+							<FCDA ldInst="A" lnClass="GGIO" lnInst="3" doName="TCTrans" daName="stVal" fc="ST"/>
+							<FCDA ldInst="A" lnClass="GGIO" lnInst="3" doName="TCTrans" daName="q" fc="ST"/>
+							<FCDA ldInst="A" lnClass="GGIO" lnInst="3" doName="VrtOut01" daName="stVal" fc="ST"/>
+							<FCDA ldInst="A" lnClass="GGIO" lnInst="3" doName="VrtOut01" daName="q" fc="ST"/>
+							<FCDA ldInst="A" lnClass="GGIO" lnInst="3" doName="VrtOut02" daName="stVal" fc="ST"/>
+							<FCDA ldInst="A" lnClass="GGIO" lnInst="3" doName="VrtOut02" daName="q" fc="ST"/>
+							<FCDA ldInst="A" lnClass="GGIO" lnInst="1" doName="Ind1" daName="stVal" fc="ST"/>
+							<FCDA ldInst="A" lnClass="GGIO" lnInst="1" doName="Ind1" daName="q" fc="ST"/>
+							<FCDA ldInst="A" lnClass="GGIO" lnInst="1" doName="Ind2" daName="stVal" fc="ST"/>
+							<FCDA ldInst="A" lnClass="GGIO" lnInst="1" doName="Ind2" daName="q" fc="ST"/>
+							<FCDA ldInst="A" lnClass="GGIO" lnInst="1" doName="Ind3" daName="stVal" fc="ST"/>
+							<FCDA ldInst="A" lnClass="GGIO" lnInst="1" doName="Ind3" daName="q" fc="ST"/>
+							<FCDA ldInst="A" lnClass="GGIO" lnInst="1" doName="Ind4" daName="stVal" fc="ST"/>
+							<FCDA ldInst="A" lnClass="GGIO" lnInst="1" doName="Ind4" daName="q" fc="ST"/>
+							<FCDA ldInst="A" lnClass="GGIO" lnInst="1" doName="Ind5" daName="stVal" fc="ST"/>
+							<FCDA ldInst="A" lnClass="GGIO" lnInst="1" doName="Ind5" daName="q" fc="ST"/>
+							<FCDA ldInst="A" lnClass="GGIO" lnInst="1" doName="Ind6" daName="stVal" fc="ST"/>
+							<FCDA ldInst="A" lnClass="GGIO" lnInst="1" doName="Ind6" daName="q" fc="ST"/>
+							<FCDA ldInst="A" lnClass="GGIO" lnInst="1" doName="Ind7" daName="stVal" fc="ST"/>
+							<FCDA ldInst="A" lnClass="GGIO" lnInst="1" doName="Ind7" daName="q" fc="ST"/>
+							<FCDA ldInst="A" lnClass="GGIO" lnInst="1" doName="Ind8" daName="stVal" fc="ST"/>
+							<FCDA ldInst="A" lnClass="GGIO" lnInst="1" doName="Ind8" daName="q" fc="ST"/>
+							<FCDA ldInst="A" lnClass="GGIO" lnInst="1" doName="Ind9" daName="stVal" fc="ST"/>
+							<FCDA ldInst="A" lnClass="GGIO" lnInst="1" doName="Ind9" daName="q" fc="ST"/>
+							<FCDA ldInst="A" lnClass="GGIO" lnInst="1" doName="Ind10" daName="stVal" fc="ST"/>
+							<FCDA ldInst="A" lnClass="GGIO" lnInst="1" doName="Ind10" daName="q" fc="ST"/>
+							<FCDA ldInst="A" lnClass="GGIO" lnInst="1" doName="Ind11" daName="stVal" fc="ST"/>
+							<FCDA ldInst="A" lnClass="GGIO" lnInst="1" doName="Ind11" daName="q" fc="ST"/>
+							<FCDA ldInst="A" lnClass="GGIO" lnInst="1" doName="Ind12" daName="stVal" fc="ST"/>
+							<FCDA ldInst="A" lnClass="GGIO" lnInst="1" doName="Ind12" daName="q" fc="ST"/>
+							<FCDA ldInst="A" lnClass="GGIO" lnInst="1" doName="Ind13" daName="stVal" fc="ST"/>
+							<FCDA ldInst="A" lnClass="GGIO" lnInst="1" doName="Ind13" daName="q" fc="ST"/>
+							<FCDA ldInst="A" lnClass="GGIO" lnInst="1" doName="Ind14" daName="stVal" fc="ST"/>
+							<FCDA ldInst="A" lnClass="GGIO" lnInst="1" doName="Ind14" daName="q" fc="ST"/>
+							<FCDA ldInst="A" lnClass="GGIO" lnInst="1" doName="Ind15" daName="stVal" fc="ST"/>
+							<FCDA ldInst="A" lnClass="GGIO" lnInst="1" doName="Ind15" daName="q" fc="ST"/>
+							<FCDA ldInst="A" lnClass="GGIO" lnInst="1" doName="Ind16" daName="stVal" fc="ST"/>
+							<FCDA ldInst="A" lnClass="GGIO" lnInst="1" doName="Ind16" daName="q" fc="ST"/>
+						</DataSet>
+						<DataSet name="DsL0St" desc="Device Status">
+							<FCDA ldInst="A" prefix="" lnClass="LLN0" doName="Mod" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="LLN0" doName="Beh" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="LLN0" doName="Health" fc="ST"/>
+						</DataSet>
+						<ReportControl name="urcbL0St" rptID="A/LLN0$urcbL0St" datSet="DsL0St" confRev="1">
+							<TrgOps dchg="true" qchg="true"/>
+							<OptFields seqNum="true" timeStamp="true" dataSet="true" reasonCode="true" configRef="true"/>
+							<RptEnabled max="6"/>
+						</ReportControl>
+						<DOI name="Mod">
+							<DAI name="stVal" sAddr="2; 52; 52"/>
+							<DAI name="ctlModel" valKind="Set">
+								<Val>status-only</Val>
+							</DAI>
+						</DOI>
+						<DOI name="Beh">
+							<DAI name="stVal" sAddr="2; 52; 52"/>
+						</DOI>
+						<DOI name="Health">
+							<DAI name="stVal" sAddr="2; 52; 52"/>
+						</DOI>
+						<DOI name="NamPlt">
+							<DAI name="vendor">
+								<Val>a-Eberle</Val>
+							</DAI>
+							<DAI name="swRev">
+								<Val>1.0</Val>
+							</DAI>
+							<DAI name="d">
+								<Val>REG-D(A)</Val>
+							</DAI>
+							<DAI name="configRev">
+								<Val>1.0</Val>
+							</DAI>
+						</DOI>
+						<GSEControl name="GoCb_RegATCC" desc="ATCC Specific" datSet="GoDs_RegATCC" type="GOOSE" appID="GoId_RegATCC" confRev="1"/>
+					</LN0>
+					<LN inst="1" desc="LPHD" lnClass="LPHD" lnType="AE_LNTYPE_LPHD_01">
+						<DataSet name="DsPh">
+							<FCDA ldInst="A" prefix="" lnClass="LPHD" lnInst="1" doName="PhyHealth" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="LPHD" lnInst="1" doName="Proxy" fc="ST"/>
+						</DataSet>
+						<ReportControl name="urcbPh" rptID="A/LPHD$urcbPh" datSet="DsPh" confRev="1">
+							<TrgOps dchg="true" qchg="true"/>
+							<OptFields seqNum="true" timeStamp="true" dataSet="true" reasonCode="true" configRef="true"/>
+							<RptEnabled max="6"/>
+						</ReportControl>
+						<DOI name="PhyNam">
+							<DAI name="vendor">
+								<Val>a-Eberle</Val>
+							</DAI>
+							<DAI name="hwRev">
+								<Val>1.0</Val>
+							</DAI>
+							<DAI name="swRev">
+								<Val>1.0</Val>
+							</DAI>
+							<DAI name="model">
+								<Val>REG-D(A)</Val>
+							</DAI>
+							<DAI name="location">
+								<Val>Nuremberg, Germany</Val>
+							</DAI>
+						</DOI>
+						<DOI name="PhyHealth">
+							<DAI name="stVal" sAddr="2; 52; 52"/>
+						</DOI>
+						<DOI name="Proxy">
+							<DAI name="stVal" sAddr="2; 50"/>
+						</DOI>
+					</LN>
+					<LN inst="1" desc="GGIO1" lnClass="GGIO" lnType="AE_REGD_GGIO1">
+						<DataSet name="DsBinInp">
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="1" doName="Mod" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="1" doName="Beh" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="1" doName="Health" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="1" doName="Ind1" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="1" doName="Ind2" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="1" doName="Ind3" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="1" doName="Ind4" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="1" doName="Ind5" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="1" doName="Ind6" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="1" doName="Ind7" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="1" doName="Ind8" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="1" doName="Ind9" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="1" doName="Ind10" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="1" doName="Ind11" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="1" doName="Ind12" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="1" doName="Ind13" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="1" doName="Ind14" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="1" doName="Ind15" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="1" doName="Ind16" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="1" doName="Ind17" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="1" doName="Ind18" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="1" doName="Ind19" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="1" doName="Ind20" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="1" doName="Ind21" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="1" doName="Ind22" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="1" doName="Ind23" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="1" doName="Ind24" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="1" doName="Ind25" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="1" doName="Ind26" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="1" doName="Ind27" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="1" doName="Ind28" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="1" doName="Ind29" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="1" doName="Ind30" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="1" doName="Ind31" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="1" doName="Ind32" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="1" doName="SPCSO1" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="1" doName="SPCSO2" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="1" doName="SPCSO3" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="1" doName="SPCSO4" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="1" doName="SPCSO5" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="1" doName="SPCSO6" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="1" doName="SPCSO7" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="1" doName="SPCSO8" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="1" doName="SPCSO9" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="1" doName="SPCSO10" fc="ST"/>
+						</DataSet>
+						<ReportControl name="urcbBinInp" rptID="A/GGIO1$urcbBinInp" datSet="DsBinInp" confRev="1">
+							<TrgOps dchg="true" qchg="true"/>
+							<OptFields seqNum="true" timeStamp="true" dataSet="true" reasonCode="true" configRef="true"/>
+							<RptEnabled max="6"/>
+						</ReportControl>
+						<DOI name="Mod">
+							<DAI name="stVal" sAddr="2; 52; 52"/>
+							<DAI name="ctlModel" valKind="Set">
+								<Val>status-only</Val>
+							</DAI>
+						</DOI>
+						<DOI name="Beh">
+							<DAI name="stVal" sAddr="2; 52; 52"/>
+						</DOI>
+						<DOI name="Health">
+							<DAI name="stVal" sAddr="2; 52; 52"/>
+						</DOI>
+						<DOI name="NamPlt">
+							<DAI name="vendor">
+								<Val>a-Eberle</Val>
+							</DAI>
+							<DAI name="swRev">
+								<Val>1.0</Val>
+							</DAI>
+							<DAI name="d">
+								<Val>REG-D(A)</Val>
+							</DAI>
+							<DAI name="configRev">
+								<Val>1.0</Val>
+							</DAI>
+						</DOI>
+						<DOI name="Ind1">
+							<DAI name="stVal" sAddr="2;50;32;0;9;0"/>
+						</DOI>
+						<DOI name="Ind2">
+							<DAI name="stVal" sAddr="2;50;33;0;9;0"/>
+						</DOI>
+						<DOI name="Ind3">
+							<DAI name="stVal" sAddr="2; 50; 34; 0; 9"/>
+						</DOI>
+						<DOI name="Ind4">
+							<DAI name="stVal" sAddr="2; 50; 35; 0; 9"/>
+						</DOI>
+						<DOI name="Ind5">
+							<DAI name="stVal" sAddr="2; 50; 36; 0; 9"/>
+						</DOI>
+						<DOI name="Ind6">
+							<DAI name="stVal" sAddr="2; 50; 37; 0; 9"/>
+						</DOI>
+						<DOI name="Ind7">
+							<DAI name="stVal" sAddr="2; 50; 38; 0; 9"/>
+						</DOI>
+						<DOI name="Ind8">
+							<DAI name="stVal" sAddr="2; 50; 39; 0; 9"/>
+						</DOI>
+						<DOI name="Ind9">
+							<DAI name="stVal" sAddr="2; 50; 32; 0; 8"/>
+						</DOI>
+						<DOI name="Ind10">
+							<DAI name="stVal" sAddr="2; 50; 33; 0; 8"/>
+						</DOI>
+						<DOI name="Ind11">
+							<DAI name="stVal" sAddr="2; 50; 34; 0; 8"/>
+						</DOI>
+						<DOI name="Ind12">
+							<DAI name="stVal" sAddr="2; 50; 35; 0; 8"/>
+						</DOI>
+						<DOI name="Ind13">
+							<DAI name="stVal" sAddr="2; 50; 36; 0; 8"/>
+						</DOI>
+						<DOI name="Ind14">
+							<DAI name="stVal" sAddr="2; 50; 37; 0; 8"/>
+						</DOI>
+						<DOI name="Ind15">
+							<DAI name="stVal" sAddr="2; 50; 38; 0; 8"/>
+						</DOI>
+						<DOI name="Ind16">
+							<DAI name="stVal" sAddr="2; 50; 39; 0; 8"/>
+						</DOI>
+						<DOI name="Ind17">
+							<DAI name="stVal" sAddr="2; 50; 32; 0; 7"/>
+						</DOI>
+						<DOI name="Ind18">
+							<DAI name="stVal" sAddr="2; 50; 33; 0; 7"/>
+						</DOI>
+						<DOI name="Ind19">
+							<DAI name="stVal" sAddr="2; 50; 34; 0; 7"/>
+						</DOI>
+						<DOI name="Ind20">
+							<DAI name="stVal" sAddr="2; 50; 35; 0; 7"/>
+						</DOI>
+						<DOI name="Ind21">
+							<DAI name="stVal" sAddr="2; 50; 36; 0; 7"/>
+						</DOI>
+						<DOI name="Ind22">
+							<DAI name="stVal" sAddr="2; 50; 37; 0; 7"/>
+						</DOI>
+						<DOI name="Ind23">
+							<DAI name="stVal" sAddr="2; 50; 38; 0; 7"/>
+						</DOI>
+						<DOI name="Ind24">
+							<DAI name="stVal" sAddr="2; 50; 39; 0; 7"/>
+						</DOI>
+						<DOI name="Ind25">
+							<DAI name="stVal" sAddr="2; 50; 32; 0; 6"/>
+						</DOI>
+						<DOI name="Ind26">
+							<DAI name="stVal" sAddr="2; 50; 33; 0; 6"/>
+						</DOI>
+						<DOI name="Ind27">
+							<DAI name="stVal" sAddr="2; 50; 34; 0; 6"/>
+						</DOI>
+						<DOI name="Ind28">
+							<DAI name="stVal" sAddr="2; 50; 35; 0; 6"/>
+						</DOI>
+						<DOI name="Ind29">
+							<DAI name="stVal" sAddr="2; 50; 36; 0; 6"/>
+						</DOI>
+						<DOI name="Ind30">
+							<DAI name="stVal" sAddr="2; 50; 37; 0; 6"/>
+						</DOI>
+						<DOI name="Ind31">
+							<DAI name="stVal" sAddr="2; 50; 38; 0; 6"/>
+						</DOI>
+						<DOI name="Ind32">
+							<DAI name="stVal" sAddr="2; 50; 39; 0; 6"/>
+						</DOI>
+						<DOI name="SPCSO1">
+							<DAI name="stVal" sAddr="2; 50; 32; 0; 11"/>
+							<DAI name="ctlModel" valKind="Set">
+								<Val>direct-with-normal-security</Val>
+							</DAI>
+							<SDI name="Oper">
+								<DAI name="ctlVal" sAddr="3;50;0;0;{B20 =};{$Chk:ChkVal:Off=3:Bit=7:Val=1}"/>
+							</SDI>
+						</DOI>
+						<DOI name="SPCSO2">
+							<DAI name="stVal" sAddr="2; 50; 33; 0; 11"/>
+							<DAI name="ctlModel" valKind="Set">
+								<Val>direct-with-normal-security</Val>
+							</DAI>
+							<SDI name="Oper">
+								<DAI name="ctlVal" sAddr="3; 50; 0; 0; {B21 =};{$Chk:ChkVal:Off=3:Bit=7:Val=1}"/>
+							</SDI>
+						</DOI>
+						<DOI name="SPCSO3">
+							<DAI name="stVal" sAddr="2; 50; 34; 0; 11"/>
+							<DAI name="ctlModel" valKind="Set">
+								<Val>direct-with-normal-security</Val>
+							</DAI>
+							<SDI name="Oper">
+								<DAI name="ctlVal" sAddr="3; 50; 0; 0; {B22 =};{$Chk:ChkVal:Off=3:Bit=7:Val=1}"/>
+							</SDI>
+						</DOI>
+						<DOI name="SPCSO4">
+							<DAI name="stVal" sAddr="2; 50; 35; 0; 11"/>
+							<DAI name="ctlModel" valKind="Set">
+								<Val>direct-with-normal-security</Val>
+							</DAI>
+							<SDI name="Oper">
+								<DAI name="ctlVal" sAddr="3; 50; 0; 0; {B23 =};{$Chk:ChkVal:Off=3:Bit=7:Val=1}"/>
+							</SDI>
+						</DOI>
+						<DOI name="SPCSO5">
+							<DAI name="stVal" sAddr="2; 50; 36; 0; 11"/>
+							<DAI name="ctlModel" valKind="Set">
+								<Val>direct-with-normal-security</Val>
+							</DAI>
+							<SDI name="Oper">
+								<DAI name="ctlVal" sAddr="3; 50; 0; 0; {B24 =};{$Chk:ChkVal:Off=3:Bit=7:Val=1}"/>
+							</SDI>
+						</DOI>
+						<DOI name="SPCSO6">
+							<DAI name="stVal" sAddr="2; 50; 37; 0; 11"/>
+							<DAI name="ctlModel" valKind="Set">
+								<Val>direct-with-normal-security</Val>
+							</DAI>
+							<SDI name="Oper">
+								<DAI name="ctlVal" sAddr="3; 50; 0; 0; {B25 =};{$Chk:ChkVal:Off=3:Bit=7:Val=1}"/>
+							</SDI>
+						</DOI>
+						<DOI name="SPCSO7">
+							<DAI name="stVal" sAddr="2; 50; 38; 0; 11"/>
+							<DAI name="ctlModel" valKind="Set">
+								<Val>direct-with-normal-security</Val>
+							</DAI>
+							<SDI name="Oper">
+								<DAI name="ctlVal" sAddr="3; 50; 0; 0; {B26 =};{$Chk:ChkVal:Off=3:Bit=7:Val=1}"/>
+							</SDI>
+						</DOI>
+						<DOI name="SPCSO8">
+							<DAI name="stVal" sAddr="2; 50; 39; 0; 11"/>
+							<DAI name="ctlModel" valKind="Set">
+								<Val>direct-with-normal-security</Val>
+							</DAI>
+							<SDI name="Oper">
+								<DAI name="ctlVal" sAddr="3; 50; 0; 0; {B27 =};{$Chk:ChkVal:Off=3:Bit=7:Val=1}"/>
+							</SDI>
+						</DOI>
+						<DOI name="SPCSO9">
+							<DAI name="stVal" sAddr="2; 50; 32; 0; 10"/>
+							<DAI name="ctlModel" valKind="Set">
+								<Val>direct-with-normal-security</Val>
+							</DAI>
+							<SDI name="Oper">
+								<DAI name="ctlVal" sAddr="3; 50; 0; 0; {B28 =};{$Chk:ChkVal:Off=3:Bit=7:Val=1}"/>
+							</SDI>
+						</DOI>
+						<DOI name="SPCSO10">
+							<DAI name="stVal" sAddr="2; 50; 33; 0; 10"/>
+							<DAI name="ctlModel" valKind="Set">
+								<Val>direct-with-normal-security</Val>
+							</DAI>
+							<SDI name="Oper">
+								<DAI name="ctlVal" sAddr="3; 50; 0; 0; {B29 =};{$Chk:ChkVal:Off=3:Bit=7:Val=1}"/>
+							</SDI>
+						</DOI>
+					</LN>
+					<LN inst="2" desc="GGIO2" lnClass="GGIO" lnType="AE_REGD_GGIO2">
+						<DataSet name="DsLed">
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="2" doName="Mod" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="2" doName="Beh" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="2" doName="Health" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="2" doName="Ind1" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="2" doName="Ind2" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="2" doName="Ind3" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="2" doName="Ind4" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="2" doName="Ind5" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="2" doName="Ind6" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="2" doName="Ind7" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="2" doName="Ind8" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="2" doName="Ind9" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="2" doName="Ind10" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="2" doName="Ind11" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="2" doName="Ind12" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="2" doName="Ind13" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="2" doName="Ind14" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="2" doName="Ind15" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="2" doName="Ind16" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="2" doName="Ind17" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="2" doName="Ind18" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="2" doName="Ind19" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="2" doName="Ind20" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="2" doName="Ind21" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="2" doName="Ind22" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="2" doName="Ind23" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="2" doName="Ind24" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="2" doName="Ind25" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="2" doName="Ind26" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="2" doName="Ind27" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="2" doName="Ind28" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="2" doName="Ind29" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="2" doName="Ind30" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="2" doName="Ind31" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="2" doName="Ind32" fc="ST"/>
+						</DataSet>
+						<ReportControl name="urcbLed" rptID="A/GGIO2$urcbLed" datSet="DsLed" confRev="1">
+							<TrgOps dchg="true" qchg="true"/>
+							<OptFields seqNum="true" timeStamp="true" dataSet="true" reasonCode="true" configRef="true"/>
+							<RptEnabled max="6"/>
+						</ReportControl>
+						<DOI name="Mod">
+							<DAI name="stVal" sAddr="2; 52; 52"/>
+							<DAI name="ctlModel" valKind="Set">
+								<Val>status-only</Val>
+							</DAI>
+						</DOI>
+						<DOI name="Beh">
+							<DAI name="stVal" sAddr="2; 52; 52"/>
+						</DOI>
+						<DOI name="Health">
+							<DAI name="stVal" sAddr="2; 52; 52"/>
+						</DOI>
+						<DOI name="NamPlt">
+							<DAI name="vendor">
+								<Val>a-Eberle</Val>
+							</DAI>
+							<DAI name="swRev">
+								<Val>1.0</Val>
+							</DAI>
+							<DAI name="d">
+								<Val>REG-D(A)</Val>
+							</DAI>
+							<DAI name="configRev">
+								<Val>1.0</Val>
+							</DAI>
+						</DOI>
+						<DOI name="Ind1">
+							<DAI name="stVal" sAddr="2; 50; 36; 0; 17"/>
+						</DOI>
+						<DOI name="Ind2">
+							<DAI name="stVal" sAddr="2; 50; 37; 0; 17"/>
+						</DOI>
+						<DOI name="Ind3">
+							<DAI name="stVal" sAddr="2; 50; 38; 0; 17"/>
+						</DOI>
+						<DOI name="Ind4">
+							<DAI name="stVal" sAddr="2; 50; 39; 0; 17"/>
+						</DOI>
+						<DOI name="Ind5">
+							<DAI name="stVal" sAddr="2; 50; 33; 0; 17"/>
+						</DOI>
+						<DOI name="Ind6">
+							<DAI name="stVal" sAddr="2; 50; 34; 0; 17"/>
+						</DOI>
+						<DOI name="Ind7">
+							<DAI name="stVal" sAddr="2; 50; 35; 0; 17"/>
+						</DOI>
+						<DOI name="Ind8">
+							<DAI name="stVal" sAddr="2; 50; 37; 0; 16"/>
+						</DOI>
+						<DOI name="Ind9">
+							<DAI name="stVal" sAddr="2; 50; 38; 0; 16"/>
+						</DOI>
+						<DOI name="Ind10">
+							<DAI name="stVal" sAddr="2; 50; 39; 0; 16"/>
+						</DOI>
+						<DOI name="Ind11">
+							<DAI name="stVal" sAddr="2; 50; 34; 0; 126"/>
+						</DOI>
+						<DOI name="Ind12">
+							<DAI name="stVal" sAddr="2; 50; 35; 0; 126"/>
+						</DOI>
+						<DOI name="Ind13">
+							<DAI name="stVal" sAddr="2; 50; 32; 0; 17"/>
+						</DOI>
+						<DOI name="Ind14">
+							<DAI name="stVal" sAddr="2; 50"/>
+						</DOI>
+						<DOI name="Ind15">
+							<DAI name="stVal" sAddr="2; 50"/>
+						</DOI>
+						<DOI name="Ind16">
+							<DAI name="stVal" sAddr="2; 50"/>
+						</DOI>
+						<DOI name="Ind17">
+							<DAI name="stVal" sAddr="2; 50"/>
+						</DOI>
+						<DOI name="Ind18">
+							<DAI name="stVal" sAddr="2; 50"/>
+						</DOI>
+						<DOI name="Ind19">
+							<DAI name="stVal" sAddr="2; 50"/>
+						</DOI>
+						<DOI name="Ind20">
+							<DAI name="stVal" sAddr="2; 50"/>
+						</DOI>
+						<DOI name="Ind21">
+							<DAI name="stVal" sAddr="2; 50"/>
+						</DOI>
+						<DOI name="Ind22">
+							<DAI name="stVal" sAddr="2; 50"/>
+						</DOI>
+						<DOI name="Ind23">
+							<DAI name="stVal" sAddr="2; 50"/>
+						</DOI>
+						<DOI name="Ind24">
+							<DAI name="stVal" sAddr="2; 50"/>
+						</DOI>
+						<DOI name="Ind25">
+							<DAI name="stVal" sAddr="2; 50"/>
+						</DOI>
+						<DOI name="Ind26">
+							<DAI name="stVal" sAddr="2; 50"/>
+						</DOI>
+						<DOI name="Ind27">
+							<DAI name="stVal" sAddr="2; 50"/>
+						</DOI>
+						<DOI name="Ind28">
+							<DAI name="stVal" sAddr="2; 50"/>
+						</DOI>
+						<DOI name="Ind29">
+							<DAI name="stVal" sAddr="2; 50"/>
+						</DOI>
+						<DOI name="Ind30">
+							<DAI name="stVal" sAddr="2; 50"/>
+						</DOI>
+						<DOI name="Ind31">
+							<DAI name="stVal" sAddr="2; 50"/>
+						</DOI>
+						<DOI name="Ind32">
+							<DAI name="stVal" sAddr="2; 50"/>
+						</DOI>
+					</LN>
+					<LN inst="1" desc="ATCC" lnClass="ATCC" lnType="AE_REGD_ATCC1">
+						<DataSet name="DsCtrlSt">
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="Mod" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="Beh" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="Health" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="Loc" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="OpCntRs" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="TapChg" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="ParOp" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="LTCBlk" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="Auto" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="TapChgFail" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="ELANFail" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="ParPFail" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="OvLogMem" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="OvV" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="OvA" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="Inh" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="FstDown" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="FstUp" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="InhHi" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="Slave" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="Master" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="RegU2Act" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="RegU1Act" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="TapChgDown" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="TapChgUp" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="UnUnV" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="B0Sw4" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="B0Sw3" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="B0Sw2" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="B0Sw1" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="FailSt32" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="FailSt31" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="FailSt30" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="FailSt29" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="FailSt28" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="FailSt27" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="FailSt26" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="FailSt25" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="FailSt24" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="FailSt23" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="FailSt22" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="FailSt21" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="FailSt20" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="FailSt19" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="FailSt18" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="FailSt17" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="FailSt16" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="FailSt15" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="FailSt14" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="FailSt13" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="FailSt12" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="FailSt11" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="FailSt10" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="FailSt09" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="FailSt08" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="FailSt07" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="FailSt06" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="FailSt05" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="FailSt04" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="FailSt03" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="FailSt02" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="FailSt01" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="A25" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="TapChgOper" fc="ST"/>
+						</DataSet>
+						<DataSet name="DsCtrlSp">
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="SPIndex" fc="SP"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="SPVal1" fc="SP"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="SPVal2" fc="SP"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="SPVal3" fc="SP"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="SPVal4" fc="SP"/>
+						</DataSet>
+						<DataSet name="DsCtrlMv">
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="CtlV" fc="MX"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="LodA" fc="MX"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="BndCtr" fc="MX"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="TRatV" fc="MX"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="TRatA" fc="MX"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="TRatW" fc="MX"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="SPValVNom" fc="MX"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="PwrNom" fc="MX"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="VArNom" fc="MX"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="AppPwrNom" fc="MX"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="PPV1Nom" fc="MX"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="PPV2Nom" fc="MX"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="PPA1" fc="MX"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="PPA2" fc="MX"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="PPA3" fc="MX"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="CosPhi" fc="MX"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="NomAr" fc="MX"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="AnIn1" fc="MX"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="AnIn2" fc="MX"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="TotNTapChg" fc="MX"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="ParPrgAct" fc="MX"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="ActPrg" fc="MX"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="ImbPct" fc="MX"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="InhHiPct" fc="MX"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="BackHiSpd" fc="MX"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="OvVPct" fc="MX"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="UnVPct" fc="MX"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="FwdHiSpd" fc="MX"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="InhLoPct" fc="MX"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="OvAPct" fc="MX"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="MaxAr" fc="MX"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="AngDEG" fc="MX"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="TmpWind" fc="MX"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="TmpOilTr" fc="MX"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="TmpOilTC" fc="MX"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="GasInOil" fc="MX"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="H2OinOil" fc="MX"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="LosLife" fc="MX"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="LevOilTr" fc="MX"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="LevOilTC" fc="MX"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="A20" fc="MX"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="A21" fc="MX"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="A22" fc="MX"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="A23" fc="MX"/>
+							<FCDA ldInst="A" prefix="" lnClass="ATCC" lnInst="1" doName="A24" fc="MX"/>
+						</DataSet>
+						<ReportControl name="urcbCtrlSt" rptID="A/ATTC$urcbCtrlSt" datSet="DsCtrlSt" confRev="1">
+							<TrgOps dchg="true" qchg="true"/>
+							<OptFields seqNum="true" timeStamp="true" dataSet="true" reasonCode="true" configRef="true"/>
+							<RptEnabled max="6"/>
+						</ReportControl>
+						<ReportControl name="urcbCtrlSp" rptID="A/ATTC$urcbCtrlSp" datSet="DsCtrlSp" confRev="1">
+							<TrgOps dchg="true" qchg="true"/>
+							<OptFields seqNum="true" timeStamp="true" dataSet="true" reasonCode="true" configRef="true"/>
+							<RptEnabled max="6"/>
+						</ReportControl>
+						<ReportControl name="urcbCtrlMv" rptID="A/ATTC$urcbCtrlMv" datSet="DsCtrlMv" confRev="1">
+							<TrgOps dchg="true" qchg="true"/>
+							<OptFields seqNum="true" timeStamp="true" dataSet="true" reasonCode="true" configRef="true"/>
+							<RptEnabled max="6"/>
+						</ReportControl>
+						<DOI name="Mod">
+							<DAI name="stVal" sAddr="2;52;52;0;0;1"/>
+							<DAI name="ctlModel" valKind="Set">
+								<Val>status-only</Val>
+							</DAI>
+						</DOI>
+						<DOI name="Beh">
+							<DAI name="stVal" sAddr="2;52;52;0;0;1"/>
+						</DOI>
+						<DOI name="Health">
+							<DAI name="stVal" sAddr="2;52;52;0;0;1"/>
+						</DOI>
+						<DOI name="NamPlt">
+							<DAI name="vendor">
+								<Val>a-Eberle</Val>
+							</DAI>
+							<DAI name="swRev">
+								<Val>1.0</Val>
+							</DAI>
+							<DAI name="d">
+								<Val>REG-D(A)</Val>
+							</DAI>
+							<DAI name="configRev">
+								<Val>1.0</Val>
+							</DAI>
+						</DOI>
+						<DOI name="Loc">
+							<DAI name="stVal" sAddr="2; 50; 39; -1; 3"/>
+						</DOI>
+						<DOI name="OpCntRs">
+							<DAI name="stVal" sAddr="2; 45; 45; 0; 96"/>
+							<DAI name="ctlModel" valKind="Set">
+								<Val>direct-with-enhanced-security</Val>
+							</DAI>
+							<SDI name="Oper">
+								<DAI name="ctlVal" sAddr="3;50;0;0;{RegTapStatCl*=0,};{$Chk:ChkVal:Off=3:Bit=7:Val=1; $ACK:RulVal:Off=96:ULong:Val=0}"/>
+							</SDI>
+						</DOI>
+						<DOI name="TapChg">
+							<SDI name="valWTr">
+								<DAI name="posVal" sAddr="2; 40; 40; 0; 104"/>
+								<DAI name="transInd" sAddr="2; 50; 33; 0; 5"/>
+							</SDI>
+							<DAI name="persistent" valKind="Set">
+								<Val>false</Val>
+							</DAI>
+							<DAI name="ctlModel" valKind="Set">
+								<Val>direct-with-enhanced-security</Val>
+							</DAI>
+							<SDI name="Oper">
+								<DAI name="ctlVal" sAddr="3;51;0;1;{,aa:q20='if,regup=1,else,regdown=1',aa:q20 };{$Chk:ChkVal:Off=3:Bit=7:Val=1; $Chk:ChkVal:Off=3:Bit=5; $Chk:ChkInLim:Off=104:Int8:Min=-64:Max=64:CMin=2:CMax=1; $ACK:Any:Off=104:Int8}"/>
+							</SDI>
+						</DOI>
+						<DOI name="ParOp">
+							<DAI name="stVal" sAddr="2; 51; 38; 0; 3"/>
+							<DAI name="ctlModel" valKind="Set">
+								<Val>direct-with-enhanced-security</Val>
+							</DAI>
+							<SDI name="Oper">
+								<DAI name="ctlVal" sAddr="3;50;0;0;{regparaproga =};{$Chk:ChkVal:Off=3:Bit=7:Val=1; $ACK:CtVal:Off=3:Bit=6}"/>
+							</SDI>
+						</DOI>
+						<DOI name="LTCBlk">
+							<DAI name="stVal" sAddr="2;50;37;-1;3;0"/>
+							<DAI name="ctlModel" valKind="Set">
+								<Val>direct-with-enhanced-security</Val>
+							</DAI>
+							<SDI name="Oper">
+								<DAI name="ctlVal" sAddr="3;50;0;5;{RegAUTO=};{$Chk:ChkVal:Off=3:Bit=7:Val=1; $Chk:ChkCtVal:Off=3:Bit=5; $ACK:RulNCtVal:Off=3:Bit=5:Val=0}"/>
+							</SDI>
+						</DOI>
+						<DOI name="CtlV">
+							<SDI name="mag">
+								<DAI name="f" sAddr="2;53;53;0.5;40;1"/>
+							</SDI>
+							<SDI name="units">
+								<DAI name="SIUnit" valKind="RO">
+									<Val>V</Val>
+								</DAI>
+							</SDI>
+							<SDI name="sVC">
+								<DAI name="scaleFactor" valKind="RO">
+									<Val>1.0</Val>
+								</DAI>
+								<DAI name="offset" valKind="RO">
+									<Val>0.0</Val>
+								</DAI>
+							</SDI>
+						</DOI>
+						<DOI name="LodA">
+							<SDI name="mag">
+								<DAI name="f" sAddr="2;53;53;0.5;44;1"/>
+							</SDI>
+							<SDI name="units">
+								<DAI name="SIUnit" valKind="RO">
+									<Val>A</Val>
+								</DAI>
+							</SDI>
+							<SDI name="sVC">
+								<DAI name="scaleFactor" valKind="RO">
+									<Val>1.0</Val>
+								</DAI>
+								<DAI name="offset" valKind="RO">
+									<Val>0.0</Val>
+								</DAI>
+							</SDI>
+						</DOI>
+						<DOI name="Auto">
+							<DAI name="stVal" sAddr="2;50;37;0;3;0"/>
+							<DAI name="ctlModel" valKind="Set">
+								<Val>direct-with-enhanced-security</Val>
+							</DAI>
+							<SDI name="Oper">
+								<DAI name="ctlVal" sAddr="3;50;0;0;{RegAUTO=};{$Chk:ChkVal:Off=3:Bit=7:Val=1; $Chk:ChkNCtVal:Off=3:Bit=5; $ACK:RulCtVal:Off=3:Bit=5:Val=0}"/>
+							</SDI>
+						</DOI>
+						<DOI name="BndCtr">
+							<SDI name="mag">
+								<DAI name="f" sAddr="2; 53; 53; 0.05; 80"/>
+							</SDI>
+							<SDI name="units">
+								<DAI name="SIUnit" valKind="RO">
+									<Val>V</Val>
+								</DAI>
+							</SDI>
+							<SDI name="sVC">
+								<DAI name="scaleFactor" valKind="RO">
+									<Val>1.0</Val>
+								</DAI>
+								<DAI name="offset" valKind="RO">
+									<Val>0.0</Val>
+								</DAI>
+							</SDI>
+						</DOI>
+						<DOI name="TapChgFail">
+							<DAI name="stVal" sAddr="2; 50; 37; 0; 14"/>
+						</DOI>
+						<DOI name="ELANFail">
+							<DAI name="stVal" sAddr="2; 50; 35; 0; 3"/>
+						</DOI>
+						<DOI name="ParPFail">
+							<DAI name="stVal" sAddr="2; 50; 34; 0; 3"/>
+						</DOI>
+						<DOI name="OvLogMem">
+							<DAI name="stVal" sAddr="2; 50; 33; 0; 3"/>
+						</DOI>
+						<DOI name="OvV">
+							<DAI name="stVal" sAddr="2; 50; 39; 0; 4"/>
+						</DOI>
+						<DOI name="OvA">
+							<DAI name="stVal" sAddr="2; 50; 38; 0; 4"/>
+						</DOI>
+						<DOI name="Inh">
+							<DAI name="stVal" sAddr="2; 50; 37; 0; 4"/>
+						</DOI>
+						<DOI name="FstDown">
+							<DAI name="stVal" sAddr="2; 50; 36; 0; 4"/>
+						</DOI>
+						<DOI name="FstUp">
+							<DAI name="stVal" sAddr="2; 50; 35; 0; 4"/>
+						</DOI>
+						<DOI name="InhHi">
+							<DAI name="stVal" sAddr="2; 50; 34; 0; 4"/>
+						</DOI>
+						<DOI name="Slave">
+							<DAI name="stVal" sAddr="2; 50; 33; 0; 4"/>
+						</DOI>
+						<DOI name="Master">
+							<DAI name="stVal" sAddr="2; 50; 32; 0; 4"/>
+						</DOI>
+						<DOI name="RegU2Act">
+							<DAI name="stVal" sAddr="2; 50; 37; 0; 5"/>
+						</DOI>
+						<DOI name="RegU1Act">
+							<DAI name="stVal" sAddr="2; 50; 36; 0; 5"/>
+						</DOI>
+						<DOI name="TapChgOper">
+							<DAI name="stVal" sAddr="2; 50; 33; 0; 5"/>
+						</DOI>
+						<DOI name="TapChgDown">
+							<DAI name="stVal" sAddr="2; 50; 35; 0; 5"/>
+						</DOI>
+						<DOI name="TapChgUp">
+							<DAI name="stVal" sAddr="2; 50; 34; 0; 5"/>
+						</DOI>
+						<DOI name="UnUnV">
+							<DAI name="stVal" sAddr="2; 50; 32; 0; 5"/>
+						</DOI>
+						<DOI name="B0Sw4">
+							<DAI name="stVal" sAddr="2; 50; 35; 0; 108"/>
+						</DOI>
+						<DOI name="B0Sw3">
+							<DAI name="stVal" sAddr="2; 50; 34; 0; 108"/>
+						</DOI>
+						<DOI name="B0Sw2">
+							<DAI name="stVal" sAddr="2; 50; 33; 0; 108"/>
+						</DOI>
+						<DOI name="B0Sw1">
+							<DAI name="stVal" sAddr="2; 50; 32; 0; 108"/>
+						</DOI>
+						<DOI name="FailSt32">
+							<DAI name="stVal" sAddr="2; 50; 39; 0; 216"/>
+						</DOI>
+						<DOI name="FailSt31">
+							<DAI name="stVal" sAddr="2; 50; 38; 0; 216"/>
+						</DOI>
+						<DOI name="FailSt30">
+							<DAI name="stVal" sAddr="2; 50; 37; 0; 216"/>
+						</DOI>
+						<DOI name="FailSt29">
+							<DAI name="stVal" sAddr="2; 50; 36; 0; 216"/>
+						</DOI>
+						<DOI name="FailSt28">
+							<DAI name="stVal" sAddr="2; 50; 35; 0; 216"/>
+						</DOI>
+						<DOI name="FailSt27">
+							<DAI name="stVal" sAddr="2; 50; 34; 0; 216"/>
+						</DOI>
+						<DOI name="FailSt26">
+							<DAI name="stVal" sAddr="2; 50; 33; 0; 216"/>
+						</DOI>
+						<DOI name="FailSt25">
+							<DAI name="stVal" sAddr="2; 50; 32; 0; 216"/>
+						</DOI>
+						<DOI name="FailSt24">
+							<DAI name="stVal" sAddr="2; 50; 39; 0; 217"/>
+						</DOI>
+						<DOI name="FailSt23">
+							<DAI name="stVal" sAddr="2; 50; 38; 0; 217"/>
+						</DOI>
+						<DOI name="FailSt22">
+							<DAI name="stVal" sAddr="2; 50; 37; 0; 217"/>
+						</DOI>
+						<DOI name="FailSt21">
+							<DAI name="stVal" sAddr="2; 50; 36; 0; 217"/>
+						</DOI>
+						<DOI name="FailSt20">
+							<DAI name="stVal" sAddr="2; 50; 35; 0; 217"/>
+						</DOI>
+						<DOI name="FailSt19">
+							<DAI name="stVal" sAddr="2; 50; 34; 0; 217"/>
+						</DOI>
+						<DOI name="FailSt18">
+							<DAI name="stVal" sAddr="2; 50; 33; 0; 217"/>
+						</DOI>
+						<DOI name="FailSt17">
+							<DAI name="stVal" sAddr="2; 50; 32; 0; 217"/>
+						</DOI>
+						<DOI name="FailSt16">
+							<DAI name="stVal" sAddr="2; 50; 39; 0; 218"/>
+						</DOI>
+						<DOI name="FailSt15">
+							<DAI name="stVal" sAddr="2; 50; 38; 0; 218"/>
+						</DOI>
+						<DOI name="FailSt14">
+							<DAI name="stVal" sAddr="2; 50; 37; 0; 218"/>
+						</DOI>
+						<DOI name="FailSt13">
+							<DAI name="stVal" sAddr="2; 50; 36; 0; 218"/>
+						</DOI>
+						<DOI name="FailSt12">
+							<DAI name="stVal" sAddr="2; 50; 35; 0; 218"/>
+						</DOI>
+						<DOI name="FailSt11">
+							<DAI name="stVal" sAddr="2; 50; 34; 0; 218"/>
+						</DOI>
+						<DOI name="FailSt10">
+							<DAI name="stVal" sAddr="2; 50; 33; 0; 218"/>
+						</DOI>
+						<DOI name="FailSt09">
+							<DAI name="stVal" sAddr="2; 50; 32; 0; 218"/>
+						</DOI>
+						<DOI name="FailSt08">
+							<DAI name="stVal" sAddr="2; 50; 39; 0; 219"/>
+						</DOI>
+						<DOI name="FailSt07">
+							<DAI name="stVal" sAddr="2; 50; 38; 0; 219"/>
+						</DOI>
+						<DOI name="FailSt06">
+							<DAI name="stVal" sAddr="2; 50; 37; 0; 219"/>
+						</DOI>
+						<DOI name="FailSt05">
+							<DAI name="stVal" sAddr="2; 50; 36; 0; 219"/>
+						</DOI>
+						<DOI name="FailSt04">
+							<DAI name="stVal" sAddr="2; 50; 35; 0; 219"/>
+						</DOI>
+						<DOI name="FailSt03">
+							<DAI name="stVal" sAddr="2; 50; 34; 0; 219"/>
+						</DOI>
+						<DOI name="FailSt02">
+							<DAI name="stVal" sAddr="2; 50; 33; 0; 219"/>
+						</DOI>
+						<DOI name="FailSt01">
+							<DAI name="stVal" sAddr="2; 50; 32; 0; 219"/>
+						</DOI>
+						<DOI name="A25">
+							<DAI name="stVal" sAddr="2; 44; 44; 0; 240"/>
+						</DOI>
+						<DOI name="SPIndex">
+							<DAI name="setVal" sAddr="5;44;40;0;105;0;44;0;0;{RegSWI=};{$Chk:ChkVal:Off=3:Bit=7:Val=1; $Chk:ChkNCtVal:Off=105:Int8; $Chk:ChkInLim:Off=105:Int8:Min=1:Max=4}"/>
+							<DAI name="minVal" valKind="Set">
+								<Val>1</Val>
+							</DAI>
+							<DAI name="maxVal" valKind="Set">
+								<Val>4</Val>
+							</DAI>
+							<DAI name="stepSize" valKind="Set">
+								<Val>1</Val>
+							</DAI>
+						</DOI>
+						<DOI name="SPVal1">
+							<SDI name="setMag">
+								<DAI name="f" sAddr="5;53;53;0;132;0;53;0;0;{REGSW1 =};{$Chk:ChkVal:Off=3:Bit=7:Val=1; $Chk:ChkNCtVal:Off=132:Float; $Chk:ChkInLim:Float:Min=60:Max=140}"/>
+							</SDI>
+							<SDI name="sVC">
+								<DAI name="scaleFactor" valKind="RO">
+									<Val>1.0</Val>
+								</DAI>
+								<DAI name="offset" valKind="RO">
+									<Val>0.0</Val>
+								</DAI>
+							</SDI>
+						</DOI>
+						<DOI name="SPVal2">
+							<SDI name="setMag">
+								<DAI name="f" sAddr="5;53;53;0;136;0;53;0;0;{REGSW2 =};{$Chk:ChkVal:Off=3:Bit=7:Val=1; $Chk:ChkNCtVal:Off=136:Float; $Chk:ChkInLim:Float:Min=60:Max=140}"/>
+							</SDI>
+							<SDI name="sVC">
+								<DAI name="scaleFactor" valKind="RO">
+									<Val>1.0</Val>
+								</DAI>
+								<DAI name="offset" valKind="RO">
+									<Val>0.0</Val>
+								</DAI>
+							</SDI>
+						</DOI>
+						<DOI name="SPVal3">
+							<SDI name="setMag">
+								<DAI name="f" sAddr="5;53;53;0;140;0;53;0;0;{REGSW3 =};{$Chk:ChkVal:Off=3:Bit=7:Val=1; $Chk:ChkNCtVal:Off=140:Float; $Chk:ChkInLim:Float:Min=60:Max=140}"/>
+							</SDI>
+							<SDI name="sVC">
+								<DAI name="scaleFactor" valKind="RO">
+									<Val>1.0</Val>
+								</DAI>
+								<DAI name="offset" valKind="RO">
+									<Val>0.0</Val>
+								</DAI>
+							</SDI>
+						</DOI>
+						<DOI name="SPVal4">
+							<SDI name="setMag">
+								<DAI name="f" sAddr="5;53;53;0;144;0;53;0;0;{REGSW4 =};{$Chk:ChkVal:Off=3:Bit=7:Val=1; $Chk:ChkNCtVal:Off=144:Float; $Chk:ChkInLim:Float:Min=60:Max=140}"/>
+							</SDI>
+							<SDI name="sVC">
+								<DAI name="scaleFactor" valKind="RO">
+									<Val>1.0</Val>
+								</DAI>
+								<DAI name="offset" valKind="RO">
+									<Val>0.0</Val>
+								</DAI>
+							</SDI>
+						</DOI>
+						<DOI name="TRatV">
+							<SDI name="mag">
+								<DAI name="f" sAddr="2; 53; 53; 0.05; 24"/>
+							</SDI>
+							<SDI name="units">
+								<DAI name="SIUnit" valKind="RO">
+									<Val>V</Val>
+								</DAI>
+							</SDI>
+							<SDI name="sVC">
+								<DAI name="scaleFactor" valKind="RO">
+									<Val>1.0</Val>
+								</DAI>
+								<DAI name="offset" valKind="RO">
+									<Val>0.0</Val>
+								</DAI>
+							</SDI>
+						</DOI>
+						<DOI name="TRatA">
+							<SDI name="mag">
+								<DAI name="f" sAddr="2; 53; 53; 0.05; 28"/>
+							</SDI>
+							<SDI name="units">
+								<DAI name="SIUnit" valKind="RO">
+									<Val>A</Val>
+								</DAI>
+							</SDI>
+							<SDI name="sVC">
+								<DAI name="scaleFactor" valKind="RO">
+									<Val>1.0</Val>
+								</DAI>
+								<DAI name="offset" valKind="RO">
+									<Val>0.0</Val>
+								</DAI>
+							</SDI>
+						</DOI>
+						<DOI name="TRatW">
+							<SDI name="mag">
+								<DAI name="f" sAddr="2; 53; 53; 0.05; 32"/>
+							</SDI>
+							<SDI name="units">
+								<DAI name="SIUnit" valKind="RO">
+									<Val>VA</Val>
+								</DAI>
+							</SDI>
+							<SDI name="sVC">
+								<DAI name="scaleFactor" valKind="RO">
+									<Val>1.0</Val>
+								</DAI>
+								<DAI name="offset" valKind="RO">
+									<Val>0.0</Val>
+								</DAI>
+							</SDI>
+						</DOI>
+						<DOI name="SPValVNom">
+							<SDI name="mag">
+								<DAI name="f" sAddr="2; 53; 53; 0.05; 36"/>
+							</SDI>
+							<SDI name="units">
+								<DAI name="SIUnit" valKind="RO">
+									<Val>V</Val>
+								</DAI>
+							</SDI>
+							<SDI name="sVC">
+								<DAI name="scaleFactor" valKind="RO">
+									<Val>1.0</Val>
+								</DAI>
+								<DAI name="offset" valKind="RO">
+									<Val>0.0</Val>
+								</DAI>
+							</SDI>
+						</DOI>
+						<DOI name="PwrNom">
+							<SDI name="mag">
+								<DAI name="f" sAddr="2; 53; 53; 0.5; 48"/>
+							</SDI>
+							<SDI name="units">
+								<DAI name="SIUnit" valKind="RO">
+									<Val>VA</Val>
+								</DAI>
+							</SDI>
+							<SDI name="sVC">
+								<DAI name="scaleFactor" valKind="RO">
+									<Val>1.0</Val>
+								</DAI>
+								<DAI name="offset" valKind="RO">
+									<Val>0.0</Val>
+								</DAI>
+							</SDI>
+						</DOI>
+						<DOI name="VArNom">
+							<SDI name="mag">
+								<DAI name="f" sAddr="2; 53; 53; 0.5; 52"/>
+							</SDI>
+							<SDI name="units">
+								<DAI name="SIUnit" valKind="RO">
+									<Val>VAr</Val>
+								</DAI>
+							</SDI>
+							<SDI name="sVC">
+								<DAI name="scaleFactor" valKind="RO">
+									<Val>1.0</Val>
+								</DAI>
+								<DAI name="offset" valKind="RO">
+									<Val>0.0</Val>
+								</DAI>
+							</SDI>
+						</DOI>
+						<DOI name="AppPwrNom">
+							<SDI name="mag">
+								<DAI name="f" sAddr="2; 53; 53; 0.5; 56"/>
+							</SDI>
+							<SDI name="units">
+								<DAI name="SIUnit" valKind="RO">
+									<Val>VA</Val>
+								</DAI>
+							</SDI>
+							<SDI name="sVC">
+								<DAI name="scaleFactor" valKind="RO">
+									<Val>1.0</Val>
+								</DAI>
+								<DAI name="offset" valKind="RO">
+									<Val>0.0</Val>
+								</DAI>
+							</SDI>
+						</DOI>
+						<DOI name="PPV1Nom">
+							<SDI name="mag">
+								<DAI name="f" sAddr="2; 53; 53; 0.5; 60"/>
+							</SDI>
+							<SDI name="units">
+								<DAI name="SIUnit" valKind="RO">
+									<Val>V</Val>
+								</DAI>
+							</SDI>
+							<SDI name="sVC">
+								<DAI name="scaleFactor" valKind="RO">
+									<Val>1.0</Val>
+								</DAI>
+								<DAI name="offset" valKind="RO">
+									<Val>0.0</Val>
+								</DAI>
+							</SDI>
+						</DOI>
+						<DOI name="PPV2Nom">
+							<SDI name="mag">
+								<DAI name="f" sAddr="2; 53; 53; 0.5; 64"/>
+							</SDI>
+							<SDI name="units">
+								<DAI name="SIUnit" valKind="RO">
+									<Val>V</Val>
+								</DAI>
+							</SDI>
+							<SDI name="sVC">
+								<DAI name="scaleFactor" valKind="RO">
+									<Val>1.0</Val>
+								</DAI>
+								<DAI name="offset" valKind="RO">
+									<Val>0.0</Val>
+								</DAI>
+							</SDI>
+						</DOI>
+						<DOI name="PPA1">
+							<SDI name="mag">
+								<DAI name="f" sAddr="2; 53; 53; 0.5; 68"/>
+							</SDI>
+							<SDI name="units">
+								<DAI name="SIUnit" valKind="RO">
+									<Val>A</Val>
+								</DAI>
+							</SDI>
+							<SDI name="sVC">
+								<DAI name="scaleFactor" valKind="RO">
+									<Val>1.0</Val>
+								</DAI>
+								<DAI name="offset" valKind="RO">
+									<Val>0.0</Val>
+								</DAI>
+							</SDI>
+						</DOI>
+						<DOI name="PPA2">
+							<SDI name="mag">
+								<DAI name="f" sAddr="2; 53; 53; 0.5; 72"/>
+							</SDI>
+							<SDI name="units">
+								<DAI name="SIUnit" valKind="RO">
+									<Val>A</Val>
+								</DAI>
+							</SDI>
+							<SDI name="sVC">
+								<DAI name="scaleFactor" valKind="RO">
+									<Val>1.0</Val>
+								</DAI>
+								<DAI name="offset" valKind="RO">
+									<Val>0.0</Val>
+								</DAI>
+							</SDI>
+						</DOI>
+						<DOI name="PPA3">
+							<SDI name="mag">
+								<DAI name="f" sAddr="2; 53; 53; 0.5; 76"/>
+							</SDI>
+							<SDI name="units">
+								<DAI name="SIUnit" valKind="RO">
+									<Val>A</Val>
+								</DAI>
+							</SDI>
+							<SDI name="sVC">
+								<DAI name="scaleFactor" valKind="RO">
+									<Val>1.0</Val>
+								</DAI>
+								<DAI name="offset" valKind="RO">
+									<Val>0.0</Val>
+								</DAI>
+							</SDI>
+						</DOI>
+						<DOI name="CosPhi">
+							<SDI name="mag">
+								<DAI name="f" sAddr="2; 53; 53; 0.5; 80"/>
+							</SDI>
+							<SDI name="units">
+								<DAI name="SIUnit" valKind="RO">
+									<Val>cos(phi)</Val>
+								</DAI>
+							</SDI>
+							<SDI name="sVC">
+								<DAI name="scaleFactor" valKind="RO">
+									<Val>1.0</Val>
+								</DAI>
+								<DAI name="offset" valKind="RO">
+									<Val>0.0</Val>
+								</DAI>
+							</SDI>
+						</DOI>
+						<DOI name="NomAr">
+							<SDI name="mag">
+								<DAI name="f" sAddr="2; 53; 53; 0.5; 84"/>
+							</SDI>
+							<SDI name="sVC">
+								<DAI name="scaleFactor" valKind="RO">
+									<Val>1.0</Val>
+								</DAI>
+								<DAI name="offset" valKind="RO">
+									<Val>0.0</Val>
+								</DAI>
+							</SDI>
+						</DOI>
+						<DOI name="AnIn1">
+							<SDI name="mag">
+								<DAI name="f" sAddr="2; 53; 53; 0.5; 88"/>
+							</SDI>
+							<SDI name="sVC">
+								<DAI name="scaleFactor" valKind="RO">
+									<Val>1.0</Val>
+								</DAI>
+								<DAI name="offset" valKind="RO">
+									<Val>0.0</Val>
+								</DAI>
+							</SDI>
+						</DOI>
+						<DOI name="AnIn2">
+							<SDI name="mag">
+								<DAI name="f" sAddr="2; 53; 53; 0.5; 92"/>
+							</SDI>
+							<SDI name="sVC">
+								<DAI name="scaleFactor" valKind="RO">
+									<Val>1.0</Val>
+								</DAI>
+								<DAI name="offset" valKind="RO">
+									<Val>0.0</Val>
+								</DAI>
+							</SDI>
+						</DOI>
+						<DOI name="TotNTapChg">
+							<SDI name="mag">
+								<DAI name="f" sAddr="2; 53; 45; 0.5; 96"/>
+							</SDI>
+							<SDI name="sVC">
+								<DAI name="scaleFactor" valKind="RO">
+									<Val>1.0</Val>
+								</DAI>
+								<DAI name="offset" valKind="RO">
+									<Val>0.0</Val>
+								</DAI>
+							</SDI>
+						</DOI>
+						<DOI name="ParPrgAct">
+							<SDI name="mag">
+								<DAI name="f" sAddr="2; 53; 41; 0.5; 111"/>
+							</SDI>
+							<SDI name="sVC">
+								<DAI name="scaleFactor" valKind="RO">
+									<Val>1.0</Val>
+								</DAI>
+								<DAI name="offset" valKind="RO">
+									<Val>0.0</Val>
+								</DAI>
+							</SDI>
+						</DOI>
+						<DOI name="ActPrg">
+							<SDI name="mag">
+								<DAI name="f" sAddr="2; 53; 41; 0.5; 110"/>
+							</SDI>
+							<SDI name="sVC">
+								<DAI name="scaleFactor" valKind="RO">
+									<Val>1.0</Val>
+								</DAI>
+								<DAI name="offset" valKind="RO">
+									<Val>0.0</Val>
+								</DAI>
+							</SDI>
+						</DOI>
+						<DOI name="ImbPct">
+							<SDI name="mag">
+								<DAI name="f" sAddr="2; 53; 53; 0.5; 128"/>
+							</SDI>
+							<SDI name="sVC">
+								<DAI name="scaleFactor" valKind="RO">
+									<Val>1.0</Val>
+								</DAI>
+								<DAI name="offset" valKind="RO">
+									<Val>0.0</Val>
+								</DAI>
+							</SDI>
+						</DOI>
+						<DOI name="InhHiPct">
+							<SDI name="mag">
+								<DAI name="f" sAddr="2; 53; 53; 0.5; 148"/>
+							</SDI>
+							<SDI name="sVC">
+								<DAI name="scaleFactor" valKind="RO">
+									<Val>1.0</Val>
+								</DAI>
+								<DAI name="offset" valKind="RO">
+									<Val>0.0</Val>
+								</DAI>
+							</SDI>
+						</DOI>
+						<DOI name="BackHiSpd">
+							<SDI name="mag">
+								<DAI name="f" sAddr="2; 53; 53; 0.5; 152"/>
+							</SDI>
+							<SDI name="sVC">
+								<DAI name="scaleFactor" valKind="RO">
+									<Val>1.0</Val>
+								</DAI>
+								<DAI name="offset" valKind="RO">
+									<Val>0.0</Val>
+								</DAI>
+							</SDI>
+						</DOI>
+						<DOI name="OvVPct">
+							<SDI name="mag">
+								<DAI name="f" sAddr="2; 53; 53; 0.5; 156"/>
+							</SDI>
+							<SDI name="sVC">
+								<DAI name="scaleFactor" valKind="RO">
+									<Val>1.0</Val>
+								</DAI>
+								<DAI name="offset" valKind="RO">
+									<Val>0.0</Val>
+								</DAI>
+							</SDI>
+						</DOI>
+						<DOI name="UnVPct">
+							<SDI name="mag">
+								<DAI name="f" sAddr="2; 53; 53; 0.5; 160"/>
+							</SDI>
+							<SDI name="sVC">
+								<DAI name="scaleFactor" valKind="RO">
+									<Val>1.0</Val>
+								</DAI>
+								<DAI name="offset" valKind="RO">
+									<Val>0.0</Val>
+								</DAI>
+							</SDI>
+						</DOI>
+						<DOI name="FwdHiSpd">
+							<SDI name="mag">
+								<DAI name="f" sAddr="2; 53; 53; 0.5; 164"/>
+							</SDI>
+							<SDI name="sVC">
+								<DAI name="scaleFactor" valKind="RO">
+									<Val>1.0</Val>
+								</DAI>
+								<DAI name="offset" valKind="RO">
+									<Val>0.0</Val>
+								</DAI>
+							</SDI>
+						</DOI>
+						<DOI name="InhLoPct">
+							<SDI name="mag">
+								<DAI name="f" sAddr="2; 53; 53; 0.5; 168"/>
+							</SDI>
+							<SDI name="sVC">
+								<DAI name="scaleFactor" valKind="RO">
+									<Val>1.0</Val>
+								</DAI>
+								<DAI name="offset" valKind="RO">
+									<Val>0.0</Val>
+								</DAI>
+							</SDI>
+						</DOI>
+						<DOI name="OvAPct">
+							<SDI name="mag">
+								<DAI name="f" sAddr="2; 53; 53; 0.5; 172"/>
+							</SDI>
+							<SDI name="sVC">
+								<DAI name="scaleFactor" valKind="RO">
+									<Val>1.0</Val>
+								</DAI>
+								<DAI name="offset" valKind="RO">
+									<Val>0.0</Val>
+								</DAI>
+							</SDI>
+						</DOI>
+						<DOI name="MaxAr">
+							<SDI name="mag">
+								<DAI name="f" sAddr="2; 53; 53; 0.5; 176"/>
+							</SDI>
+							<SDI name="units">
+								<DAI name="SIUnit" valKind="RO">
+									<Val>A</Val>
+								</DAI>
+							</SDI>
+							<SDI name="sVC">
+								<DAI name="scaleFactor" valKind="RO">
+									<Val>1.0</Val>
+								</DAI>
+								<DAI name="offset" valKind="RO">
+									<Val>0.0</Val>
+								</DAI>
+							</SDI>
+						</DOI>
+						<DOI name="AngDEG">
+							<SDI name="mag">
+								<DAI name="f" sAddr="2; 53; 53; 0.5; 180"/>
+							</SDI>
+							<SDI name="units">
+								<DAI name="SIUnit" valKind="RO">
+									<Val>deg</Val>
+								</DAI>
+							</SDI>
+							<SDI name="sVC">
+								<DAI name="scaleFactor" valKind="RO">
+									<Val>1.0</Val>
+								</DAI>
+								<DAI name="offset" valKind="RO">
+									<Val>0.0</Val>
+								</DAI>
+							</SDI>
+						</DOI>
+						<DOI name="TmpWind">
+							<SDI name="mag">
+								<DAI name="f" sAddr="2; 53; 53; 0.5; 184"/>
+							</SDI>
+							<SDI name="units">
+								<DAI name="SIUnit" valKind="RO">
+									<Val>°C</Val>
+								</DAI>
+							</SDI>
+							<SDI name="sVC">
+								<DAI name="scaleFactor" valKind="RO">
+									<Val>1.0</Val>
+								</DAI>
+								<DAI name="offset" valKind="RO">
+									<Val>0.0</Val>
+								</DAI>
+							</SDI>
+						</DOI>
+						<DOI name="TmpOilTr">
+							<SDI name="mag">
+								<DAI name="f" sAddr="2; 53; 53; 0.5; 188"/>
+							</SDI>
+							<SDI name="units">
+								<DAI name="SIUnit" valKind="RO">
+									<Val>°C</Val>
+								</DAI>
+							</SDI>
+							<SDI name="sVC">
+								<DAI name="scaleFactor" valKind="RO">
+									<Val>1.0</Val>
+								</DAI>
+								<DAI name="offset" valKind="RO">
+									<Val>0.0</Val>
+								</DAI>
+							</SDI>
+						</DOI>
+						<DOI name="TmpOilTC">
+							<SDI name="mag">
+								<DAI name="f" sAddr="2; 53; 53; 0.5; 192"/>
+							</SDI>
+							<SDI name="units">
+								<DAI name="SIUnit" valKind="RO">
+									<Val>°C</Val>
+								</DAI>
+							</SDI>
+							<SDI name="sVC">
+								<DAI name="scaleFactor" valKind="RO">
+									<Val>1.0</Val>
+								</DAI>
+								<DAI name="offset" valKind="RO">
+									<Val>0.0</Val>
+								</DAI>
+							</SDI>
+						</DOI>
+						<DOI name="GasInOil">
+							<SDI name="mag">
+								<DAI name="f" sAddr="2; 53; 53; 0.5; 196"/>
+							</SDI>
+							<SDI name="sVC">
+								<DAI name="scaleFactor" valKind="RO">
+									<Val>1.0</Val>
+								</DAI>
+								<DAI name="offset" valKind="RO">
+									<Val>0.0</Val>
+								</DAI>
+							</SDI>
+						</DOI>
+						<DOI name="H2OinOil">
+							<SDI name="mag">
+								<DAI name="f" sAddr="2; 53; 53; 0.5; 200"/>
+							</SDI>
+							<SDI name="sVC">
+								<DAI name="scaleFactor" valKind="RO">
+									<Val>1.0</Val>
+								</DAI>
+								<DAI name="offset" valKind="RO">
+									<Val>0.0</Val>
+								</DAI>
+							</SDI>
+						</DOI>
+						<DOI name="LosLife">
+							<SDI name="mag">
+								<DAI name="f" sAddr="2; 53; 53; 0.5; 204"/>
+							</SDI>
+							<SDI name="sVC">
+								<DAI name="scaleFactor" valKind="RO">
+									<Val>1.0</Val>
+								</DAI>
+								<DAI name="offset" valKind="RO">
+									<Val>0.0</Val>
+								</DAI>
+							</SDI>
+						</DOI>
+						<DOI name="LevOilTr">
+							<SDI name="mag">
+								<DAI name="f" sAddr="2; 53; 53; 0.5; 208"/>
+							</SDI>
+							<SDI name="sVC">
+								<DAI name="scaleFactor" valKind="RO">
+									<Val>1.0</Val>
+								</DAI>
+								<DAI name="offset" valKind="RO">
+									<Val>0.0</Val>
+								</DAI>
+							</SDI>
+						</DOI>
+						<DOI name="LevOilTC">
+							<SDI name="mag">
+								<DAI name="f" sAddr="2; 53; 53; 0.5; 212"/>
+							</SDI>
+							<SDI name="sVC">
+								<DAI name="scaleFactor" valKind="RO">
+									<Val>1.0</Val>
+								</DAI>
+								<DAI name="offset" valKind="RO">
+									<Val>0.0</Val>
+								</DAI>
+							</SDI>
+						</DOI>
+						<DOI name="A20">
+							<SDI name="mag">
+								<DAI name="f" sAddr="2; 53; 53; 0.5; 220"/>
+							</SDI>
+							<SDI name="sVC">
+								<DAI name="scaleFactor" valKind="RO">
+									<Val>1.0</Val>
+								</DAI>
+								<DAI name="offset" valKind="RO">
+									<Val>0.0</Val>
+								</DAI>
+							</SDI>
+						</DOI>
+						<DOI name="A21">
+							<SDI name="mag">
+								<DAI name="f" sAddr="2; 53; 53; 0.5; 224"/>
+							</SDI>
+							<SDI name="sVC">
+								<DAI name="scaleFactor" valKind="RO">
+									<Val>1.0</Val>
+								</DAI>
+								<DAI name="offset" valKind="RO">
+									<Val>0.0</Val>
+								</DAI>
+							</SDI>
+						</DOI>
+						<DOI name="A22">
+							<SDI name="mag">
+								<DAI name="f" sAddr="2; 53; 53; 0.5; 228"/>
+							</SDI>
+							<SDI name="sVC">
+								<DAI name="scaleFactor" valKind="RO">
+									<Val>1.0</Val>
+								</DAI>
+								<DAI name="offset" valKind="RO">
+									<Val>0.0</Val>
+								</DAI>
+							</SDI>
+						</DOI>
+						<DOI name="A23">
+							<SDI name="mag">
+								<DAI name="f" sAddr="2; 53; 53; 0.5; 232"/>
+							</SDI>
+							<SDI name="sVC">
+								<DAI name="scaleFactor" valKind="RO">
+									<Val>1.0</Val>
+								</DAI>
+								<DAI name="offset" valKind="RO">
+									<Val>0.0</Val>
+								</DAI>
+							</SDI>
+						</DOI>
+						<DOI name="A24">
+							<SDI name="mag">
+								<DAI name="f" sAddr="2; 53; 53; 0.5; 236"/>
+							</SDI>
+							<SDI name="sVC">
+								<DAI name="scaleFactor" valKind="RO">
+									<Val>1.0</Val>
+								</DAI>
+								<DAI name="offset" valKind="RO">
+									<Val>0.0</Val>
+								</DAI>
+							</SDI>
+						</DOI>
+					</LN>
+					<LN inst="3" desc="Goose Extensions" lnClass="GGIO" lnType="AE_REGD_GGIO_ED1_GOEXT">
+						<DataSet name="DsGoExt">
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="3" doName="Mod" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="3" doName="Beh" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="3" doName="Health" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="3" doName="RemMode" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="3" doName="CFlt" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="3" doName="TCPos" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="3" doName="TCTrans" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="3" doName="VrtOut01" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="3" doName="VrtOut02" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="3" doName="VrtOut03" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="3" doName="VrtOut04" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="3" doName="VrtOut05" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="3" doName="VrtOut06" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="3" doName="VrtOut07" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="3" doName="VrtOut08" fc="ST"/>
+						</DataSet>
+						<ReportControl name="urcbGoExt" rptID="A/GGIO$urcbGoExt" datSet="DsGoExt" confRev="1">
+							<TrgOps dchg="true" qchg="true"/>
+							<OptFields seqNum="true" timeStamp="true" dataSet="true" reasonCode="true" configRef="true"/>
+							<RptEnabled max="6"/>
+						</ReportControl>
+						<DOI name="Mod">
+							<DAI name="stVal" sAddr="2;52;52;0;0;1"/>
+							<DAI name="ctlModel" valKind="Set">
+								<Val>status-only</Val>
+							</DAI>
+						</DOI>
+						<DOI name="Beh">
+							<DAI name="stVal" sAddr="2;52;52;0;0;1"/>
+						</DOI>
+						<DOI name="Health">
+							<DAI name="stVal" sAddr="2;52;52;0;0;1"/>
+						</DOI>
+						<DOI name="NamPlt">
+							<DAI name="vendor">
+								<Val>a-Eberle</Val>
+							</DAI>
+							<DAI name="swRev">
+								<Val>1.0</Val>
+							</DAI>
+							<DAI name="d">
+								<Val>REG-D(A)</Val>
+							</DAI>
+							<DAI name="configRev">
+								<Val>1.0</Val>
+							</DAI>
+						</DOI>
+						<DOI name="RemMode">
+							<DAI name="stVal" sAddr="2; 50; 39; 0; 3"/>
+						</DOI>
+						<DOI name="CFlt">
+							<DAI name="stVal" sAddr="2; 50; 38; 0; 108"/>
+						</DOI>
+						<DOI name="TCPos">
+							<DAI name="stVal" sAddr="2; 44; 40; 0; 104; 0"/>
+						</DOI>
+						<DOI name="TCTrans">
+							<DAI name="stVal" sAddr="2; 50; 33; 0; 5"/>
+						</DOI>
+						<DOI name="VrtOut01">
+							<DAI name="stVal" sAddr="2; 50; 53; 0.5; 220"/>
+						</DOI>
+						<DOI name="VrtOut02">
+							<DAI name="stVal" sAddr="2; 50; 53; 0.5; 224"/>
+						</DOI>
+						<DOI name="VrtOut03">
+							<DAI name="stVal" sAddr="2; 50"/>
+						</DOI>
+						<DOI name="VrtOut04">
+							<DAI name="stVal" sAddr="2; 50"/>
+						</DOI>
+						<DOI name="VrtOut05">
+							<DAI name="stVal" sAddr="2; 50"/>
+						</DOI>
+						<DOI name="VrtOut06">
+							<DAI name="stVal" sAddr="2; 50"/>
+						</DOI>
+						<DOI name="VrtOut07">
+							<DAI name="stVal" sAddr="2; 50"/>
+						</DOI>
+						<DOI name="VrtOut08">
+							<DAI name="stVal" sAddr="2; 50"/>
+						</DOI>
+					</LN>
+					<LN inst="4" desc="Goose Subscribers alarms" lnClass="GGIO" lnType="AE_REGD_GGIO_ED1_GOALM">
+						<DataSet name="DsGoIncAlm">
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="4" doName="Mod" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="4" doName="Beh" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="4" doName="Health" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="4" doName="Alm0" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="4" doName="Alm1" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="4" doName="Alm2" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="4" doName="Alm3" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="4" doName="Alm4" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="4" doName="Alm5" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="4" doName="Alm6" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="4" doName="Alm7" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="4" doName="Alm8" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="4" doName="Alm9" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="4" doName="Alm10" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="4" doName="Alm11" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="4" doName="Alm12" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="4" doName="Alm13" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="4" doName="Alm14" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="4" doName="Alm15" fc="ST"/>
+						</DataSet>
+						<ReportControl name="urcbGoIncAlm" rptID="A/GGIO2$urcbGoIncAlm" datSet="DsGoIncAlm" confRev="1">
+							<TrgOps dchg="true" qchg="true"/>
+							<OptFields seqNum="true" timeStamp="true" dataSet="true" reasonCode="true" configRef="true"/>
+							<RptEnabled max="6"/>
+						</ReportControl>
+						<DOI name="Mod">
+							<DAI name="stVal" sAddr="2;52;52;0;0;1"/>
+							<DAI name="ctlModel" valKind="Set">
+								<Val>status-only</Val>
+							</DAI>
+						</DOI>
+						<DOI name="Beh">
+							<DAI name="stVal" sAddr="2;52;52;0;0;1"/>
+						</DOI>
+						<DOI name="Health">
+							<DAI name="stVal" sAddr="2;52;52;0;0;1"/>
+						</DOI>
+						<DOI name="NamPlt">
+							<DAI name="vendor">
+								<Val>a-Eberle</Val>
+							</DAI>
+							<DAI name="swRev">
+								<Val>1.0</Val>
+							</DAI>
+							<DAI name="d">
+								<Val>REG-D(A)</Val>
+							</DAI>
+							<DAI name="configRev">
+								<Val>1.0</Val>
+							</DAI>
+						</DOI>
+						<DOI name="Alm0">
+							<DAI name="stVal" sAddr="2;50;32;-1;0;2"/>
+						</DOI>
+						<DOI name="Alm1">
+							<DAI name="stVal" sAddr="2;50;32;-1;0;6"/>
+						</DOI>
+						<DOI name="Alm2">
+							<DAI name="stVal" sAddr="2;50;32;-1;0;10"/>
+						</DOI>
+						<DOI name="Alm3">
+							<DAI name="stVal" sAddr="2;50;32;-1;0;14"/>
+						</DOI>
+						<DOI name="Alm4">
+							<DAI name="stVal" sAddr="2;50;32;-1;0;18"/>
+						</DOI>
+						<DOI name="Alm5">
+							<DAI name="stVal" sAddr="2;50;32;-1;0;22"/>
+						</DOI>
+						<DOI name="Alm6">
+							<DAI name="stVal" sAddr="2;50;32;-1;0;26"/>
+						</DOI>
+						<DOI name="Alm7">
+							<DAI name="stVal" sAddr="2;50;32;-1;0;30"/>
+						</DOI>
+						<DOI name="Alm8">
+							<DAI name="stVal" sAddr="2;50;32;-1;0;34"/>
+						</DOI>
+						<DOI name="Alm9">
+							<DAI name="stVal" sAddr="2;50;32;-1;0;38"/>
+						</DOI>
+						<DOI name="Alm10">
+							<DAI name="stVal" sAddr="2;50;32;-1;0;42"/>
+						</DOI>
+						<DOI name="Alm11">
+							<DAI name="stVal" sAddr="2;50;32;-1;0;46"/>
+						</DOI>
+						<DOI name="Alm12">
+							<DAI name="stVal" sAddr="2;50;32;-1;0;50"/>
+						</DOI>
+						<DOI name="Alm13">
+							<DAI name="stVal" sAddr="2;50;32;-1;0;54"/>
+						</DOI>
+						<DOI name="Alm14">
+							<DAI name="stVal" sAddr="2;50;32;-1;0;58"/>
+						</DOI>
+						<DOI name="Alm15">
+							<DAI name="stVal" sAddr="2;50;32;-1;0;62"/>
+						</DOI>
+					</LN>
+					<LN inst="5" desc="Variables for H-Program" lnClass="GGIO" lnType="AE_REGD_GGIO_ED1_VAR">
+						<DataSet name="DsVarSt">
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="5" doName="Mod" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="5" doName="Beh" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="5" doName="Health" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="5" doName="VarA25" fc="ST"/>
+						</DataSet>
+						<DataSet name="DsVarMx">
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="5" doName="VarA20" fc="MX"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="5" doName="VarA21" fc="MX"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="5" doName="VarA22" fc="MX"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="5" doName="VarA23" fc="MX"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="5" doName="VarA24" fc="MX"/>
+						</DataSet>
+						<ReportControl name="urcbVarSt" rptID="A/GGIO$urcbVarSt" datSet="DsVarSt" confRev="1">
+							<TrgOps dchg="true" qchg="true"/>
+							<OptFields seqNum="true" timeStamp="true" dataSet="true" reasonCode="true" configRef="true"/>
+							<RptEnabled max="6"/>
+						</ReportControl>
+						<ReportControl name="urcbVarMx" rptID="A/GGIO$urcbVarMx" datSet="DsVarMx" confRev="1">
+							<TrgOps dchg="true" qchg="true"/>
+							<OptFields seqNum="true" timeStamp="true" dataSet="true" reasonCode="true" configRef="true"/>
+							<RptEnabled max="6"/>
+						</ReportControl>
+						<DOI name="Mod">
+							<DAI name="stVal" sAddr="2;52;52;0;0;1"/>
+							<DAI name="ctlModel" valKind="Set">
+								<Val>status-only</Val>
+							</DAI>
+						</DOI>
+						<DOI name="Beh">
+							<DAI name="stVal" sAddr="2;52;52;0;0;1"/>
+						</DOI>
+						<DOI name="Health">
+							<DAI name="stVal" sAddr="2;52;52;0;0;1"/>
+						</DOI>
+						<DOI name="NamPlt">
+							<DAI name="vendor">
+								<Val>a-Eberle</Val>
+							</DAI>
+							<DAI name="swRev">
+								<Val>1.0</Val>
+							</DAI>
+							<DAI name="d">
+								<Val>REG-D(A)</Val>
+							</DAI>
+							<DAI name="configRev">
+								<Val>1.0</Val>
+							</DAI>
+						</DOI>
+						<DOI name="VarA20">
+							<SDI name="mag">
+								<DAI name="f" sAddr="2; 53; 53; 0.5; 220"/>
+							</SDI>
+							<SDI name="sVC">
+								<DAI name="scaleFactor" valKind="RO">
+									<Val>1.0</Val>
+								</DAI>
+								<DAI name="offset" valKind="RO">
+									<Val>0.0</Val>
+								</DAI>
+							</SDI>
+						</DOI>
+						<DOI name="VarA21">
+							<SDI name="mag">
+								<DAI name="f" sAddr="2; 53; 53; 0.5; 224"/>
+							</SDI>
+							<SDI name="sVC">
+								<DAI name="scaleFactor" valKind="RO">
+									<Val>1.0</Val>
+								</DAI>
+								<DAI name="offset" valKind="RO">
+									<Val>0.0</Val>
+								</DAI>
+							</SDI>
+						</DOI>
+						<DOI name="VarA22">
+							<SDI name="mag">
+								<DAI name="f" sAddr="2; 53; 53; 0.5; 228"/>
+							</SDI>
+							<SDI name="sVC">
+								<DAI name="scaleFactor" valKind="RO">
+									<Val>1.0</Val>
+								</DAI>
+								<DAI name="offset" valKind="RO">
+									<Val>0.0</Val>
+								</DAI>
+							</SDI>
+						</DOI>
+						<DOI name="VarA23">
+							<SDI name="mag">
+								<DAI name="f" sAddr="2; 53; 53; 0.5; 232"/>
+							</SDI>
+							<SDI name="sVC">
+								<DAI name="scaleFactor" valKind="RO">
+									<Val>1.0</Val>
+								</DAI>
+								<DAI name="offset" valKind="RO">
+									<Val>0.0</Val>
+								</DAI>
+							</SDI>
+						</DOI>
+						<DOI name="VarA24">
+							<SDI name="mag">
+								<DAI name="f" sAddr="2; 53; 53; 0.5; 236"/>
+							</SDI>
+							<SDI name="sVC">
+								<DAI name="scaleFactor" valKind="RO">
+									<Val>1.0</Val>
+								</DAI>
+								<DAI name="offset" valKind="RO">
+									<Val>0.0</Val>
+								</DAI>
+							</SDI>
+						</DOI>
+						<DOI name="VarA25">
+							<DAI name="stVal" sAddr="2; 44; 44; 0; 240"/>
+						</DOI>
+					</LN>
+					<LN inst="6" desc="Virtual Commands" lnClass="GGIO" lnType="AE_REGD_GGIO_ED1_VRTCMD">
+						<DataSet name="DsVrtCmd">
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="6" doName="Mod" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="6" doName="Beh" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="6" doName="Health" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="6" doName="VrtCmd01" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="6" doName="VrtCmd02" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="6" doName="VrtCmd03" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="6" doName="VrtCmd04" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="6" doName="VrtCmd05" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="6" doName="VrtCmd06" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="6" doName="VrtCmd07" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="6" doName="VrtCmd08" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="6" doName="VrtCmd09" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="6" doName="VrtCmd10" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="6" doName="VrtCmd11" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="6" doName="VrtCmd12" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="6" doName="VrtCmd13" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="6" doName="VrtCmd14" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="6" doName="VrtCmd15" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="6" doName="VrtCmd16" fc="ST"/>
+						</DataSet>
+						<ReportControl name="urcbVrtCmd" rptID="A/GGIO$urcbVrtCmd" datSet="DsVrtCmd" confRev="1">
+							<TrgOps dchg="true" qchg="true"/>
+							<OptFields seqNum="true" timeStamp="true" dataSet="true" reasonCode="true" configRef="true"/>
+							<RptEnabled max="6"/>
+						</ReportControl>
+						<DOI name="Mod">
+							<DAI name="stVal" sAddr="2;52;52;0;0;1"/>
+							<DAI name="ctlModel" valKind="Set">
+								<Val>status-only</Val>
+							</DAI>
+						</DOI>
+						<DOI name="Beh">
+							<DAI name="stVal" sAddr="2;52;52;0;0;1"/>
+						</DOI>
+						<DOI name="Health">
+							<DAI name="stVal" sAddr="2;52;52;0;0;1"/>
+						</DOI>
+						<DOI name="NamPlt">
+							<DAI name="vendor">
+								<Val>a-Eberle</Val>
+							</DAI>
+							<DAI name="swRev">
+								<Val>1.0</Val>
+							</DAI>
+							<DAI name="d">
+								<Val>REG-D(A)</Val>
+							</DAI>
+							<DAI name="configRev">
+								<Val>1.0</Val>
+							</DAI>
+						</DOI>
+						<DOI name="VrtCmd01">
+							<DAI name="stVal" sAddr="2; 50; 32; 0; 243"/>
+							<DAI name="ctlModel" valKind="Set">
+								<Val>direct-with-normal-security</Val>
+							</DAI>
+							<SDI name="Oper">
+								<DAI name="ctlVal" sAddr="3;50;0;0;{RegMSI_Ind=}"/>
+							</SDI>
+						</DOI>
+						<DOI name="VrtCmd02">
+							<DAI name="stVal" sAddr="2; 50; 33; 0; 243"/>
+							<DAI name="ctlModel" valKind="Set">
+								<Val>direct-with-normal-security</Val>
+							</DAI>
+							<SDI name="Oper">
+								<DAI name="ctlVal" sAddr="3;50;0;0;{RegMSI_Ma=}"/>
+							</SDI>
+						</DOI>
+						<DOI name="VrtCmd03">
+							<DAI name="stVal" sAddr="2; 50; 34; 0; 243"/>
+							<DAI name="ctlModel" valKind="Set">
+								<Val>direct-with-normal-security</Val>
+							</DAI>
+							<SDI name="Oper">
+								<DAI name="ctlVal" sAddr="3;50;0;0;{RegMSI_Sl=}"/>
+							</SDI>
+						</DOI>
+						<DOI name="VrtCmd04">
+							<DAI name="stVal" sAddr="2; 50; 35; 0; 243"/>
+							<DAI name="ctlModel" valKind="Set">
+								<Val>direct-with-normal-security</Val>
+							</DAI>
+							<SDI name="Oper">
+								<DAI name="ctlVal" sAddr="3;50;0;0;{B4=}"/>
+							</SDI>
+						</DOI>
+						<DOI name="VrtCmd05">
+							<DAI name="stVal" sAddr="2; 50; 36; 0; 243"/>
+							<DAI name="ctlModel" valKind="Set">
+								<Val>direct-with-normal-security</Val>
+							</DAI>
+							<SDI name="Oper">
+								<DAI name="ctlVal" sAddr="3; 50; 0; 0; {B5=};{}"/>
+							</SDI>
+						</DOI>
+						<DOI name="VrtCmd06">
+							<DAI name="stVal" sAddr="2; 50; 37; 0; 243"/>
+							<DAI name="ctlModel" valKind="Set">
+								<Val>direct-with-normal-security</Val>
+							</DAI>
+							<SDI name="Oper">
+								<DAI name="ctlVal" sAddr="3; 50; 0; 0; {B6=};{}"/>
+							</SDI>
+						</DOI>
+						<DOI name="VrtCmd07">
+							<DAI name="stVal" sAddr="2; 50; 38; 0; 243"/>
+							<DAI name="ctlModel" valKind="Set">
+								<Val>direct-with-normal-security</Val>
+							</DAI>
+							<SDI name="Oper">
+								<DAI name="ctlVal" sAddr="3; 50; 0; 0; {B7=};{}"/>
+							</SDI>
+						</DOI>
+						<DOI name="VrtCmd08">
+							<DAI name="stVal" sAddr="2; 50; 39; 0; 243"/>
+							<DAI name="ctlModel" valKind="Set">
+								<Val>direct-with-normal-security</Val>
+							</DAI>
+							<SDI name="Oper">
+								<DAI name="ctlVal" sAddr="3; 50; 0; 0; {B8=};{}"/>
+							</SDI>
+						</DOI>
+						<DOI name="VrtCmd09">
+							<DAI name="stVal" sAddr="2; 50; 32; 0; 242"/>
+							<DAI name="ctlModel" valKind="Set">
+								<Val>direct-with-normal-security</Val>
+							</DAI>
+							<SDI name="Oper">
+								<DAI name="ctlVal" sAddr="3; 50; 0; 0; {B9=};{}"/>
+							</SDI>
+						</DOI>
+						<DOI name="VrtCmd10">
+							<DAI name="stVal" sAddr="2; 50; 33; 0; 242"/>
+							<DAI name="ctlModel" valKind="Set">
+								<Val>direct-with-normal-security</Val>
+							</DAI>
+							<SDI name="Oper">
+								<DAI name="ctlVal" sAddr="3; 50; 0; 0; {B10=};{}"/>
+							</SDI>
+						</DOI>
+						<DOI name="VrtCmd11">
+							<DAI name="stVal" sAddr="2; 50; 34; 0; 242"/>
+							<DAI name="ctlModel" valKind="Set">
+								<Val>direct-with-normal-security</Val>
+							</DAI>
+							<SDI name="Oper">
+								<DAI name="ctlVal" sAddr="3; 50; 0; 0; {B11=};{}"/>
+							</SDI>
+						</DOI>
+						<DOI name="VrtCmd12">
+							<DAI name="stVal" sAddr="2; 50; 35; 0; 242"/>
+							<DAI name="ctlModel" valKind="Set">
+								<Val>direct-with-normal-security</Val>
+							</DAI>
+							<SDI name="Oper">
+								<DAI name="ctlVal" sAddr="3; 50; 0; 0; {B12=};{}"/>
+							</SDI>
+						</DOI>
+						<DOI name="VrtCmd13">
+							<DAI name="stVal" sAddr="2; 50; 36; 0; 242"/>
+							<DAI name="ctlModel" valKind="Set">
+								<Val>direct-with-normal-security</Val>
+							</DAI>
+							<SDI name="Oper">
+								<DAI name="ctlVal" sAddr="3; 50; 0; 0; {B13=};{}"/>
+							</SDI>
+						</DOI>
+						<DOI name="VrtCmd14">
+							<DAI name="stVal" sAddr="2; 50; 37; 0; 242"/>
+							<DAI name="ctlModel" valKind="Set">
+								<Val>direct-with-normal-security</Val>
+							</DAI>
+							<SDI name="Oper">
+								<DAI name="ctlVal" sAddr="3; 50; 0; 0; {B14=};{}"/>
+							</SDI>
+						</DOI>
+						<DOI name="VrtCmd15">
+							<DAI name="stVal" sAddr="2; 50; 38; 0; 242"/>
+							<DAI name="ctlModel" valKind="Set">
+								<Val>direct-with-normal-security</Val>
+							</DAI>
+							<SDI name="Oper">
+								<DAI name="ctlVal" sAddr="3; 50; 0; 0; {B15=};{}"/>
+							</SDI>
+						</DOI>
+						<DOI name="VrtCmd16">
+							<DAI name="stVal" sAddr="2; 50; 39; 0; 242"/>
+							<DAI name="ctlModel" valKind="Set">
+								<Val>direct-with-normal-security</Val>
+							</DAI>
+							<SDI name="Oper">
+								<DAI name="ctlVal" sAddr="3; 50; 0; 0; {B16=};{}"/>
+							</SDI>
+						</DOI>
+					</LN>
+					<LN inst="7" desc="Physical communication channels" lnClass="GGIO" lnType="AE_REGD_GGIO_ED1_LCCH">
+						<DataSet name="DsChnSup">
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="7" doName="Mod" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="7" doName="Beh" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="7" doName="Health" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="7" doName="ChLiv" fc="ST"/>
+							<FCDA ldInst="A" prefix="" lnClass="GGIO" lnInst="7" doName="RedChLiv" fc="ST"/>
+						</DataSet>
+						<ReportControl name="urcbChnSup" rptID="A/GGIO$urcbIdChnSup" datSet="DsChnSup" confRev="1">
+							<TrgOps dchg="true" qchg="true"/>
+							<OptFields seqNum="true" timeStamp="true" dataSet="true" reasonCode="true" configRef="true"/>
+							<RptEnabled max="6"/>
+						</ReportControl>
+						<DOI name="Mod">
+							<DAI name="stVal" sAddr="2;52;52;0;0;1"/>
+							<DAI name="ctlModel" valKind="Set">
+								<Val>status-only</Val>
+							</DAI>
+						</DOI>
+						<DOI name="Beh">
+							<DAI name="stVal" sAddr="2;52;52;0;0;1"/>
+						</DOI>
+						<DOI name="Health">
+							<DAI name="stVal" sAddr="2;52;52;0;0;1"/>
+						</DOI>
+						<DOI name="NamPlt">
+							<DAI name="vendor">
+								<Val>a-Eberle</Val>
+							</DAI>
+							<DAI name="swRev">
+								<Val>1.0</Val>
+							</DAI>
+							<DAI name="d">
+								<Val>REG-D(A)</Val>
+							</DAI>
+							<DAI name="configRev">
+								<Val>1.0</Val>
+							</DAI>
+						</DOI>
+						<DOI name="ChLiv">
+							<DAI name="stVal" sAddr="2; 50; 50; 0; 0; 0;{ $SUP:CHLIVE }"/>
+						</DOI>
+						<DOI name="RedChLiv">
+							<DAI name="stVal" sAddr="2; 50; 50; 0; 0; 0;{ $SUP:RED_CHLIVE }"/>
+						</DOI>
+					</LN>
+				</LDevice>
+			</Server>
+		</AccessPoint>
+	</IED>
+	<DataTypeTemplates>
+		<LNodeType id="AE_LNTYPE_LLN0_01" lnClass="LLN0" desc=" ">
+			<DO name="Mod" desc="Mod" type="AE_INC_ModSO_Ns"/>
+			<DO name="Beh" desc="Beh" type="AE_StdINS_Beh"/>
+			<DO name="Health" desc="Health" type="AE_StdINS_Health"/>
+			<DO name="NamPlt" desc="NamPlt" type="AE_LN0LPL"/>
+		</LNodeType>
+		<LNodeType id="AE_LNTYPE_LPHD_01" lnClass="LPHD" desc=" ">
+			<DO name="PhyNam" desc="PhyNam" type="AE_DPL"/>
+			<DO name="PhyHealth" desc="PhyHealth" type="AE_StdINS_Health"/>
+			<DO name="Proxy" desc="Proxy" type="AE_StdSPS"/>
+		</LNodeType>
+		<LNodeType id="AE_REGD_GGIO1" lnClass="GGIO" desc="Binary inputs and Relays">
+			<DO name="Mod" desc="Mod" type="AE_INC_ModSO"/>
+			<DO name="Beh" desc="Beh" type="AE_StdINS_Beh"/>
+			<DO name="Health" desc="Health" type="AE_StdINS_Health"/>
+			<DO name="NamPlt" desc="NamPlt" type="AE_LPL"/>
+			<DO name="SPCSO1" desc="SPC00" type="AE_StdSPC"/>
+			<DO name="SPCSO2" desc="SPC01" type="AE_StdSPC"/>
+			<DO name="SPCSO3" desc="SPC02" type="AE_StdSPC"/>
+			<DO name="SPCSO4" desc="SPC03" type="AE_StdSPC"/>
+			<DO name="SPCSO5" desc="SPC04" type="AE_StdSPC"/>
+			<DO name="SPCSO6" desc="SPC05" type="AE_StdSPC"/>
+			<DO name="SPCSO7" desc="SPC06" type="AE_StdSPC"/>
+			<DO name="SPCSO8" desc="SPC07" type="AE_StdSPC"/>
+			<DO name="SPCSO9" desc="SPC08" type="AE_StdSPC"/>
+			<DO name="SPCSO10" desc="SPC09" type="AE_StdSPC"/>
+			<DO name="Ind1" desc="SPS00" type="AE_StdSPS"/>
+			<DO name="Ind2" desc="SPS01" type="AE_StdSPS"/>
+			<DO name="Ind3" desc="SPS02" type="AE_StdSPS"/>
+			<DO name="Ind4" desc="SPS03" type="AE_StdSPS"/>
+			<DO name="Ind5" desc="SPS04" type="AE_StdSPS"/>
+			<DO name="Ind6" desc="SPS05" type="AE_StdSPS"/>
+			<DO name="Ind7" desc="SPS06" type="AE_StdSPS"/>
+			<DO name="Ind8" desc="SPS07" type="AE_StdSPS"/>
+			<DO name="Ind9" desc="SPS08" type="AE_StdSPS"/>
+			<DO name="Ind10" desc="SPS09" type="AE_StdSPS"/>
+			<DO name="Ind11" desc="SPS10" type="AE_StdSPS"/>
+			<DO name="Ind12" desc="SPS11" type="AE_StdSPS"/>
+			<DO name="Ind13" desc="SPS12" type="AE_StdSPS"/>
+			<DO name="Ind14" desc="SPS13" type="AE_StdSPS"/>
+			<DO name="Ind15" desc="SPS14" type="AE_StdSPS"/>
+			<DO name="Ind16" desc="SPS15" type="AE_StdSPS"/>
+			<DO name="Ind17" desc="SPS16" type="AE_StdSPS"/>
+			<DO name="Ind18" desc="SPS17" type="AE_StdSPS"/>
+			<DO name="Ind19" desc="SPS18" type="AE_StdSPS"/>
+			<DO name="Ind20" desc="SPS19" type="AE_StdSPS"/>
+			<DO name="Ind21" desc="SPS20" type="AE_StdSPS"/>
+			<DO name="Ind22" desc="SPS21" type="AE_StdSPS"/>
+			<DO name="Ind23" desc="SPS22" type="AE_StdSPS"/>
+			<DO name="Ind24" desc="SPS23" type="AE_StdSPS"/>
+			<DO name="Ind25" desc="SPS24" type="AE_StdSPS"/>
+			<DO name="Ind26" desc="SPS25" type="AE_StdSPS"/>
+			<DO name="Ind27" desc="SPS26" type="AE_StdSPS"/>
+			<DO name="Ind28" desc="SPS27" type="AE_StdSPS"/>
+			<DO name="Ind29" desc="SPS28" type="AE_StdSPS"/>
+			<DO name="Ind30" desc="SPS29" type="AE_StdSPS"/>
+			<DO name="Ind31" desc="SPS30" type="AE_StdSPS"/>
+			<DO name="Ind32" desc="SPS31" type="AE_StdSPS"/>
+		</LNodeType>
+		<LNodeType id="AE_REGD_GGIO2" lnClass="GGIO" desc="LEDs">
+			<DO name="Mod" desc="Mod" type="AE_INC_ModSO"/>
+			<DO name="Beh" desc="Beh" type="AE_StdINS_Beh"/>
+			<DO name="Health" desc="Health" type="AE_StdINS_Health"/>
+			<DO name="NamPlt" desc="NamPlt" type="AE_LPL"/>
+			<DO name="Ind1" desc="SPS00" type="AE_StdSPS"/>
+			<DO name="Ind2" desc="SPS01" type="AE_StdSPS"/>
+			<DO name="Ind3" desc="SPS02" type="AE_StdSPS"/>
+			<DO name="Ind4" desc="SPS03" type="AE_StdSPS"/>
+			<DO name="Ind5" desc="SPS04" type="AE_StdSPS"/>
+			<DO name="Ind6" desc="SPS05" type="AE_StdSPS"/>
+			<DO name="Ind7" desc="SPS06" type="AE_StdSPS"/>
+			<DO name="Ind8" desc="SPS07" type="AE_StdSPS"/>
+			<DO name="Ind9" desc="SPS08" type="AE_StdSPS"/>
+			<DO name="Ind10" desc="SPS09" type="AE_StdSPS"/>
+			<DO name="Ind11" desc="SPS10" type="AE_StdSPS"/>
+			<DO name="Ind12" desc="SPS11" type="AE_StdSPS"/>
+			<DO name="Ind13" desc="SPS12" type="AE_StdSPS"/>
+			<DO name="Ind14" desc="SPS13" type="AE_StdSPS"/>
+			<DO name="Ind15" desc="SPS14" type="AE_StdSPS"/>
+			<DO name="Ind16" desc="SPS15" type="AE_StdSPS"/>
+			<DO name="Ind17" desc="SPS16" type="AE_StdSPS"/>
+			<DO name="Ind18" desc="SPS17" type="AE_StdSPS"/>
+			<DO name="Ind19" desc="SPS18" type="AE_StdSPS"/>
+			<DO name="Ind20" desc="SPS19" type="AE_StdSPS"/>
+			<DO name="Ind21" desc="SPS20" type="AE_StdSPS"/>
+			<DO name="Ind22" desc="SPS21" type="AE_StdSPS"/>
+			<DO name="Ind23" desc="SPS22" type="AE_StdSPS"/>
+			<DO name="Ind24" desc="SPS23" type="AE_StdSPS"/>
+			<DO name="Ind25" desc="SPS24" type="AE_StdSPS"/>
+			<DO name="Ind26" desc="SPS25" type="AE_StdSPS"/>
+			<DO name="Ind27" desc="SPS26" type="AE_StdSPS"/>
+			<DO name="Ind28" desc="SPS27" type="AE_StdSPS"/>
+			<DO name="Ind29" desc="SPS28" type="AE_StdSPS"/>
+			<DO name="Ind30" desc="SPS29" type="AE_StdSPS"/>
+			<DO name="Ind31" desc="SPS30" type="AE_StdSPS"/>
+			<DO name="Ind32" desc="SPS31" type="AE_StdSPS"/>
+		</LNodeType>
+		<LNodeType id="AE_REGD_ATCC1" lnClass="ATCC" desc="Tap Controller">
+			<DO name="Mod" desc="Mod" type="AE_INC_ModSO"/>
+			<DO name="Beh" desc="Beh" type="AE_StdINS_Beh"/>
+			<DO name="Health" desc="Health" type="AE_StdINS_Health"/>
+			<DO name="NamPlt" desc="NamPlt" type="AE_LPL"/>
+			<DO name="Loc" desc="Loc" type="AE_StdSPS"/>
+			<DO name="OpCntRs" desc="Counter" type="AE_StdINC"/>
+			<DO name="TapChg" desc="Change Tap Position" type="AE_StdBSC"/>
+			<DO name="ParOp" desc="Paralle_Independent oper" type="AE_StdDPC"/>
+			<DO name="LTCBlk" desc="Block_AutCtrlofLTC" type="AE_StdSPC"/>
+			<DO name="CtlV" desc="RegUN (Control Voltage)" type="AE_StdMV"/>
+			<DO name="LodA" desc="RegIN (Load Current)" type="AE_StdMV"/>
+			<DO name="Auto" desc="Automatic_Manual operation" type="AE_StdSPC"/>
+			<DO name="A20" desc="A20" type="AE_StdMV"/>
+			<DO name="A21" desc="A21" type="AE_StdMV"/>
+			<DO name="A22" desc="A22" type="AE_StdMV"/>
+			<DO name="A23" desc="A23" type="AE_StdMV"/>
+			<DO name="A24" desc="A24" type="AE_StdMV"/>
+			<DO name="A25" desc="A25" type="AE_StdINS"/>
+			<DO name="ActPrg" desc="ActPrg" type="AE_MV"/>
+			<DO name="AnIn1" desc="AnIn1" type="AE_StdMV"/>
+			<DO name="AnIn2" desc="AnIn2" type="AE_StdMV"/>
+			<DO name="AngDEG" desc="AngDEG" type="AE_MV"/>
+			<DO name="AppPwrNom" desc="AppPwrNom" type="AE_MV"/>
+			<DO name="B0Sw1" desc="B0Sw1" type="AE_SPS"/>
+			<DO name="B0Sw2" desc="B0Sw2" type="AE_SPS"/>
+			<DO name="B0Sw3" desc="B0Sw3" type="AE_SPS"/>
+			<DO name="B0Sw4" desc="B0Sw4" type="AE_SPS"/>
+			<DO name="BackHiSpd" desc="BackHiSpd" type="AE_MV"/>
+			<DO name="BndCtr" desc="BndCtr" type="AE_StdMV"/>
+			<DO name="CosPhi" desc="CosPhi" type="AE_MV"/>
+			<DO name="ELANFail" desc="ELANFail" type="AE_SPS"/>
+			<DO name="FailSt01" desc="FailSt01" type="AE_SPS"/>
+			<DO name="FailSt02" desc="FailSt02" type="AE_SPS"/>
+			<DO name="FailSt03" desc="FailSt03" type="AE_SPS"/>
+			<DO name="FailSt04" desc="FailSt04" type="AE_SPS"/>
+			<DO name="FailSt05" desc="FailSt05" type="AE_SPS"/>
+			<DO name="FailSt06" desc="FailSt06" type="AE_SPS"/>
+			<DO name="FailSt07" desc="FailSt07" type="AE_SPS"/>
+			<DO name="FailSt08" desc="FailSt08" type="AE_SPS"/>
+			<DO name="FailSt09" desc="FailSt09" type="AE_SPS"/>
+			<DO name="FailSt10" desc="FailSt10" type="AE_SPS"/>
+			<DO name="FailSt11" desc="FailSt11" type="AE_SPS"/>
+			<DO name="FailSt12" desc="FailSt12" type="AE_SPS"/>
+			<DO name="FailSt13" desc="FailSt13" type="AE_SPS"/>
+			<DO name="FailSt14" desc="FailSt14" type="AE_SPS"/>
+			<DO name="FailSt15" desc="FailSt15" type="AE_SPS"/>
+			<DO name="FailSt16" desc="FailSt16" type="AE_SPS"/>
+			<DO name="FailSt17" desc="FailSt17" type="AE_SPS"/>
+			<DO name="FailSt18" desc="FailSt18" type="AE_SPS"/>
+			<DO name="FailSt19" desc="FailSt19" type="AE_SPS"/>
+			<DO name="FailSt20" desc="FailSt20" type="AE_SPS"/>
+			<DO name="FailSt21" desc="FailSt21" type="AE_SPS"/>
+			<DO name="FailSt22" desc="FailSt22" type="AE_SPS"/>
+			<DO name="FailSt23" desc="FailSt23" type="AE_SPS"/>
+			<DO name="FailSt24" desc="FailSt24" type="AE_SPS"/>
+			<DO name="FailSt25" desc="FailSt25" type="AE_SPS"/>
+			<DO name="FailSt26" desc="FailSt26" type="AE_SPS"/>
+			<DO name="FailSt27" desc="FailSt27" type="AE_SPS"/>
+			<DO name="FailSt28" desc="FailSt28" type="AE_SPS"/>
+			<DO name="FailSt29" desc="FailSt29" type="AE_SPS"/>
+			<DO name="FailSt30" desc="FailSt30" type="AE_SPS"/>
+			<DO name="FailSt31" desc="FailSt31" type="AE_SPS"/>
+			<DO name="FailSt32" desc="FailSt32" type="AE_SPS"/>
+			<DO name="FstDown" desc="FstDown" type="AE_SPS"/>
+			<DO name="FstUp" desc="FstUp" type="AE_SPS"/>
+			<DO name="FwdHiSpd" desc="FwdHiSpd" type="AE_MV"/>
+			<DO name="GasInOil" desc="GasInOil" type="AE_MV"/>
+			<DO name="H2OinOil" desc="H2OinOil" type="AE_MV"/>
+			<DO name="ImbPct" desc="ImbPct" type="AE_MV"/>
+			<DO name="Inh" desc="Inh" type="AE_SPS"/>
+			<DO name="InhHi" desc="InhHi" type="AE_SPS"/>
+			<DO name="InhHiPct" desc="InhHiPct" type="AE_MV"/>
+			<DO name="InhLoPct" desc="InhLoPct" type="AE_MV"/>
+			<DO name="LevOilTC" desc="LevOilTC" type="AE_MV"/>
+			<DO name="LevOilTr" desc="LevOilTr" type="AE_MV"/>
+			<DO name="LosLife" desc="LosLife" type="AE_MV"/>
+			<DO name="Master" desc="Master" type="AE_SPS"/>
+			<DO name="MaxAr" desc="MaxAr" type="AE_MV"/>
+			<DO name="NomAr" desc="NomAr" type="AE_MV"/>
+			<DO name="OvA" desc="OvA" type="AE_SPS"/>
+			<DO name="OvAPct" desc="OvAPct" type="AE_MV"/>
+			<DO name="OvLogMem" desc="OvLogMem" type="AE_SPS"/>
+			<DO name="OvV" desc="OvV" type="AE_SPS"/>
+			<DO name="OvVPct" desc="OvVPct" type="AE_MV"/>
+			<DO name="PPA1" desc="PPA1" type="AE_MV"/>
+			<DO name="PPA2" desc="PPA2" type="AE_MV"/>
+			<DO name="PPA3" desc="PPA3" type="AE_MV"/>
+			<DO name="PPV1Nom" desc="PPV1Nom" type="AE_MV"/>
+			<DO name="PPV2Nom" desc="PPV2Nom" type="AE_MV"/>
+			<DO name="ParPFail" desc="ParPFail" type="AE_SPS"/>
+			<DO name="ParPrgAct" desc="ParPrgAct" type="AE_MV"/>
+			<DO name="PwrNom" desc="PwrNom" type="AE_MV"/>
+			<DO name="RegU1Act" desc="RegU1Act" type="AE_SPS"/>
+			<DO name="RegU2Act" desc="RegU2Act" type="AE_SPS"/>
+			<DO name="Slave" desc="Slave" type="AE_SPS"/>
+			<DO name="SPIndex" desc="SPIndex" type="AE_ING"/>
+			<DO name="SPVal1" desc="SPVal1" type="AE_ASG"/>
+			<DO name="SPVal2" desc="SPVal2" type="AE_ASG"/>
+			<DO name="SPVal3" desc="SPVal3" type="AE_ASG"/>
+			<DO name="SPVal4" desc="SPVal4" type="AE_ASG"/>
+			<DO name="SPValVNom" desc="SPValVNom" type="AE_MV"/>
+			<DO name="TapChgDown" desc="TapChgDown" type="AE_SPS"/>
+			<DO name="TapChgFail" desc="TapChgFail" type="AE_SPS"/>
+			<DO name="TapChgOper" desc="TapChgOper" type="AE_SPS"/>
+			<DO name="TapChgUp" desc="TapChgUp" type="AE_SPS"/>
+			<DO name="TRatA" desc="TRatA" type="AE_MV"/>
+			<DO name="TRatV" desc="TRatV" type="AE_MV"/>
+			<DO name="TRatW" desc="TRatW" type="AE_MV"/>
+			<DO name="TmpOilTC" desc="TmpOilTC" type="AE_MV"/>
+			<DO name="TmpOilTr" desc="TmpOilTr" type="AE_MV"/>
+			<DO name="TmpWind" desc="TmpWind" type="AE_MV"/>
+			<DO name="TotNTapChg" desc="TotNTapChg" type="AE_MV"/>
+			<DO name="UnUnV" desc="UnUnV" type="AE_SPS"/>
+			<DO name="UnVPct" desc="UnVPct" type="AE_MV"/>
+			<DO name="VArNom" desc="VArNom" type="AE_MV"/>
+		</LNodeType>
+		<LNodeType id="AE_REGD_GGIO_ED1_GOALM" lnClass="GGIO" desc="GOOSE subscriber alarms">
+			<DO name="Mod" desc="Mod" type="AE_INC_ModSO"/>
+			<DO name="Beh" desc="Beh" type="AE_StdINS_Beh"/>
+			<DO name="Health" desc="Health" type="AE_StdINS_Health"/>
+			<DO name="NamPlt" desc="NamPlt" type="AE_LPL"/>
+			<DO name="Alm0" desc="Timeout incoming GOOSE subscriber 0" type="AE_StdSPS"/>
+			<DO name="Alm1" desc="Timeout incoming GOOSE subscriber 1" type="AE_StdSPS"/>
+			<DO name="Alm2" desc="Timeout incoming GOOSE subscriber 2" type="AE_StdSPS"/>
+			<DO name="Alm3" desc="Timeout incoming GOOSE subscriber 3" type="AE_StdSPS"/>
+			<DO name="Alm4" desc="Timeout incoming GOOSE subscriber 4" type="AE_StdSPS"/>
+			<DO name="Alm5" desc="Timeout incoming GOOSE subscriber 5" type="AE_StdSPS"/>
+			<DO name="Alm6" desc="Timeout incoming GOOSE subscriber 6" type="AE_StdSPS"/>
+			<DO name="Alm7" desc="Timeout incoming GOOSE subscriber 7" type="AE_StdSPS"/>
+			<DO name="Alm8" desc="Timeout incoming GOOSE subscriber 8" type="AE_StdSPS"/>
+			<DO name="Alm9" desc="Timeout incoming GOOSE subscriber 9" type="AE_StdSPS"/>
+			<DO name="Alm10" desc="Timeout incoming GOOSE subscriber 10" type="AE_StdSPS"/>
+			<DO name="Alm11" desc="Timeout incoming GOOSE subscriber 11" type="AE_StdSPS"/>
+			<DO name="Alm12" desc="Timeout incoming GOOSE subscriber 12" type="AE_StdSPS"/>
+			<DO name="Alm13" desc="Timeout incoming GOOSE subscriber 13" type="AE_StdSPS"/>
+			<DO name="Alm14" desc="Timeout incoming GOOSE subscriber 14" type="AE_StdSPS"/>
+			<DO name="Alm15" desc="Timeout incoming GOOSE subscriber 15" type="AE_StdSPS"/>
+		</LNodeType>
+		<LNodeType id="AE_REGD_GGIO_ED1_GOEXT" lnClass="GGIO" desc="GOOSE extended DOs">
+			<DO name="Mod" desc="Mod" type="AE_INC_ModSO"/>
+			<DO name="Beh" desc="Beh" type="AE_StdINS_Beh"/>
+			<DO name="Health" desc="Health" type="AE_StdINS_Health"/>
+			<DO name="NamPlt" desc="NamPlt" type="AE_LPL"/>
+			<DO name="RemMode" desc="Remote Mode" type="AE_SPS"/>
+			<DO name="CFlt" desc="Common Fault" type="AE_SPS"/>
+			<DO name="TCPos" desc="Tap Position" type="AE_INS"/>
+			<DO name="TCTrans" desc="Tap Transient State" type="AE_SPS"/>
+			<DO name="VrtOut01" desc="Virtual Output signal 01" type="AE_SPS"/>
+			<DO name="VrtOut02" desc="Virtual Output signal 02" type="AE_SPS"/>
+			<DO name="VrtOut03" desc="Virtual Output signal 03" type="AE_SPS"/>
+			<DO name="VrtOut04" desc="Virtual Output signal 04" type="AE_SPS"/>
+			<DO name="VrtOut05" desc="Virtual Output signal 05" type="AE_SPS"/>
+			<DO name="VrtOut06" desc="Virtual Output signal 06" type="AE_SPS"/>
+			<DO name="VrtOut07" desc="Virtual Output signal 07" type="AE_SPS"/>
+			<DO name="VrtOut08" desc="Virtual Output signal 08" type="AE_SPS"/>
+		</LNodeType>
+		<LNodeType id="AE_REGD_GGIO_ED1_VAR" lnClass="GGIO" desc="Variables">
+			<DO name="Mod" desc="Mod" type="AE_INC_ModSO"/>
+			<DO name="Beh" desc="Beh" type="AE_StdINS_Beh"/>
+			<DO name="Health" desc="Health" type="AE_StdINS_Health"/>
+			<DO name="NamPlt" desc="NamPlt" type="AE_LPL"/>
+			<DO name="VarA20" desc="A20 Variable for H-Program" type="AE_MV"/>
+			<DO name="VarA21" desc="A21 Variable for H-Program" type="AE_MV"/>
+			<DO name="VarA22" desc="A22 Variable for H-Program" type="AE_MV"/>
+			<DO name="VarA23" desc="A23 Variable for H-Program" type="AE_MV"/>
+			<DO name="VarA24" desc="A24 Variable for H-Program" type="AE_MV"/>
+			<DO name="VarA25" desc="A25 Variable for H-Program" type="AE_INS"/>
+		</LNodeType>
+		<LNodeType id="AE_REGD_GGIO_ED1_VRTCMD" lnClass="GGIO" desc="Virtuals Commands">
+			<DO name="Mod" desc="Mod" type="AE_INC_ModSO"/>
+			<DO name="Beh" desc="Beh" type="AE_StdINS_Beh"/>
+			<DO name="Health" desc="Health" type="AE_StdINS_Health"/>
+			<DO name="NamPlt" desc="NamPlt" type="AE_LPL"/>
+			<DO name="VrtCmd01" desc="VrtCmd01" type="AE_SPC"/>
+			<DO name="VrtCmd02" desc="VrtCmd02" type="AE_SPC"/>
+			<DO name="VrtCmd03" desc="VrtCmd03" type="AE_SPC"/>
+			<DO name="VrtCmd04" desc="VrtCmd04" type="AE_SPC"/>
+			<DO name="VrtCmd05" desc="VrtCmd05" type="AE_SPC"/>
+			<DO name="VrtCmd06" desc="VrtCmd06" type="AE_SPC"/>
+			<DO name="VrtCmd07" desc="VrtCmd07" type="AE_SPC"/>
+			<DO name="VrtCmd08" desc="VrtCmd08" type="AE_SPC"/>
+			<DO name="VrtCmd09" desc="VrtCmd09" type="AE_SPC"/>
+			<DO name="VrtCmd10" desc="VrtCmd10" type="AE_SPC"/>
+			<DO name="VrtCmd11" desc="VrtCmd11" type="AE_SPC"/>
+			<DO name="VrtCmd12" desc="VrtCmd12" type="AE_SPC"/>
+			<DO name="VrtCmd13" desc="VrtCmd13" type="AE_SPC"/>
+			<DO name="VrtCmd14" desc="VrtCmd14" type="AE_SPC"/>
+			<DO name="VrtCmd15" desc="VrtCmd15" type="AE_SPC"/>
+			<DO name="VrtCmd16" desc="VrtCmd16" type="AE_SPC"/>
+		</LNodeType>
+		<LNodeType id="AE_REGD_GGIO_ED1_LCCH" lnClass="GGIO" desc="Channels Supervision via GGIO">
+			<DO name="Mod" desc="Mod" type="AE_INC_ModSO"/>
+			<DO name="Beh" desc="Beh" type="AE_StdINS_Beh"/>
+			<DO name="Health" desc="Health" type="AE_StdINS_Health"/>
+			<DO name="NamPlt" desc="NamPlt" type="AE_LPL"/>
+			<DO name="ChLiv" desc="Physical channel status" type="AE_SPS"/>
+			<DO name="RedChLiv" desc="Physical channel status of redundant channel" type="AE_SPS"/>
+		</LNodeType>
+		<DOType id="AE_LN0LPL" cdc="LPL">
+			<DA name="vendor" fc="DC" bType="VisString255" valKind="Set"/>
+			<DA name="swRev" fc="DC" bType="VisString255" valKind="Set"/>
+			<DA name="d" fc="DC" bType="VisString255" valKind="Set"/>
+			<DA name="configRev" fc="DC" bType="VisString255" valKind="Set"/>
+			<DA name="ldNs" fc="EX" bType="VisString255" valKind="Set">
+				<Val>IEC 61850-7-4:2003</Val>
+			</DA>
+		</DOType>
+		<DOType id="AE_LPL" cdc="LPL">
+			<DA name="vendor" fc="DC" bType="VisString255" valKind="Set"/>
+			<DA name="swRev" fc="DC" bType="VisString255" valKind="Set"/>
+			<DA name="d" fc="DC" bType="VisString255" valKind="Set"/>
+			<DA name="configRev" fc="DC" bType="VisString255" valKind="Set"/>
+		</DOType>
+		<DOType id="AE_DPL" cdc="DPL">
+			<DA name="vendor" fc="DC" bType="VisString255" valKind="Set"/>
+			<DA name="hwRev" fc="DC" bType="VisString255" valKind="Set"/>
+			<DA name="swRev" fc="DC" bType="VisString255" valKind="Set"/>
+			<DA name="model" fc="DC" bType="VisString255" valKind="Set"/>
+			<DA name="location" fc="DC" bType="VisString255" valKind="Set"/>
+		</DOType>
+		<DOType id="AE_StdSPS" cdc="SPS">
+			<DA name="stVal" fc="ST" bType="BOOLEAN" dchg="true" valKind="RO"/>
+			<DA name="q" fc="ST" bType="Quality" qchg="true" sAddr="2; 70" valKind="RO"/>
+			<DA name="t" fc="ST" bType="Timestamp" sAddr="2; 71" valKind="RO"/>
+		</DOType>
+		<DOType id="AE_SPS" cdc="SPS">
+			<DA name="stVal" fc="ST" bType="BOOLEAN" dchg="true" valKind="RO"/>
+			<DA name="q" fc="ST" bType="Quality" qchg="true" sAddr="2; 70" valKind="RO"/>
+			<DA name="t" fc="ST" bType="Timestamp" sAddr="2; 71" valKind="RO"/>
+			<DA name="dataNs" fc="EX" bType="VisString255" valKind="Set">
+				<Val>AE_REGSYS_IEC61860_MICS_ED1:2003</Val>
+			</DA>
+		</DOType>
+		<DOType id="AE_DPS" cdc="DPS">
+			<DA name="stVal" fc="ST" bType="Dbpos" dchg="true" valKind="RO"/>
+			<DA name="q" fc="ST" bType="Quality" qchg="true" sAddr="2; 70" valKind="RO"/>
+			<DA name="t" fc="ST" bType="Timestamp" sAddr="2; 71" valKind="RO"/>
+			<DA name="dataNs" fc="EX" bType="VisString255" valKind="Set">
+				<Val>AE_REGSYS_IEC61860_MICS_ED1:2003</Val>
+			</DA>
+		</DOType>
+		<DOType id="AE_StdINS_Beh" cdc="INS">
+			<DA name="stVal" fc="ST" bType="Enum" type="AE_BehaviourModeKind_OnOff" dchg="true" valKind="RO"/>
+			<DA name="q" fc="ST" bType="Quality" qchg="true" sAddr="2; 70" valKind="RO"/>
+			<DA name="t" fc="ST" bType="Timestamp" sAddr="2; 71" valKind="RO"/>
+		</DOType>
+		<DOType id="AE_StdINS_Health" cdc="INS">
+			<DA name="stVal" fc="ST" bType="Enum" type="HealthKind" dchg="true" valKind="RO"/>
+			<DA name="q" fc="ST" bType="Quality" qchg="true" sAddr="2; 70" valKind="RO"/>
+			<DA name="t" fc="ST" bType="Timestamp" sAddr="2; 71" valKind="RO"/>
+		</DOType>
+		<DOType id="AE_StdINS" cdc="INS">
+			<DA name="stVal" fc="ST" bType="INT32" dchg="true" valKind="RO"/>
+			<DA name="q" fc="ST" bType="Quality" qchg="true" sAddr="2; 70" valKind="RO"/>
+			<DA name="t" fc="ST" bType="Timestamp" sAddr="2; 71" valKind="RO"/>
+		</DOType>
+		<DOType id="AE_INS" cdc="INS">
+			<DA name="stVal" fc="ST" bType="INT32" dchg="true" valKind="RO"/>
+			<DA name="q" fc="ST" bType="Quality" qchg="true" sAddr="2; 70" valKind="RO"/>
+			<DA name="t" fc="ST" bType="Timestamp" sAddr="2; 71" valKind="RO"/>
+			<DA name="dataNs" fc="EX" bType="VisString255" valKind="Set">
+				<Val>AE_REGSYS_IEC61860_MICS_ED1:2003</Val>
+			</DA>
+		</DOType>
+		<DOType id="AE_StdMV" cdc="MV">
+			<DA name="mag" fc="MX" bType="Struct" type="AE_AnalogueValue" dchg="true" valKind="RO"/>
+			<DA name="q" fc="MX" bType="Quality" qchg="true" sAddr="2; 70" valKind="RO"/>
+			<DA name="t" fc="MX" bType="Timestamp" sAddr="2; 71" valKind="RO"/>
+			<DA name="units" fc="CF" bType="Struct" type="AE_Unit" valKind="Set"/>
+			<DA name="sVC" fc="CF" bType="Struct" type="AE_ScaledValueCfg" valKind="Set"/>
+		</DOType>
+		<DOType id="AE_MV" cdc="MV">
+			<DA name="mag" fc="MX" bType="Struct" type="AE_AnalogueValue" dchg="true" valKind="RO"/>
+			<DA name="q" fc="MX" bType="Quality" qchg="true" sAddr="2; 70" valKind="RO"/>
+			<DA name="t" fc="MX" bType="Timestamp" sAddr="2; 71" valKind="RO"/>
+			<DA name="units" fc="CF" bType="Struct" type="AE_Unit" valKind="Set"/>
+			<DA name="sVC" fc="CF" bType="Struct" type="AE_ScaledValueCfg" valKind="Set"/>
+			<DA name="dataNs" fc="EX" bType="VisString255" valKind="Set">
+				<Val>AE_REGSYS_IEC61860_MICS_ED1:2003</Val>
+			</DA>
+		</DOType>
+		<DOType id="AE_StdCMV" cdc="CMV" desc="Complex measured">
+			<DA name="cVal" fc="MX" bType="Struct" type="AE_Vector" dchg="true" valKind="RO"/>
+			<DA name="q" fc="MX" bType="Quality" qchg="true" sAddr="2; 70" valKind="RO"/>
+			<DA name="t" fc="MX" bType="Timestamp" sAddr="2; 71" valKind="RO"/>
+			<DA name="units" fc="CF" bType="Struct" type="AE_Unit" valKind="Set"/>
+		</DOType>
+		<DOType id="AE_CMV" cdc="CMV" desc="Complex measured">
+			<DA name="cVal" fc="MX" bType="Struct" type="AE_Vector" dchg="true" valKind="RO"/>
+			<DA name="q" fc="MX" bType="Quality" qchg="true" sAddr="2; 70" valKind="RO"/>
+			<DA name="t" fc="MX" bType="Timestamp" sAddr="2; 71" valKind="RO"/>
+			<DA name="units" fc="CF" bType="Struct" type="AE_Unit" valKind="Set"/>
+			<DA name="dataNs" fc="EX" bType="VisString255" valKind="Set">
+				<Val>AE_REGSYS_IEC61860_MICS_ED1:2003</Val>
+			</DA>
+		</DOType>
+		<DOType id="AE_StdENG_ParCoilModeKind" cdc="ING">
+			<DA name="setVal" bType="Enum" type="ParallelCoilModeKind" fc="SP" dchg="true"/>
+		</DOType>
+		<DOType id="AE_ING" cdc="ING">
+			<DA name="setVal" fc="SP" bType="INT32" dchg="true"/>
+			<DA name="minVal" fc="CF" bType="INT32" valKind="Set"/>
+			<DA name="maxVal" fc="CF" bType="INT32" valKind="Set"/>
+			<DA name="stepSize" fc="CF" bType="INT32U" valKind="Set"/>
+			<DA name="dataNs" fc="EX" bType="VisString255" valKind="Set">
+				<Val>AE_REGSYS_IEC61860_MICS_ED1:2003</Val>
+			</DA>
+		</DOType>
+		<DOType id="AE_ASG" cdc="ASG">
+			<DA name="setMag" fc="SP" bType="Struct" type="AE_AnalogueSetMag" dchg="true"/>
+			<DA name="sVC" fc="CF" bType="Struct" type="AE_ScaledValueCfg" valKind="Set"/>
+			<DA name="dataNs" fc="EX" bType="VisString255" valKind="Set">
+				<Val>AE_REGSYS_IEC61860_MICS_ED1:2003</Val>
+			</DA>
+		</DOType>
+		<DOType id="AE_StdSPC" cdc="SPC">
+			<DA name="SBOw" fc="CO" bType="Struct" type="AE_OperBool"/>
+			<DA name="Oper" fc="CO" bType="Struct" type="AE_OperBool"/>
+			<DA name="Cancel" fc="CO" bType="Struct" type="AE_CancelBool"/>
+			<DA name="stVal" fc="ST" bType="BOOLEAN" dchg="true" valKind="RO"/>
+			<DA name="q" fc="ST" bType="Quality" qchg="true" sAddr="2; 70" valKind="RO"/>
+			<DA name="t" fc="ST" bType="Timestamp" sAddr="2; 71" valKind="RO"/>
+			<DA name="stSeld" fc="ST" bType="BOOLEAN" dchg="true" sAddr="2; 50" valKind="RO"/>
+			<DA name="ctlModel" fc="CF" bType="Enum" type="AE_CtlModelKind_WoSBO" sAddr="3; 52" valKind="Set">
+				<Val>direct-with-normal-security</Val>
+			</DA>
+			<DA name="sboTimeout" fc="CF" bType="INT32U" sAddr="3; 42" valKind="Set">
+				<Val>30000</Val>
+			</DA>
+			<DA name="sboClass" fc="CF" bType="Enum" type="SboClassKind" sAddr="3; 52" valKind="Set">
+				<Val>operate-once</Val>
+			</DA>
+		</DOType>
+		<DOType id="AE_SPC" cdc="SPC">
+			<DA name="SBOw" fc="CO" bType="Struct" type="AE_OperBool"/>
+			<DA name="Oper" fc="CO" bType="Struct" type="AE_OperBool"/>
+			<DA name="Cancel" fc="CO" bType="Struct" type="AE_CancelBool"/>
+			<DA name="stVal" fc="ST" bType="BOOLEAN" dchg="true" valKind="RO"/>
+			<DA name="q" fc="ST" bType="Quality" qchg="true" sAddr="2; 70" valKind="RO"/>
+			<DA name="t" fc="ST" bType="Timestamp" sAddr="2; 71" valKind="RO"/>
+			<DA name="stSeld" fc="ST" bType="BOOLEAN" dchg="true" sAddr="2; 50" valKind="RO"/>
+			<DA name="ctlModel" fc="CF" bType="Enum" type="AE_CtlModelKind_WoSBO" sAddr="3; 52" valKind="Set">
+				<Val>direct-with-normal-security</Val>
+			</DA>
+			<DA name="sboTimeout" fc="CF" bType="INT32U" sAddr="3; 42" valKind="Set">
+				<Val>30000</Val>
+			</DA>
+			<DA name="sboClass" fc="CF" bType="Enum" type="SboClassKind" sAddr="3; 52" valKind="Set">
+				<Val>operate-once</Val>
+			</DA>
+			<DA name="dataNs" fc="EX" bType="VisString255" valKind="Set">
+				<Val>AE_REGSYS_IEC61860_MICS_ED1:2003</Val>
+			</DA>
+		</DOType>
+		<DOType id="AE_StdDPC" cdc="DPC">
+			<DA name="SBOw" fc="CO" bType="Struct" type="AE_OperBool"/>
+			<DA name="Oper" fc="CO" bType="Struct" type="AE_OperBool"/>
+			<DA name="Cancel" fc="CO" bType="Struct" type="AE_CancelBool"/>
+			<DA name="stVal" fc="ST" bType="Dbpos" dchg="true" valKind="RO"/>
+			<DA name="q" fc="ST" bType="Quality" qchg="true" sAddr="2; 70" valKind="RO"/>
+			<DA name="t" fc="ST" bType="Timestamp" sAddr="2; 71" valKind="RO"/>
+			<DA name="stSeld" fc="ST" bType="BOOLEAN" dchg="true" sAddr="2; 50" valKind="RO"/>
+			<DA name="ctlModel" fc="CF" bType="Enum" type="AE_CtlModelKind_WoSBO" sAddr="3; 52" valKind="Set">
+				<Val>direct-with-normal-security</Val>
+			</DA>
+			<DA name="sboTimeout" fc="CF" bType="INT32U" sAddr="3; 42" valKind="Set">
+				<Val>30000</Val>
+			</DA>
+			<DA name="sboClass" fc="CF" bType="Enum" type="SboClassKind" sAddr="3; 52" valKind="Set">
+				<Val>operate-once</Val>
+			</DA>
+		</DOType>
+		<DOType id="AE_DPC" cdc="DPC">
+			<DA name="SBOw" fc="CO" bType="Struct" type="AE_OperBool"/>
+			<DA name="Oper" fc="CO" bType="Struct" type="AE_OperBool"/>
+			<DA name="Cancel" fc="CO" bType="Struct" type="AE_CancelBool"/>
+			<DA name="stVal" fc="ST" bType="Dbpos" dchg="true" valKind="RO"/>
+			<DA name="q" fc="ST" bType="Quality" qchg="true" sAddr="2; 70" valKind="RO"/>
+			<DA name="t" fc="ST" bType="Timestamp" sAddr="2; 71" valKind="RO"/>
+			<DA name="stSeld" fc="ST" bType="BOOLEAN" dchg="true" sAddr="2; 50" valKind="RO"/>
+			<DA name="ctlModel" fc="CF" bType="Enum" type="AE_CtlModelKind_WoSBO" sAddr="3; 52" valKind="Set">
+				<Val>direct-with-normal-security</Val>
+			</DA>
+			<DA name="sboTimeout" fc="CF" bType="INT32U" sAddr="3; 42" valKind="Set">
+				<Val>30000</Val>
+			</DA>
+			<DA name="sboClass" fc="CF" bType="Enum" type="SboClassKind" sAddr="3; 52" valKind="Set">
+				<Val>operate-once</Val>
+			</DA>
+			<DA name="dataNs" fc="EX" bType="VisString255" valKind="Set">
+				<Val>AE_REGSYS_IEC61860_MICS_ED2:2018</Val>
+			</DA>
+		</DOType>
+		<DOType id="AE_StdBSC" cdc="BSC">
+			<DA name="SBOw" fc="CO" bType="Struct" type="AE_OperTCmd"/>
+			<DA name="Oper" fc="CO" bType="Struct" type="AE_OperTCmd"/>
+			<DA name="Cancel" fc="CO" bType="Struct" type="AE_CancelTCmd"/>
+			<DA name="valWTr" fc="ST" bType="Struct" type="AE_ValWithTrans" dchg="true" valKind="RO"/>
+			<DA name="q" fc="ST" bType="Quality" qchg="true" sAddr="2; 70" valKind="RO"/>
+			<DA name="t" fc="ST" bType="Timestamp" sAddr="2; 71" valKind="RO"/>
+			<DA name="persistent" fc="CF" bType="BOOLEAN" valKind="RO"/>
+			<DA name="stSeld" fc="ST" bType="BOOLEAN" dchg="true" sAddr="2; 50" valKind="RO"/>
+			<DA name="ctlModel" fc="CF" bType="Enum" type="AE_CtlModelKind_WoSBO" sAddr="3; 52" valKind="Set">
+				<Val>direct-with-normal-security</Val>
+			</DA>
+			<DA name="sboTimeout" fc="CF" bType="INT32U" sAddr="3; 42" valKind="Set">
+				<Val>30000</Val>
+			</DA>
+			<DA name="sboClass" fc="CF" bType="Enum" type="SboClassKind" sAddr="3; 52" valKind="Set">
+				<Val>operate-once</Val>
+			</DA>
+		</DOType>
+		<DOType id="AE_StdINC" cdc="INC">
+			<DA name="SBOw" fc="CO" bType="Struct" type="AE_OperInt32"/>
+			<DA name="Oper" fc="CO" bType="Struct" type="AE_OperInt32"/>
+			<DA name="Cancel" fc="CO" bType="Struct" type="AE_CancelInt32"/>
+			<DA name="stVal" fc="ST" bType="INT32" dchg="true" valKind="RO"/>
+			<DA name="q" fc="ST" bType="Quality" qchg="true" sAddr="2; 70" valKind="RO"/>
+			<DA name="t" fc="ST" bType="Timestamp" sAddr="2; 71" valKind="RO"/>
+			<DA name="stSeld" fc="ST" bType="BOOLEAN" dchg="true" sAddr="2; 50" valKind="RO"/>
+			<DA name="ctlModel" fc="CF" bType="Enum" type="AE_CtlModelKind_WoSBO" sAddr="3; 52" valKind="RO">
+				<Val>direct-with-normal-security</Val>
+			</DA>
+			<DA name="sboTimeout" fc="CF" bType="INT32U" sAddr="3; 42" valKind="RO">
+				<Val>30000</Val>
+			</DA>
+			<DA name="sboClass" fc="CF" bType="Enum" type="SboClassKind" sAddr="3; 52" valKind="RO">
+				<Val>operate-once</Val>
+			</DA>
+		</DOType>
+		<DOType id="AE_INC" cdc="INC">
+			<DA name="SBOw" fc="CO" bType="Struct" type="AE_OperInt32"/>
+			<DA name="Oper" fc="CO" bType="Struct" type="AE_OperInt32"/>
+			<DA name="Cancel" fc="CO" bType="Struct" type="AE_CancelInt32"/>
+			<DA name="stVal" fc="ST" bType="INT32" dchg="true" valKind="RO"/>
+			<DA name="q" fc="ST" bType="Quality" qchg="true" sAddr="2; 70" valKind="RO"/>
+			<DA name="t" fc="ST" bType="Timestamp" sAddr="2; 71" valKind="RO"/>
+			<DA name="stSeld" fc="ST" bType="BOOLEAN" dchg="true" sAddr="2; 50" valKind="RO"/>
+			<DA name="ctlModel" fc="CF" bType="Enum" type="AE_CtlModelKind_WoSBO" sAddr="3; 52" valKind="RO">
+				<Val>direct-with-normal-security</Val>
+			</DA>
+			<DA name="sboTimeout" fc="CF" bType="INT32U" sAddr="3; 42" valKind="RO">
+				<Val>30000</Val>
+			</DA>
+			<DA name="sboClass" fc="CF" bType="Enum" type="SboClassKind" sAddr="3; 52" valKind="RO">
+				<Val>operate-once</Val>
+			</DA>
+			<DA name="dataNs" fc="EX" bType="VisString255" valKind="Set">
+				<Val>AE_REGSYS_IEC61860_MICS_ED2:2018</Val>
+			</DA>
+		</DOType>
+		<DOType id="AE_INC_ModSO" cdc="INC">
+			<DA name="stVal" fc="ST" bType="Enum" type="AE_BehaviourModeKind_OnOff" dchg="true" valKind="RO"/>
+			<DA name="q" fc="ST" bType="Quality" qchg="true" sAddr="2; 70" valKind="RO"/>
+			<DA name="t" fc="ST" bType="Timestamp" sAddr="2; 71" valKind="RO"/>
+			<DA name="ctlModel" fc="CF" bType="Enum" type="AE_CtlModelKind_SO" sAddr="3; 52" valKind="Set">
+				<Val>status-only</Val>
+			</DA>
+		</DOType>
+		<DOType id="AE_INC_ModSO_Ns" cdc="INC">
+			<DA name="stVal" fc="ST" bType="Enum" type="AE_BehaviourModeKind_OnOff" dchg="true" valKind="RO"/>
+			<DA name="q" fc="ST" bType="Quality" qchg="true" sAddr="2; 70" valKind="RO"/>
+			<DA name="t" fc="ST" bType="Timestamp" sAddr="2; 71" valKind="RO"/>
+			<DA name="ctlModel" fc="CF" bType="Enum" type="AE_CtlModelKind_SO" sAddr="3; 52" valKind="Set">
+				<Val>status-only</Val>
+			</DA>
+			<DA name="d" fc="DC" bType="VisString255" valKind="Set"/>
+		</DOType>
+		<DAType id="AE_OperBool">
+			<BDA name="ctlVal" bType="BOOLEAN"/>
+			<BDA name="origin" bType="Struct" type="AE_Origin"/>
+			<BDA name="ctlNum" bType="INT8U"/>
+			<BDA name="T" bType="Timestamp"/>
+			<BDA name="Test" bType="BOOLEAN"/>
+			<BDA name="Check" bType="Check"/>
+		</DAType>
+		<DAType id="AE_CancelBool">
+			<BDA name="ctlVal" bType="BOOLEAN"/>
+			<BDA name="origin" bType="Struct" type="AE_Origin"/>
+			<BDA name="ctlNum" bType="INT8U"/>
+			<BDA name="T" bType="Timestamp"/>
+			<BDA name="Test" bType="BOOLEAN"/>
+		</DAType>
+		<DAType id="AE_OperDbpos">
+			<BDA name="ctlVal" bType="Dbpos"/>
+			<BDA name="origin" bType="Struct" type="AE_Origin"/>
+			<BDA name="ctlNum" bType="INT8U"/>
+			<BDA name="T" bType="Timestamp"/>
+			<BDA name="Test" bType="BOOLEAN"/>
+			<BDA name="Check" bType="Check"/>
+		</DAType>
+		<DAType id="AE_CancelDbpos">
+			<BDA name="ctlVal" bType="Dbpos"/>
+			<BDA name="origin" bType="Struct" type="AE_Origin"/>
+			<BDA name="ctlNum" bType="INT8U"/>
+			<BDA name="T" bType="Timestamp"/>
+			<BDA name="Test" bType="BOOLEAN"/>
+		</DAType>
+		<DAType id="AE_OperTCmd">
+			<BDA name="ctlVal" bType="Tcmd"/>
+			<BDA name="origin" bType="Struct" type="AE_Origin"/>
+			<BDA name="ctlNum" bType="INT8U"/>
+			<BDA name="T" bType="Timestamp"/>
+			<BDA name="Test" bType="BOOLEAN"/>
+			<BDA name="Check" bType="Check"/>
+		</DAType>
+		<DAType id="AE_CancelTCmd">
+			<BDA name="ctlVal" bType="Tcmd"/>
+			<BDA name="origin" bType="Struct" type="AE_Origin"/>
+			<BDA name="ctlNum" bType="INT8U"/>
+			<BDA name="T" bType="Timestamp"/>
+			<BDA name="Test" bType="BOOLEAN"/>
+		</DAType>
+		<DAType id="AE_OperInt32">
+			<BDA name="ctlVal" bType="INT32"/>
+			<BDA name="origin" bType="Struct" type="AE_Origin"/>
+			<BDA name="ctlNum" bType="INT8U"/>
+			<BDA name="T" bType="Timestamp"/>
+			<BDA name="Test" bType="BOOLEAN"/>
+			<BDA name="Check" bType="Check"/>
+		</DAType>
+		<DAType id="AE_CancelInt32">
+			<BDA name="ctlVal" bType="INT32"/>
+			<BDA name="origin" bType="Struct" type="AE_Origin"/>
+			<BDA name="ctlNum" bType="INT8U"/>
+			<BDA name="T" bType="Timestamp"/>
+			<BDA name="Test" bType="BOOLEAN"/>
+		</DAType>
+		<DAType id="AE_Origin">
+			<BDA name="orCat" bType="Enum" type="OriginatorCategoryKind"/>
+			<BDA name="orIdent" bType="Octet64"/>
+		</DAType>
+		<DAType id="AE_AnalogueValue">
+			<BDA name="f" bType="FLOAT32" valKind="RO"/>
+		</DAType>
+		<DAType id="AE_AnalogueSetMag">
+			<BDA name="f" bType="FLOAT32"/>
+		</DAType>
+		<DAType id="AE_Vector">
+			<BDA name="mag" bType="Struct" type="AE_AnalogueValue" valKind="RO"/>
+			<BDA name="ang" bType="Struct" type="AE_AnalogueValue" valKind="RO"/>
+		</DAType>
+		<DAType id="AE_ValWithTrans">
+			<BDA name="posVal" bType="INT8" valKind="RO"/>
+			<BDA name="transInd" bType="BOOLEAN" valKind="RO"/>
+		</DAType>
+		<DAType id="AE_ScaledValueCfg">
+			<BDA name="scaleFactor" bType="FLOAT32" valKind="Set">
+				<Val>1.0</Val>
+			</BDA>
+			<BDA name="offset" bType="FLOAT32" valKind="Set">
+				<Val>0.0</Val>
+			</BDA>
+		</DAType>
+		<DAType id="AE_Unit">
+			<BDA name="SIUnit" bType="Enum" type="SIUnitKind" valKind="Set">
+				<Val/>
+			</BDA>
+			<BDA name="multiplier" bType="Enum" type="MultiplierKind" valKind="Set">
+				<Val/>
+			</BDA>
+		</DAType>
+		<EnumType id="AE_CtlModelKind_SO">
+			<EnumVal ord="0">status-only</EnumVal>
+		</EnumType>
+		<EnumType id="AE_CtlModelKind_WoSBO">
+			<EnumVal ord="1">direct-with-normal-security</EnumVal>
+			<EnumVal ord="3">direct-with-enhanced-security</EnumVal>
+			<EnumVal ord="4">sbo-with-enhanced-security</EnumVal>
+		</EnumType>
+		<EnumType id="CtlModelKind">
+			<EnumVal ord="0">status-only</EnumVal>
+			<EnumVal ord="1">direct-with-normal-security</EnumVal>
+			<EnumVal ord="2">sbo-with-normal-security</EnumVal>
+			<EnumVal ord="3">direct-with-enhanced-security</EnumVal>
+			<EnumVal ord="4">sbo-with-enhanced-security</EnumVal>
+		</EnumType>
+		<EnumType id="SboClassKind">
+			<EnumVal ord="0">operate-once</EnumVal>
+			<EnumVal ord="1">operate-many</EnumVal>
+		</EnumType>
+		<EnumType id="OriginatorCategoryKind">
+			<EnumVal ord="0">not-supported</EnumVal>
+			<EnumVal ord="1">bay-control</EnumVal>
+			<EnumVal ord="2">station-control</EnumVal>
+			<EnumVal ord="3">remote-control</EnumVal>
+			<EnumVal ord="4">automatic-bay</EnumVal>
+			<EnumVal ord="5">automatic-station</EnumVal>
+			<EnumVal ord="6">automatic-remote</EnumVal>
+			<EnumVal ord="7">maintenance</EnumVal>
+			<EnumVal ord="8">process</EnumVal>
+		</EnumType>
+		<EnumType id="ControlOutputKind">
+			<EnumVal ord="0">pulse</EnumVal>
+			<EnumVal ord="1">persistent</EnumVal>
+		</EnumType>
+		<EnumType id="ParallelCoilModeKind">
+			<EnumVal ord="1">Master/Slave</EnumVal>
+			<EnumVal ord="2">Master/Slave with fixed slave position</EnumVal>
+			<EnumVal ord="3">Master/Slave with variable slave position</EnumVal>
+			<EnumVal ord="4">Parallel operation without communication</EnumVal>
+		</EnumType>
+		<EnumType id="ParallelCtrlModeKind">
+			<EnumVal ord="1">Master</EnumVal>
+			<EnumVal ord="2">Slave</EnumVal>
+			<EnumVal ord="3">Independent</EnumVal>
+		</EnumType>
+		<EnumType id="BehaviourModeKind">
+			<EnumVal ord="1">on</EnumVal>
+			<EnumVal ord="2">blocked</EnumVal>
+			<EnumVal ord="3">test</EnumVal>
+			<EnumVal ord="4">test/blocked</EnumVal>
+			<EnumVal ord="5">off</EnumVal>
+		</EnumType>
+		<EnumType id="AE_BehaviourModeKind_OnOff">
+			<EnumVal ord="1">on</EnumVal>
+			<EnumVal ord="5">off</EnumVal>
+		</EnumType>
+		<EnumType id="HealthKind">
+			<EnumVal ord="1">Ok</EnumVal>
+			<EnumVal ord="2">Warning</EnumVal>
+			<EnumVal ord="3">Alarm</EnumVal>
+		</EnumType>
+		<EnumType id="SIUnitKind">
+			<EnumVal ord="1"/>
+			<EnumVal ord="2">m</EnumVal>
+			<EnumVal ord="3">kg</EnumVal>
+			<EnumVal ord="4">s</EnumVal>
+			<EnumVal ord="5">A</EnumVal>
+			<EnumVal ord="6">K</EnumVal>
+			<EnumVal ord="7">mol</EnumVal>
+			<EnumVal ord="8">cd</EnumVal>
+			<EnumVal ord="9">deg</EnumVal>
+			<EnumVal ord="10">rad</EnumVal>
+			<EnumVal ord="11">sr</EnumVal>
+			<EnumVal ord="21">Gy</EnumVal>
+			<EnumVal ord="23">°C</EnumVal>
+			<EnumVal ord="24">Sv</EnumVal>
+			<EnumVal ord="25">F</EnumVal>
+			<EnumVal ord="26">C</EnumVal>
+			<EnumVal ord="27">S</EnumVal>
+			<EnumVal ord="28">H</EnumVal>
+			<EnumVal ord="29">V</EnumVal>
+			<EnumVal ord="30">ohm</EnumVal>
+			<EnumVal ord="31">J</EnumVal>
+			<EnumVal ord="32">N</EnumVal>
+			<EnumVal ord="33">Hz</EnumVal>
+			<EnumVal ord="34">lx</EnumVal>
+			<EnumVal ord="35">Lm</EnumVal>
+			<EnumVal ord="36">Wb</EnumVal>
+			<EnumVal ord="37">T</EnumVal>
+			<EnumVal ord="38">W</EnumVal>
+			<EnumVal ord="39">Pa</EnumVal>
+			<EnumVal ord="41">m²</EnumVal>
+			<EnumVal ord="42">m³</EnumVal>
+			<EnumVal ord="43">m/s</EnumVal>
+			<EnumVal ord="44">m/s²</EnumVal>
+			<EnumVal ord="45">m³/s</EnumVal>
+			<EnumVal ord="46">m/m³</EnumVal>
+			<EnumVal ord="47">M</EnumVal>
+			<EnumVal ord="48">kg/m³</EnumVal>
+			<EnumVal ord="49">m²/s</EnumVal>
+			<EnumVal ord="50">W/m K</EnumVal>
+			<EnumVal ord="51">J/K</EnumVal>
+			<EnumVal ord="52">ppm</EnumVal>
+			<EnumVal ord="53">1/s</EnumVal>
+			<EnumVal ord="54">rad/s</EnumVal>
+			<EnumVal ord="61">VA</EnumVal>
+			<EnumVal ord="62">Watts</EnumVal>
+			<EnumVal ord="63">VAr</EnumVal>
+			<EnumVal ord="64">phi</EnumVal>
+			<EnumVal ord="65">cos(phi)</EnumVal>
+			<EnumVal ord="66">Vs</EnumVal>
+			<EnumVal ord="67">V²</EnumVal>
+			<EnumVal ord="68">As</EnumVal>
+			<EnumVal ord="69">A²</EnumVal>
+			<EnumVal ord="70">A²t</EnumVal>
+			<EnumVal ord="71">VAh</EnumVal>
+			<EnumVal ord="72">Wh</EnumVal>
+			<EnumVal ord="73">VArh</EnumVal>
+			<EnumVal ord="74">V/Hz</EnumVal>
+		</EnumType>
+		<EnumType id="MultiplierKind">
+			<EnumVal ord="-24">y</EnumVal>
+			<EnumVal ord="-21">z</EnumVal>
+			<EnumVal ord="-18">a</EnumVal>
+			<EnumVal ord="-15">f</EnumVal>
+			<EnumVal ord="-12">p</EnumVal>
+			<EnumVal ord="-9">n</EnumVal>
+			<EnumVal ord="-6">µ</EnumVal>
+			<EnumVal ord="-3">m</EnumVal>
+			<EnumVal ord="-2">c</EnumVal>
+			<EnumVal ord="-1">d</EnumVal>
+			<EnumVal ord="0"/>
+			<EnumVal ord="1">da</EnumVal>
+			<EnumVal ord="2">h</EnumVal>
+			<EnumVal ord="3">k</EnumVal>
+			<EnumVal ord="6">M</EnumVal>
+			<EnumVal ord="9">G</EnumVal>
+			<EnumVal ord="12">T</EnumVal>
+			<EnumVal ord="15">P</EnumVal>
+			<EnumVal ord="18">E</EnumVal>
+			<EnumVal ord="21">Z</EnumVal>
+			<EnumVal ord="24">Y</EnumVal>
+		</EnumType>
+		<EnumType id="Tcmd">
+			<EnumVal ord="0">stop</EnumVal>
+			<EnumVal ord="1">lower</EnumVal>
+			<EnumVal ord="2">higher</EnumVal>
+			<EnumVal ord="3">reserved</EnumVal>
+		</EnumType>
+	</DataTypeTemplates>
+</SCL>

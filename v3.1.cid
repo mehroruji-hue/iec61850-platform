@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SCL xmlns="http://www.iec.ch/61850/2003/SCL" xsi:schemaLocation="http://www.iec.ch/61850/2003/SCL SCL.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
+ <Header toolID="VR-2000 PCTools, Veesta World Co" version="20251025" id="BCU" >
+  <Text>CID-File for device: BCU</Text>
+ </Header>
+ <Substation name="Test-Interlock" >
+  <VoltageLevel name="Voltage Level" >
+   <Bay name="BCU" />
+  </VoltageLevel>
+ </Substation>
+ <Communication>
+  <SubNetwork type="8-MMS" name="Subnet1" >
+   <Text/>
+   <BitRate unit="b/s" multiplier="M" >100</BitRate>
+   <ConnectedAP iedName="BCU" apName="P1" >
+    <Address>
+     <P xsi:type="tP_IP" type="IP" >192.168.2.1</P>
+     <P xsi:type="tP_IP-SUBNET" type="IP-SUBNET" >255.255.255.0</P>
+     <P type="OSI-AP-Title" >1,3,9999,23</P>
+     <P type="OSI-AE-Qualifier" >23</P>
+     <P type="OSI-PSEL" >00000001</P>
+     <P type="OSI-SSEL" >0001</P>
+     <P type="OSI-TSEL" >0001</P>
+     <P type="S-Profile" >1</P>
+    </Address>
+   </ConnectedAP>
+  </SubNetwork>
+ </Communication>
+ <IED desc="BCU" configVersion="V3.0.0" manufacturer="Veesta World Co" type="VR-2411" name="BCU" >
+  <Services>
+   <DynAssociation/>
+   <SettingGroups/>
+   <GetDirectory/>
+   <GetDataObjectDefinition/>
+   <DataObjectDirectory/>
+   <GetDataSetValue/>
+   <SetDataSetValue/>
+   <DataSetDirectory/>
+   <ConfDataSet max="125" />
+   <DynDataSet max="125" />
+   <ReadWrite/>
+   <ReportSettings optFields="Dyn" trgOps="Dyn" rptID="Dyn" intgPd="Dyn" datSet="Dyn" bufTime="Dyn" />
+   <ConfReportControl max="10" />
+   <FileHandling/>
+   <ConfLNs fixLnInst="true" fixPrefix="true" />
+  </Services>
+  <AccessPoint name="P1" >
+   <Server>
+    <Authentication none="true" />
+    <LDevice inst="IED1" >
+     <LN0 desc="General" inst="" lnClass="LLN0" lnType="LLN01" >
+      <DataSet name="AnalogEvents" >
+       <FCDA prefix="Ai_" doName="AnIn1" lnInst="1" lnClass="GGIO" ldInst="IED1" fc="MX" />
+       <FCDA prefix="Ai_" doName="AnIn2" lnInst="1" lnClass="GGIO" ldInst="IED1" fc="MX" />
+       <FCDA prefix="Ai_" doName="AnIn3" lnInst="1" lnClass="GGIO" ldInst="IED1" fc="MX" />
+       <FCDA prefix="Ai_" doName="AnIn4" lnInst="1" lnClass="GGIO" ldInst="IED1" fc="MX" />
+       <FCDA prefix="Ai_" doName="AnIn5" lnInst="1" lnClass="GGIO" ldInst="IED1" fc="MX" />
+       <FCDA prefix="Ai_" doName="AnIn6" lnInst="1" lnClass="GGIO" ldInst="IED1" fc="MX" />
+       <FCDA prefix="Ai_" doName="AnIn7" lnInst="1" lnClass="GGIO" ldInst="IED1" fc="MX" />
+       <FCDA prefix="Ai_" doName="AnIn8" lnInst="1" lnClass="GGIO" ldInst="IED1" fc="MX" />
+       <FCDA prefix="Ai_" doName="AnIn9" lnInst="1" lnClass="GGIO" ldInst="IED1" fc="MX" />
+       <FCDA prefix="Ai_" doName="AnIn10" lnInst="1" lnClass="GGIO" ldInst="IED1" fc="MX" />
+       <FCDA prefix="Ai_" doName="AnIn11" lnInst="1" lnClass="GGIO" ldInst="IED1" fc="MX" />
+       <FCDA prefix="Ai_" doName="AnIn12" lnInst="1" lnClass="GGIO" ldInst="IED1" fc="MX" />
+       <FCDA prefix="Ai_" doName="AnIn13" lnInst="1" lnClass="GGIO" ldInst="IED1" fc="MX" />
+       <FCDA prefix="Ai_" doName="AnIn14" lnInst="1" lnClass="GGIO" ldInst="IED1" fc="MX" />
+       <FCDA prefix="Ai_" doName="AnIn15" lnInst="1" lnClass="GGIO" ldInst="IED1" fc="MX" />
+       <FCDA prefix="Ai_" doName="AnIn16" lnInst="1" lnClass="GGIO" ldInst="IED1" fc="MX" />
+       <FCDA prefix="Ai_" doName="AnIn17" lnInst="1" lnClass="GGIO" ldInst="IED1" fc="MX" />
+       <FCDA prefix="Ai_" doName="AnIn18" lnInst="1" lnClass="GGIO" ldInst="IED1" fc="MX" />
+       <FCDA prefix="Ai_" doName="AnIn19" lnInst="1" lnClass="GGIO" ldInst="IED1" fc="MX" />
+       <FCDA prefix="Ai_" doName="AnIn20" lnInst="1" lnClass="GGIO" ldInst="IED1" fc="MX" />
+       <FCDA prefix="Ai_" doName="AnIn21" lnInst="1" lnClass="GGIO" ldInst="IED1" fc="MX" />
+       <FCDA prefix="Ai_" doName="AnIn22" lnInst="1" lnClass="GGIO" ldInst="IED1" fc="MX" />
+       <FCDA prefix="Ai_" doName="AnIn23" lnInst="1" lnClass="GGIO" ldInst="IED1" fc="MX" />
+       <FCDA prefix="Ai_" doName="AnIn24" lnInst="1" lnClass="GGIO" ldInst="IED1" fc="MX" />
+       <FCDA prefix="Ai_" doName="AnIn25" lnInst="1" lnClass="GGIO" ldInst="IED1" fc="MX" />
+       <FCDA prefix="Ai_" doName="AnIn26" lnInst="1" lnClass="GGIO" ldInst="IED1" fc="MX" />
+       <FCDA prefix="Ai_" doName="AnIn27" lnInst="1" lnClass="GGIO" ldInst="IED1" fc="MX" />
+       <FCDA prefix="Ai_" doName="AnIn28" lnInst="1" lnClass="GGIO" ldInst="IED1" fc="MX" />
+       <FCDA prefix="Ai_" doName="AnIn29" lnInst="1" lnClass="GGIO" ldInst="IED1" fc="MX" />
+       <FCDA prefix="Ai_" doName="AnIn30" lnInst="1" lnClass="GGIO" ldInst="IED1" fc="MX" />
+       <FCDA prefix="Ai_" doName="AnIn31" lnInst="1" lnClass="GGIO" ldInst="IED1" fc="MX" />
+       <FCDA prefix="Ai_" doName="AnIn32" lnInst="1" lnClass="GGIO" ldInst="IED1" fc="MX" />
+       <FCDA prefix="Ai_" doName="AnIn33" lnInst="1" lnClass="GGIO" ldInst="IED1" fc="MX" />
+       <FCDA prefix="Ai_" doName="AnIn34" lnInst="1" lnClass="GGIO" ldInst="IED1" fc="MX" />
+       <FCDA prefix="Ai_" doName="AnIn35" lnInst="1" lnClass="GGIO" ldInst="IED1" fc="MX" />
+       <FCDA prefix="Ai_" doName="AnIn36" lnInst="1" lnClass="GGIO" ldInst="IED1" fc="MX" />
+       <FCDA prefix="Ai_" doName="AnIn37" lnInst="1" lnClass="GGIO" ldInst="IED1" fc="MX" />
+       <FCDA prefix="Ai_" doName="AnIn38" lnInst="1" lnClass="GGIO" ldInst="IED1" fc="MX" />
+       <FCDA prefix="Ai_" doName="AnIn39" lnInst="1" lnClass="GGIO" ldInst="IED1" fc="MX" />
+       <FCDA prefix="Ai_" doName="AnIn40" lnInst="1" lnClass="GGIO" ldInst="IED1" fc="MX" />
+      </DataSet>
+      <DataSet name="SOEEvents" >
+       <FCDA prefix="Di_" doName="Ind1" lnInst="2" lnClass="GGIO" ldInst="IED1" fc="ST" />
+       <FCDA prefix="Di_" doName="Ind2" lnInst="2" lnClass="GGIO" ldInst="IED1" fc="ST" />
+       <FCDA prefix="Di_" doName="Ind3" lnInst="2" lnClass="GGIO" ldInst="IED1" fc="ST" />
+       <FCDA prefix="Di_" doName="Ind4" lnInst="2" lnClass="GGIO" ldInst="IED1" fc="ST" />
+       <FCDA prefix="Di_" doName="Ind5" lnInst="2" lnClass="GGIO" ldInst="IED1" fc="ST" />
+       <FCDA prefix="Di_" doName="Ind6" lnInst="2" lnClass="GGIO" ldInst="IED1" fc="ST" />
+       <FCDA prefix="Di_" doName="Ind7" lnInst="2" lnClass="GGIO" ldInst="IED1" fc="ST" />
+       <FCDA prefix="Di_" doName="Ind8" lnInst="2" lnClass="GGIO" ldInst="IED1" fc="ST" />
+       <FCDA prefix="Di_" doName="Ind9" lnInst="2" lnClass="GGIO" ldInst="IED1" fc="ST" />
+       <FCDA prefix="Di_" doName="Ind10" lnInst="2" lnClass="GGIO" ldInst="IED1" fc="ST" />
+       <FCDA prefix="Di_" doName="Ind11" lnInst="2" lnClass="GGIO" ldInst="IED1" fc="ST" />
+       <FCDA prefix="Di_" doName="Ind14" lnInst="2" lnClass="GGIO" ldInst="IED1" fc="ST" />
+       <FCDA prefix="Di_" doName="Ind15" lnInst="2" lnClass="GGIO" ldInst="IED1" fc="ST" />
+       <FCDA prefix="Di_" doName="Ind16" lnInst="2" lnClass="GGIO" ldInst="IED1" fc="ST" />
+       <FCDA prefix="Di_" doName="Ind17" lnInst="2" lnClass="GGIO" ldInst="IED1" fc="ST" />
+      </DataSet>
+      <DataSet name="COSEvents" >
+       <FCDA prefix="Di_" doName="Ind12" lnInst="2" lnClass="GGIO" ldInst="IED1" fc="ST" />
+      </DataSet>
+      <ReportControl confRev="121" rptID="AnalogEvents1" intgPd="3600000" datSet="AnalogEvents" name="AnalogEventsRCB" bufTime="100" buffered="false" >
+       <TrgOps qchg="true" period="false" dupd="true" dchg="true" />
+       <OptFields dataRef="false" reasonCode="true" configRef="true" dataSet="true" seqNum="true" entryID="true" timeStamp="true" />
+       <RptEnabled max="1" />
+      </ReportControl>
+      <ReportControl confRev="121" rptID="SOEEvents1" intgPd="1000" datSet="SOEEvents" name="SOEEventsRCB" bufTime="100" buffered="true" >
+       <TrgOps qchg="true" period="false" dupd="true" dchg="true" />
+       <OptFields reasonCode="true" configRef="true" dataSet="true" seqNum="true" entryID="true" timeStamp="true" />
+       <RptEnabled max="1" />
+      </ReportControl>
+      <ReportControl confRev="121" rptID="COSEvents1" intgPd="1000" datSet="COSEvents" name="COSEventsRCB" bufTime="100" buffered="true" >
+       <TrgOps qchg="true" period="false" dupd="true" dchg="true" />
+       <OptFields reasonCode="true" configRef="true" dataSet="true" seqNum="true" entryID="true" timeStamp="true" />
+       <RptEnabled max="1" />
+      </ReportControl>
+      <DOI name="Beh" >
+       <DAI name="stVal" >
+        <Val>on</Val>
+       </DAI>
+      </DOI>
+      <SettingControl actSG="1" numOfSGs="1" />
+     </LN0>
+     <LN prefix="Ai_" inst="1" lnClass="GGIO" lnType="GGIO_AI_IED1" >
+      <DOI name="Beh" >
+       <DAI name="stVal" >
+        <Val>on</Val>
+       </DAI>
+      </DOI>
+      <DOI desc="AiPnt0001" name="AnIn1" >
+       <DAI sAddr="1048611" name="mag" />
+      </DOI>
+      <DOI desc="AiPnt0002" name="AnIn2" >
+       <DAI sAddr="2097187" name="mag" />
+      </DOI>
+      <DOI desc="AiPnt0003" name="AnIn3" >
+       <DAI sAddr="3145763" name="mag" />
+      </DOI>
+      <DOI desc="AiPnt0004" name="AnIn4" >
+       <DAI sAddr="4194339" name="mag" />
+      </DOI>
+      <DOI desc="AiPnt0005" name="AnIn5" >
+       <DAI sAddr="5242915" name="mag" />
+      </DOI>
+      <DOI desc="AiPnt0006" name="AnIn6" >
+       <DAI sAddr="6291491" name="mag" />
+      </DOI>
+      <DOI desc="AiPnt0007" name="AnIn7" >
+       <DAI sAddr="7340067" name="mag" />
+      </DOI>
+      <DOI desc="AiPnt0008" name="AnIn8" >
+       <DAI sAddr="8388643" name="mag" />
+      </DOI>
+      <DOI desc="AiPnt0009" name="AnIn9" >
+       <DAI sAddr="9437219" name="mag" />
+      </DOI>
+      <DOI desc="AiPnt0010" name="AnIn10" >
+       <DAI sAddr="10485795" name="mag" />
+      </DOI>
+      <DOI desc="AiPnt0011" name="AnIn11" >
+       <DAI sAddr="11534371" name="mag" />
+      </DOI>
+      <DOI desc="AiPnt0012" name="AnIn12" >
+       <DAI sAddr="12582947" name="mag" />
+      </DOI>
+      <DOI desc="AiPnt0013" name="AnIn13" >
+       <DAI sAddr="13631523" name="mag" />
+      </DOI>
+      <DOI desc="AiPnt0014" name="AnIn14" >
+       <DAI sAddr="14680099" name="mag" />
+      </DOI>
+      <DOI desc="AiPnt0015" name="AnIn15" >
+       <DAI sAddr="15728675" name="mag" />
+      </DOI>
+      <DOI desc="AiPnt0016" name="AnIn16" >
+       <DAI sAddr="16777251" name="mag" />
+      </DOI>
+      <DOI desc="AiPnt0017" name="AnIn17" >
+       <DAI sAddr="17825827" name="mag" />
+      </DOI>
+      <DOI desc="AiPnt0018" name="AnIn18" >
+       <DAI sAddr="18874403" name="mag" />
+      </DOI>
+      <DOI desc="AiPnt0019" name="AnIn19" >
+       <DAI sAddr="19922979" name="mag" />
+      </DOI>
+      <DOI desc="AiPnt0020" name="AnIn20" >
+       <DAI sAddr="20971555" name="mag" />
+      </DOI>
+      <DOI desc="AiPnt0021" name="AnIn21" >
+       <DAI sAddr="22020131" name="mag" />
+      </DOI>
+      <DOI desc="AiPnt0022" name="AnIn22" >
+       <DAI sAddr="23068707" name="mag" />
+      </DOI>
+      <DOI desc="AiPnt0023" name="AnIn23" >
+       <DAI sAddr="24117283" name="mag" />
+      </DOI>
+      <DOI desc="AiPnt0024" name="AnIn24" >
+       <DAI sAddr="25165859" name="mag" />
+      </DOI>
+      <DOI desc="AiPnt0025" name="AnIn25" >
+       <DAI sAddr="26214435" name="mag" />
+      </DOI>
+      <DOI desc="AiPnt0026" name="AnIn26" >
+       <DAI sAddr="27263011" name="mag" />
+      </DOI>
+      <DOI desc="AiPnt0027" name="AnIn27" >
+       <DAI sAddr="28311587" name="mag" />
+      </DOI>
+      <DOI desc="AiPnt0028" name="AnIn28" >
+       <DAI sAddr="29360163" name="mag" />
+      </DOI>
+      <DOI desc="AiPnt0029" name="AnIn29" >
+       <DAI sAddr="30408739" name="mag" />
+      </DOI>
+      <DOI desc="AiPnt0030" name="AnIn30" >
+       <DAI sAddr="31457315" name="mag" />
+      </DOI>
+      <DOI desc="AiPnt0031" name="AnIn31" >
+       <DAI sAddr="32505891" name="mag" />
+      </DOI>
+      <DOI desc="AiPnt0032" name="AnIn32" >
+       <DAI sAddr="33554467" name="mag" />
+      </DOI>
+      <DOI desc="AiPnt0033" name="AnIn33" >
+       <DAI sAddr="34603043" name="mag" />
+      </DOI>
+      <DOI desc="AiPnt0034" name="AnIn34" >
+       <DAI sAddr="35651619" name="mag" />
+      </DOI>
+      <DOI desc="AiPnt0035" name="AnIn35" >
+       <DAI sAddr="36700195" name="mag" />
+      </DOI>
+      <DOI desc="AiPnt0036" name="AnIn36" >
+       <DAI sAddr="37748771" name="mag" />
+      </DOI>
+      <DOI desc="AiPnt0037" name="AnIn37" >
+       <DAI sAddr="38797347" name="mag" />
+      </DOI>
+      <DOI desc="AiPnt0038" name="AnIn38" >
+       <DAI sAddr="39845923" name="mag" />
+      </DOI>
+      <DOI desc="AiPnt0039" name="AnIn39" >
+       <DAI sAddr="40894499" name="mag" />
+      </DOI>
+      <DOI desc="AiPnt0040" name="AnIn40" >
+       <DAI sAddr="41943075" name="mag" />
+      </DOI>
+     </LN>
+     <LN prefix="Di_" inst="2" lnClass="GGIO" lnType="GGIO_DI_IED1" >
+      <DOI name="Beh" >
+       <DAI name="stVal" >
+        <Val>on</Val>
+       </DAI>
+      </DOI>
+      <DOI desc="20kvPanelL/RSwitchinLocalPos" name="Ind1" >
+       <DAI sAddr="1114147" name="stVal" />
+      </DOI>
+      <DOI desc="LocalCBOpenCommand" name="Ind2" >
+       <DAI sAddr="2162723" name="stVal" />
+      </DOI>
+      <DOI desc="20kvPanelL/RSwitchinRemotePos" name="Ind3" >
+       <DAI sAddr="3211299" name="stVal" />
+      </DOI>
+      <DOI desc="Sub/ScadaSwitchinSUBPos" name="Ind4" >
+       <DAI sAddr="4259875" name="stVal" />
+      </DOI>
+      <DOI desc="SubOpenCommand" name="Ind5" >
+       <DAI sAddr="5308451" name="stVal" />
+      </DOI>
+      <DOI desc="Sub/ScadaSwitchinSCADAPos" name="Ind6" >
+       <DAI sAddr="6357027" name="stVal" />
+      </DOI>
+      <DOI desc="ScadaOpenCommand" name="Ind7" >
+       <DAI sAddr="7405603" name="stVal" />
+      </DOI>
+      <DOI desc="EarthSwitchCloseIndication" name="Ind8" >
+       <DAI sAddr="8454179" name="stVal" />
+      </DOI>
+      <DOI desc="BusbarUnder/OverVoltageTripStatus" name="Ind9" >
+       <DAI sAddr="9502755" name="stVal" />
+      </DOI>
+      <DOI desc="CBinServicePosition" name="Ind10" >
+       <DAI sAddr="10551331" name="stVal" />
+      </DOI>
+      <DOI desc="ProtectionRelayTripStatus" name="Ind11" >
+       <DAI sAddr="11599907" name="stVal" />
+      </DOI>
+      <DOI desc="CBPOSStatus" name="Ind12" >
+       <DAI sAddr="12648483" name="stVal" />
+      </DOI>
+      <DOI desc="DiPnt0014" name="Ind14" >
+       <DAI sAddr="14745635" name="stVal" />
+      </DOI>
+      <DOI desc="DiPnt0015" name="Ind15" >
+       <DAI sAddr="15794211" name="stVal" />
+      </DOI>
+      <DOI desc="DiPnt0016" name="Ind16" >
+       <DAI sAddr="16842787" name="stVal" />
+      </DOI>
+      <DOI desc="DiPnt0017" name="Ind17" >
+       <DAI sAddr="17891363" name="stVal" />
+      </DOI>
+     </LN>
+     <LN prefix="Do_" inst="4" lnClass="GGIO" lnType="GGIO_DO_IED1" >
+      <DOI name="Beh" >
+       <DAI name="stVal" >
+        <Val>on</Val>
+       </DAI>
+      </DOI>
+      <DOI desc="CBTripOpenCmd" name="SPCSO1" >
+       <DAI sAddr="1245219" name="ctlModel" >
+        <Val>direct-with-normal-security</Val>
+       </DAI>
+      </DOI>
+      <DOI desc="CBCloseCmd" name="SPCSO2" >
+       <DAI sAddr="2293795" name="ctlModel" >
+        <Val>direct-with-normal-security</Val>
+       </DAI>
+      </DOI>
+      <DOI desc="CBTripOpenSBOCmd" name="SPCSO3" >
+       <DAI sAddr="3342371" name="ctlModel" >
+        <Val>sbo-with-enhanced-security</Val>
+       </DAI>
+      </DOI>
+      <DOI desc="CBCloseSBOCmd" name="SPCSO4" >
+       <DAI sAddr="4390947" name="ctlModel" >
+        <Val>sbo-with-enhanced-security</Val>
+       </DAI>
+      </DOI>
+      <DOI desc="CBCloseCmd" name="SPCSO5" >
+       <DAI sAddr="5439523" name="ctlModel" >
+        <Val>direct-with-normal-security</Val>
+       </DAI>
+      </DOI>
+     </LN>
+    </LDevice>
+   </Server>
+  </AccessPoint>
+ </IED>
+ <DataTypeTemplates>
+  <LNodeType lnClass="LLN0" id="LLN01" >
+   <DO type="veesta_Mod" name="Mod" />
+   <DO type="veesta_Beh" name="Beh" />
+   <DO type="veesta_Health" name="Health" />
+   <DO type="veesta_NamPlt" name="NamPlt" />
+  </LNodeType>
+  <LNodeType lnClass="GGIO" id="GGIO_AI_IED1" >
+   <DO type="veesta_Beh" name="Beh" />
+   <DO type="veesta_MV" name="AnIn1" />
+   <DO type="veesta_MV" name="AnIn2" />
+   <DO type="veesta_MV" name="AnIn3" />
+   <DO type="veesta_MV" name="AnIn4" />
+   <DO type="veesta_MV" name="AnIn5" />
+   <DO type="veesta_MV" name="AnIn6" />
+   <DO type="veesta_MV" name="AnIn7" />
+   <DO type="veesta_MV" name="AnIn8" />
+   <DO type="veesta_MV" name="AnIn9" />
+   <DO type="veesta_MV" name="AnIn10" />
+   <DO type="veesta_MV" name="AnIn11" />
+   <DO type="veesta_MV" name="AnIn12" />
+   <DO type="veesta_MV" name="AnIn13" />
+   <DO type="veesta_MV" name="AnIn14" />
+   <DO type="veesta_MV" name="AnIn15" />
+   <DO type="veesta_MV" name="AnIn16" />
+   <DO type="veesta_MV" name="AnIn17" />
+   <DO type="veesta_MV" name="AnIn18" />
+   <DO type="veesta_MV" name="AnIn19" />
+   <DO type="veesta_MV" name="AnIn20" />
+   <DO type="veesta_MV" name="AnIn21" />
+   <DO type="veesta_MV" name="AnIn22" />
+   <DO type="veesta_MV" name="AnIn23" />
+   <DO type="veesta_MV" name="AnIn24" />
+   <DO type="veesta_MV" name="AnIn25" />
+   <DO type="veesta_MV" name="AnIn26" />
+   <DO type="veesta_MV" name="AnIn27" />
+   <DO type="veesta_MV" name="AnIn28" />
+   <DO type="veesta_MV" name="AnIn29" />
+   <DO type="veesta_MV" name="AnIn30" />
+   <DO type="veesta_MV" name="AnIn31" />
+   <DO type="veesta_MV" name="AnIn32" />
+   <DO type="veesta_MV" name="AnIn33" />
+   <DO type="veesta_MV" name="AnIn34" />
+   <DO type="veesta_MV" name="AnIn35" />
+   <DO type="veesta_MV" name="AnIn36" />
+   <DO type="veesta_MV" name="AnIn37" />
+   <DO type="veesta_MV" name="AnIn38" />
+   <DO type="veesta_MV" name="AnIn39" />
+   <DO type="veesta_MV" name="AnIn40" />
+  </LNodeType>
+  <LNodeType lnClass="GGIO" id="GGIO_DI_IED1" >
+   <DO type="veesta_Beh" name="Beh" />
+   <DO type="veesta_SPS" name="Ind1" />
+   <DO type="veesta_SPS" name="Ind2" />
+   <DO type="veesta_SPS" name="Ind3" />
+   <DO type="veesta_SPS" name="Ind4" />
+   <DO type="veesta_SPS" name="Ind5" />
+   <DO type="veesta_SPS" name="Ind6" />
+   <DO type="veesta_SPS" name="Ind7" />
+   <DO type="veesta_SPS" name="Ind8" />
+   <DO type="veesta_SPS" name="Ind9" />
+   <DO type="veesta_SPS" name="Ind10" />
+   <DO type="veesta_SPS" name="Ind11" />
+   <DO type="veesta_DPS" name="Ind12" />
+   <DO type="veesta_SPS" name="Ind14" />
+   <DO type="veesta_SPS" name="Ind15" />
+   <DO type="veesta_SPS" name="Ind16" />
+   <DO type="veesta_SPS" name="Ind17" />
+  </LNodeType>
+  <LNodeType lnClass="GGIO" id="GGIO_DO_IED1" >
+   <DO type="veesta_Beh" name="Beh" />
+   <DO type="veesta_SPC_DirNor" name="SPCSO1" />
+   <DO type="veesta_SPC_DirNor" name="SPCSO2" />
+   <DO type="veesta_SPC_SBOEnh" name="SPCSO3" />
+   <DO type="veesta_SPC_SBOEnh" name="SPCSO4" />
+   <DO type="veesta_SPC_DirNor" name="SPCSO5" />
+  </LNodeType>
+  <DOType id="veesta_Mod" cdc="INC" >
+   <DA bType="Enum" type="Beh" name="stVal" fc="ST" dchg="true" />
+   <DA qchg="true" bType="Quality" name="q" fc="ST" />
+   <DA bType="Timestamp" name="t" fc="ST" />
+   <DA bType="Enum" type="ctlModel" name="ctlModel" fc="CF" />
+  </DOType>
+  <DOType id="veesta_Beh" cdc="INS" >
+   <DA bType="Enum" type="Beh" name="stVal" fc="ST" dchg="true" />
+   <DA qchg="true" bType="Quality" name="q" fc="ST" />
+   <DA bType="Timestamp" name="t" fc="ST" />
+  </DOType>
+  <DOType id="veesta_Health" cdc="INS" >
+   <DA bType="Enum" type="Health" name="stVal" fc="ST" dchg="true" />
+   <DA qchg="true" bType="Quality" name="q" fc="ST" />
+   <DA bType="Timestamp" name="t" fc="ST" />
+  </DOType>
+  <DOType id="veesta_NamPlt" cdc="LPL" >
+   <DA bType="VisString255" name="vendor" fc="DC" />
+   <DA bType="VisString255" name="swRev" fc="DC" />
+   <DA bType="VisString255" name="d" fc="DC" />
+   <DA bType="VisString255" name="configRev" fc="DC" />
+  </DOType>
+  <DOType id="veesta_MV" cdc="MV" >
+   <DA bType="Struct" type="veesta_MV_mag" name="mag" fc="MX" dchg="true" />
+   <DA qchg="true" bType="Quality" name="q" fc="MX" />
+   <DA bType="Timestamp" name="t" fc="MX" />
+  </DOType>
+  <DOType id="veesta_SPS" cdc="SPS" >
+   <DA bType="BOOLEAN" name="stVal" fc="ST" dchg="true" />
+   <DA qchg="true" bType="Quality" name="q" fc="ST" />
+   <DA bType="Timestamp" name="t" fc="ST" />
+  </DOType>
+  <DOType id="veesta_DPS" cdc="DPS" >
+   <DA bType="Dbpos" type="Dbpos" name="stVal" fc="ST" dchg="true" />
+   <DA qchg="true" bType="Quality" name="q" fc="ST" />
+   <DA bType="Timestamp" name="t" fc="ST" />
+  </DOType>
+  <DOType id="veesta_SPC_DirNor" cdc="SPC" >
+   <DA bType="Struct" type="veesta_Oper1" name="Oper" fc="CO" />
+   <DA bType="Enum" type="ctlModel" name="ctlModel" fc="CF" />
+   <DA qchg="true" bType="Quality" name="q" fc="ST" />
+  </DOType>
+  <DOType id="veesta_SPC_SBOEnh" cdc="SPC" >
+   <DA bType="Struct" type="veesta_Oper1" name="SBOw" fc="CO" />
+   <DA bType="Struct" type="veesta_Oper1" name="Oper" fc="CO" />
+   <DA bType="Struct" type="veesta_Cancel1" name="Cancel" fc="CO" />
+   <DA bType="Enum" type="ctlModel" name="ctlModel" fc="CF" />
+   <DA bType="Struct" type="veesta_Origin1" name="origin" fc="ST" />
+   <DA qchg="true" bType="Quality" name="q" fc="ST" />
+  </DOType>
+  <DAType id="veesta_MV_mag" >
+   <BDA bType="FLOAT32" name="f" />
+  </DAType>
+  <DAType id="veesta_Oper1" >
+   <BDA bType="BOOLEAN" name="ctlVal" />
+   <BDA bType="Struct" type="veesta_Origin1" name="origin" />
+   <BDA bType="INT8U" name="ctlNum" />
+   <BDA bType="Timestamp" name="T" />
+   <BDA bType="BOOLEAN" name="Test" />
+   <BDA bType="Check" type="Check" name="Check" />
+  </DAType>
+  <DAType id="veesta_Cancel1" >
+   <BDA bType="BOOLEAN" name="ctlVal" />
+   <BDA bType="Struct" type="veesta_Origin1" name="origin" />
+   <BDA bType="INT8U" name="ctlNum" />
+   <BDA bType="Timestamp" name="T" />
+   <BDA bType="BOOLEAN" name="Test" />
+  </DAType>
+  <DAType id="veesta_Origin1" >
+   <BDA bType="Enum" type="orCategory" name="orCat" />
+   <BDA bType="Octet64" name="orIdent" />
+  </DAType>
+  <EnumType id="Beh" >
+   <EnumVal ord="1" >on</EnumVal>
+   <EnumVal ord="2" >blocked</EnumVal>
+   <EnumVal ord="3" >test</EnumVal>
+   <EnumVal ord="4" >test/blocked</EnumVal>
+   <EnumVal ord="5" >off</EnumVal>
+  </EnumType>
+  <EnumType id="ctlModel" >
+   <EnumVal ord="0" >status-only</EnumVal>
+   <EnumVal ord="1" >direct-with-normal-security</EnumVal>
+   <EnumVal ord="2" >sbo-with-normal-security</EnumVal>
+   <EnumVal ord="3" >direct-with-enhanced-security</EnumVal>
+   <EnumVal ord="4" >sbo-with-enhanced-security</EnumVal>
+  </EnumType>
+  <EnumType id="Health" >
+   <EnumVal ord="1" >Ok</EnumVal>
+   <EnumVal ord="2" >Warning</EnumVal>
+   <EnumVal ord="3" >Alarm</EnumVal>
+  </EnumType>
+  <EnumType id="Check" >
+   <EnumVal ord="0" >no-check</EnumVal>
+   <EnumVal ord="1" >synchrocheck</EnumVal>
+   <EnumVal ord="2" >interlocking-check</EnumVal>
+   <EnumVal ord="3" >both</EnumVal>
+  </EnumType>
+  <EnumType id="orCategory" >
+   <EnumVal ord="0" >not-supported</EnumVal>
+   <EnumVal ord="1" >bay-control</EnumVal>
+   <EnumVal ord="2" >station-control</EnumVal>
+   <EnumVal ord="3" >remote-control</EnumVal>
+   <EnumVal ord="4" >automatic-bay</EnumVal>
+   <EnumVal ord="5" >automatic-station</EnumVal>
+   <EnumVal ord="6" >automatic-remote</EnumVal>
+   <EnumVal ord="7" >maintenance</EnumVal>
+   <EnumVal ord="8" >process</EnumVal>
+  </EnumType>
+ </DataTypeTemplates>
+</SCL>

@@ -1,0 +1,1993 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Created by ADMIN with OMICRON IEDScout 4.20 licensed to OMICRON electronics-->
+<!--SCL Schema Version 3.1 (2012/10/22)-->
+<SCL version="2007" revision="B" xmlns="http://www.iec.ch/61850/2003/SCL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.iec.ch/61850/2003/SCL SCL.xsd">
+	<Header id="" version="" revision="" toolID="OMICRON IEDScout" nameStructure="IEDName" />
+	<Communication>
+		<SubNetwork name="NONE" type="8-MMS">
+			<ConnectedAP iedName="E_Test" apName="P1">
+				<Address>
+					<P type="IP" xsi:type="tP_IP">192.168.50.119</P>
+					<P type="OSI-TSEL" xsi:type="tP_OSI-TSEL">0001</P>
+					<P type="OSI-SSEL" xsi:type="tP_OSI-SSEL">0001</P>
+					<P type="OSI-PSEL" xsi:type="tP_OSI-PSEL">00000001</P>
+					<P type="OSI-AP-Title">1,1,1,999,1</P>
+					<P type="OSI-AP-Invoke" xsi:type="tP_OSI-AP-Invoke">0</P>
+					<P type="OSI-AE-Qualifier" xsi:type="tP_OSI-AE-Qualifier">12</P>
+					<P type="OSI-AE-Invoke" xsi:type="tP_OSI-AE-Invoke">0</P>
+					<P type="MMS-Port" xsi:type="tP_MMS-Port">102</P>
+				</Address>
+			</ConnectedAP>
+		</SubNetwork>
+	</Communication>
+	<IED name="E_Test">
+		<Services>
+			<DynAssociation />
+			<GetDirectory />
+			<GetDataObjectDefinition />
+			<DataObjectDirectory />
+			<GetDataSetValue />
+			<SetDataSetValue />
+			<DataSetDirectory />
+			<ConfDataSet max="1" modify="false" />
+			<DynDataSet max="42" />
+			<ReadWrite />
+			<ConfReportControl max="68" bufConf="false" />
+			<GetCBValues />
+			<ReportSettings rptID="Dyn" optFields="Dyn" bufTime="Dyn" trgOps="Dyn" intgPd="Dyn" owner="true" resvTms="true" />
+			<ConfLNs fixPrefix="true" fixLnInst="true" />
+			<GOOSE max="0" />
+			<GSSE max="0" />
+			<FileHandling />
+		</Services>
+		<AccessPoint name="P1">
+			<Server>
+				<Authentication none="true" />
+				<LDevice inst="CTRL">
+					<LN0 lnType="E_TestCTRL.LLN0" lnClass="LLN0" inst="">
+						<ReportControl name="urcbA" buffered="false" bufTime="0" intgPd="0" confRev="1">
+							<TrgOps dchg="false" qchg="false" dupd="false" period="false" gi="false" />
+							<OptFields seqNum="false" timeStamp="false" dataSet="false" reasonCode="false" dataRef="false" entryID="false" configRef="false" />
+							<RptEnabled max="1" />
+						</ReportControl>
+						<ReportControl name="urcbB" buffered="false" bufTime="0" intgPd="0" confRev="1">
+							<TrgOps dchg="false" qchg="false" dupd="false" period="false" gi="false" />
+							<OptFields seqNum="false" timeStamp="false" dataSet="false" reasonCode="false" dataRef="false" entryID="false" configRef="false" />
+							<RptEnabled max="1" />
+						</ReportControl>
+						<ReportControl name="urcbC" buffered="false" bufTime="0" intgPd="0" confRev="1">
+							<TrgOps dchg="false" qchg="false" dupd="false" period="false" gi="false" />
+							<OptFields seqNum="false" timeStamp="false" dataSet="false" reasonCode="false" dataRef="false" entryID="false" configRef="false" />
+							<RptEnabled max="1" />
+						</ReportControl>
+						<ReportControl name="urcbD" buffered="false" bufTime="0" intgPd="0" confRev="1">
+							<TrgOps dchg="false" qchg="false" dupd="false" period="false" gi="false" />
+							<OptFields seqNum="false" timeStamp="false" dataSet="false" reasonCode="false" dataRef="false" entryID="false" configRef="false" />
+							<RptEnabled max="1" />
+						</ReportControl>
+						<ReportControl name="urcbE" buffered="false" bufTime="0" intgPd="0" confRev="1">
+							<TrgOps dchg="false" qchg="false" dupd="false" period="false" gi="false" />
+							<OptFields seqNum="false" timeStamp="false" dataSet="false" reasonCode="false" dataRef="false" entryID="false" configRef="false" />
+							<RptEnabled max="1" />
+						</ReportControl>
+						<ReportControl name="urcbF" buffered="false" bufTime="0" intgPd="0" confRev="1">
+							<TrgOps dchg="false" qchg="false" dupd="false" period="false" gi="false" />
+							<OptFields seqNum="false" timeStamp="false" dataSet="false" reasonCode="false" dataRef="false" entryID="false" configRef="false" />
+							<RptEnabled max="1" />
+						</ReportControl>
+						<ReportControl name="urcbG" buffered="false" bufTime="0" intgPd="0" confRev="1">
+							<TrgOps dchg="false" qchg="false" dupd="false" period="false" gi="false" />
+							<OptFields seqNum="false" timeStamp="false" dataSet="false" reasonCode="false" dataRef="false" entryID="false" configRef="false" />
+							<RptEnabled max="1" />
+						</ReportControl>
+						<ReportControl name="urcbH" buffered="false" bufTime="0" intgPd="0" confRev="1">
+							<TrgOps dchg="false" qchg="false" dupd="false" period="false" gi="false" />
+							<OptFields seqNum="false" timeStamp="false" dataSet="false" reasonCode="false" dataRef="false" entryID="false" configRef="false" />
+							<RptEnabled max="1" />
+						</ReportControl>
+						<ReportControl name="urcbI" buffered="false" bufTime="0" intgPd="0" confRev="1">
+							<TrgOps dchg="false" qchg="false" dupd="false" period="false" gi="false" />
+							<OptFields seqNum="false" timeStamp="false" dataSet="false" reasonCode="false" dataRef="false" entryID="false" configRef="false" />
+							<RptEnabled max="1" />
+						</ReportControl>
+						<ReportControl name="urcbJ" buffered="false" bufTime="0" intgPd="0" confRev="1">
+							<TrgOps dchg="false" qchg="false" dupd="false" period="false" gi="false" />
+							<OptFields seqNum="false" timeStamp="false" dataSet="false" reasonCode="false" dataRef="false" entryID="false" configRef="false" />
+							<RptEnabled max="1" />
+						</ReportControl>
+						<ReportControl name="brcbA" rptID="E_TestCTRL/LLN0$BR$brcbA01" buffered="true" bufTime="0" intgPd="0" confRev="0">
+							<TrgOps dchg="false" qchg="false" dupd="false" period="false" gi="true" />
+							<OptFields seqNum="false" timeStamp="false" dataSet="false" reasonCode="false" dataRef="false" entryID="false" configRef="false" />
+							<RptEnabled max="1" />
+						</ReportControl>
+						<ReportControl name="brcbB" rptID="E_TestCTRL/LLN0$BR$brcbB01" buffered="true" bufTime="0" intgPd="0" confRev="0">
+							<TrgOps dchg="false" qchg="false" dupd="false" period="false" gi="true" />
+							<OptFields seqNum="false" timeStamp="false" dataSet="false" reasonCode="false" dataRef="false" entryID="false" configRef="false" />
+							<RptEnabled max="1" />
+						</ReportControl>
+						<DOI name="Mod">
+							<DAI name="ctlModel">
+								<Val>status-only</Val>
+							</DAI>
+						</DOI>
+						<DOI name="LEDRs">
+							<DAI name="ctlModel">
+								<Val>direct-with-normal-security</Val>
+							</DAI>
+						</DOI>
+						<DOI name="NamPlt">
+							<DAI name="vendor">
+								<Val>SIEMENS</Val>
+							</DAI>
+							<DAI name="swRev">
+								<Val>04.08.04</Val>
+							</DAI>
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+							<DAI name="configRev">
+								<Val>290326124827516</Val>
+							</DAI>
+							<DAI name="ldNs">
+								<Val>IEC 61850-7-4:2003</Val>
+							</DAI>
+						</DOI>
+					</LN0>
+					<LN lnType="E_TestCTRL.CALH1" lnClass="CALH" inst="1">
+						<ReportControl name="urcbA" buffered="false" bufTime="0" intgPd="0" confRev="1">
+							<TrgOps dchg="false" qchg="false" dupd="false" period="false" gi="false" />
+							<OptFields seqNum="false" timeStamp="false" dataSet="false" reasonCode="false" dataRef="false" entryID="false" configRef="false" />
+							<RptEnabled max="1" />
+						</ReportControl>
+						<ReportControl name="urcbB" buffered="false" bufTime="0" intgPd="0" confRev="1">
+							<TrgOps dchg="false" qchg="false" dupd="false" period="false" gi="false" />
+							<OptFields seqNum="false" timeStamp="false" dataSet="false" reasonCode="false" dataRef="false" entryID="false" configRef="false" />
+							<RptEnabled max="1" />
+						</ReportControl>
+						<DOI name="Mod">
+							<DAI name="ctlModel">
+								<Val>status-only</Val>
+							</DAI>
+						</DOI>
+						<DOI name="NamPlt">
+							<DAI name="vendor">
+								<Val>SIEMENS</Val>
+							</DAI>
+							<DAI name="swRev">
+								<Val>04.08.04</Val>
+							</DAI>
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+							<DAI name="configRev">
+								<Val>210404153620012</Val>
+							</DAI>
+						</DOI>
+						<DOI name="ErrBoard1">
+							<DAI name="d">
+								<Val>ErrBoard1 stands for Error on board 1</Val>
+							</DAI>
+							<DAI name="dataNs">
+								<Val>6MD IED Configuration Description File</Val>
+							</DAI>
+						</DOI>
+						<DOI name="ErrBoard2">
+							<DAI name="d">
+								<Val>ErrBoard2 stands for Error on board 2</Val>
+							</DAI>
+							<DAI name="dataNs">
+								<Val>6MD IED Configuration Description File</Val>
+							</DAI>
+						</DOI>
+						<DOI name="ErrBoard3">
+							<DAI name="d">
+								<Val>ErrBoard3 stands for Error on board 3</Val>
+							</DAI>
+							<DAI name="dataNs">
+								<Val>6MD IED Configuration Description File</Val>
+							</DAI>
+						</DOI>
+						<DOI name="ErrBoard4">
+							<DAI name="d">
+								<Val>ErrBoard4 stands for Error on board 4</Val>
+							</DAI>
+							<DAI name="dataNs">
+								<Val>6MD IED Configuration Description File</Val>
+							</DAI>
+						</DOI>
+						<DOI name="ErrBoard5">
+							<DAI name="d">
+								<Val>ErrBoard5 stands for Error on board 5</Val>
+							</DAI>
+							<DAI name="dataNs">
+								<Val>6MD IED Configuration Description File</Val>
+							</DAI>
+						</DOI>
+					</LN>
+					<LN lnType="E_TestCTRL.GGIO1" lnClass="GGIO" inst="1">
+						<ReportControl name="urcbA" buffered="false" bufTime="0" intgPd="0" confRev="1">
+							<TrgOps dchg="false" qchg="false" dupd="false" period="false" gi="false" />
+							<OptFields seqNum="false" timeStamp="false" dataSet="false" reasonCode="false" dataRef="false" entryID="false" configRef="false" />
+							<RptEnabled max="1" />
+						</ReportControl>
+						<ReportControl name="urcbB" buffered="false" bufTime="0" intgPd="0" confRev="1">
+							<TrgOps dchg="false" qchg="false" dupd="false" period="false" gi="false" />
+							<OptFields seqNum="false" timeStamp="false" dataSet="false" reasonCode="false" dataRef="false" entryID="false" configRef="false" />
+							<RptEnabled max="1" />
+						</ReportControl>
+						<DOI name="Mod">
+							<DAI name="ctlModel">
+								<Val>status-only</Val>
+							</DAI>
+						</DOI>
+						<DOI name="SPCSO1">
+							<DAI name="ctlModel">
+								<Val>status-only</Val>
+							</DAI>
+						</DOI>
+						<DOI name="SPCSO2">
+							<DAI name="ctlModel">
+								<Val>status-only</Val>
+							</DAI>
+						</DOI>
+						<DOI name="SPCSO3">
+							<DAI name="ctlModel">
+								<Val>status-only</Val>
+							</DAI>
+						</DOI>
+						<DOI name="SPCSO4">
+							<DAI name="ctlModel">
+								<Val>status-only</Val>
+							</DAI>
+						</DOI>
+						<DOI name="SPCSO5">
+							<DAI name="ctlModel">
+								<Val>status-only</Val>
+							</DAI>
+						</DOI>
+						<DOI name="SPCSO6">
+							<DAI name="ctlModel">
+								<Val>status-only</Val>
+							</DAI>
+						</DOI>
+						<DOI name="SPCSO7">
+							<DAI name="ctlModel">
+								<Val>status-only</Val>
+							</DAI>
+						</DOI>
+						<DOI name="SPCSO8">
+							<DAI name="ctlModel">
+								<Val>status-only</Val>
+							</DAI>
+						</DOI>
+						<DOI name="SPCSO9">
+							<DAI name="ctlModel">
+								<Val>direct-with-enhanced-security</Val>
+							</DAI>
+						</DOI>
+						<DOI name="SPCSO10">
+							<DAI name="ctlModel">
+								<Val>status-only</Val>
+							</DAI>
+						</DOI>
+						<DOI name="SPCSO11">
+							<DAI name="ctlModel">
+								<Val>status-only</Val>
+							</DAI>
+						</DOI>
+						<DOI name="NamPlt">
+							<DAI name="vendor">
+								<Val>SIEMENS</Val>
+							</DAI>
+							<DAI name="swRev">
+								<Val>04.08.04</Val>
+							</DAI>
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+							<DAI name="configRev">
+								<Val>290326124827516</Val>
+							</DAI>
+						</DOI>
+					</LN>
+					<LN lnType="E_TestCTRL.LPHD1" lnClass="LPHD" inst="1">
+						<ReportControl name="urcbA" buffered="false" bufTime="0" intgPd="0" confRev="1">
+							<TrgOps dchg="false" qchg="false" dupd="false" period="false" gi="false" />
+							<OptFields seqNum="false" timeStamp="false" dataSet="false" reasonCode="false" dataRef="false" entryID="false" configRef="false" />
+							<RptEnabled max="1" />
+						</ReportControl>
+						<ReportControl name="urcbB" buffered="false" bufTime="0" intgPd="0" confRev="1">
+							<TrgOps dchg="false" qchg="false" dupd="false" period="false" gi="false" />
+							<OptFields seqNum="false" timeStamp="false" dataSet="false" reasonCode="false" dataRef="false" entryID="false" configRef="false" />
+							<RptEnabled max="1" />
+						</ReportControl>
+						<DOI name="PhyNam">
+							<DAI name="vendor">
+								<Val>SIEMENS</Val>
+							</DAI>
+							<DAI name="hwRev">
+								<Val>63</Val>
+							</DAI>
+							<DAI name="swRev">
+								<Val>04.84.02</Val>
+							</DAI>
+							<DAI name="serNum">
+								<Val>BF1201140552</Val>
+							</DAI>
+							<DAI name="model">
+								<Val>6MD66414EB920AA0----0S----------</Val>
+							</DAI>
+							<DAI name="location">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="DevStr">
+							<DAI name="d">
+								<Val>DevStr stands for either InitialStart or Resume</Val>
+							</DAI>
+							<DAI name="dataNs">
+								<Val>6MD66x IED Configuration Description File</Val>
+							</DAI>
+						</DOI>
+						<DOI name="CtlNum">
+							<DAI name="d">
+								<Val>CtlNum stands for number of Test Operations</Val>
+							</DAI>
+							<DAI name="dataNs">
+								<Val>6MD66x IED Configuration Description File</Val>
+							</DAI>
+						</DOI>
+					</LN>
+					<LN lnType="E_TestCTRL.Q0CILO1" prefix="Q0" lnClass="CILO" inst="1">
+						<ReportControl name="urcbA" buffered="false" bufTime="0" intgPd="0" confRev="1">
+							<TrgOps dchg="false" qchg="false" dupd="false" period="false" gi="false" />
+							<OptFields seqNum="false" timeStamp="false" dataSet="false" reasonCode="false" dataRef="false" entryID="false" configRef="false" />
+							<RptEnabled max="1" />
+						</ReportControl>
+						<ReportControl name="urcbB" buffered="false" bufTime="0" intgPd="0" confRev="1">
+							<TrgOps dchg="false" qchg="false" dupd="false" period="false" gi="false" />
+							<OptFields seqNum="false" timeStamp="false" dataSet="false" reasonCode="false" dataRef="false" entryID="false" configRef="false" />
+							<RptEnabled max="1" />
+						</ReportControl>
+						<DOI name="Mod">
+							<DAI name="ctlModel">
+								<Val>status-only</Val>
+							</DAI>
+						</DOI>
+						<DOI name="NamPlt">
+							<DAI name="vendor">
+								<Val>SIEMENS</Val>
+							</DAI>
+							<DAI name="swRev">
+								<Val>04.08.04</Val>
+							</DAI>
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+							<DAI name="configRev">
+								<Val>290326115041767</Val>
+							</DAI>
+						</DOI>
+					</LN>
+					<LN lnType="E_TestCTRL.Q0CSWI1" prefix="Q0" lnClass="CSWI" inst="1">
+						<ReportControl name="urcbA" buffered="false" bufTime="0" intgPd="0" confRev="1">
+							<TrgOps dchg="false" qchg="false" dupd="false" period="false" gi="false" />
+							<OptFields seqNum="false" timeStamp="false" dataSet="false" reasonCode="false" dataRef="false" entryID="false" configRef="false" />
+							<RptEnabled max="1" />
+						</ReportControl>
+						<ReportControl name="urcbB" buffered="false" bufTime="0" intgPd="0" confRev="1">
+							<TrgOps dchg="false" qchg="false" dupd="false" period="false" gi="false" />
+							<OptFields seqNum="false" timeStamp="false" dataSet="false" reasonCode="false" dataRef="false" entryID="false" configRef="false" />
+							<RptEnabled max="1" />
+						</ReportControl>
+						<DOI name="Mod">
+							<DAI name="ctlModel">
+								<Val>status-only</Val>
+							</DAI>
+						</DOI>
+						<DOI name="Pos">
+							<DAI name="ctlModel">
+								<Val>sbo-with-enhanced-security</Val>
+							</DAI>
+							<DAI name="sboTimeout">
+								<Val>300000</Val>
+							</DAI>
+							<DAI name="sboClass">
+								<Val>operate-once</Val>
+							</DAI>
+						</DOI>
+						<DOI name="NamPlt">
+							<DAI name="vendor">
+								<Val>SIEMENS</Val>
+							</DAI>
+							<DAI name="swRev">
+								<Val>04.08.04</Val>
+							</DAI>
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+							<DAI name="configRev">
+								<Val>290326115041767</Val>
+							</DAI>
+						</DOI>
+					</LN>
+					<LN lnType="E_TestCTRL.Q0XCBR1" prefix="Q0" lnClass="XCBR" inst="1">
+						<ReportControl name="urcbA" buffered="false" bufTime="0" intgPd="0" confRev="1">
+							<TrgOps dchg="false" qchg="false" dupd="false" period="false" gi="false" />
+							<OptFields seqNum="false" timeStamp="false" dataSet="false" reasonCode="false" dataRef="false" entryID="false" configRef="false" />
+							<RptEnabled max="1" />
+						</ReportControl>
+						<ReportControl name="urcbB" buffered="false" bufTime="0" intgPd="0" confRev="1">
+							<TrgOps dchg="false" qchg="false" dupd="false" period="false" gi="false" />
+							<OptFields seqNum="false" timeStamp="false" dataSet="false" reasonCode="false" dataRef="false" entryID="false" configRef="false" />
+							<RptEnabled max="1" />
+						</ReportControl>
+						<DOI name="Mod">
+							<DAI name="ctlModel">
+								<Val>status-only</Val>
+							</DAI>
+						</DOI>
+						<DOI name="Pos">
+							<DAI name="ctlModel">
+								<Val>status-only</Val>
+							</DAI>
+						</DOI>
+						<DOI name="BlkOpn">
+							<DAI name="ctlModel">
+								<Val>status-only</Val>
+							</DAI>
+						</DOI>
+						<DOI name="BlkCls">
+							<DAI name="ctlModel">
+								<Val>status-only</Val>
+							</DAI>
+						</DOI>
+						<DOI name="NamPlt">
+							<DAI name="vendor">
+								<Val>SIEMENS</Val>
+							</DAI>
+							<DAI name="swRev">
+								<Val>04.08.04</Val>
+							</DAI>
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+							<DAI name="configRev">
+								<Val>290326115041767</Val>
+							</DAI>
+						</DOI>
+					</LN>
+					<LN lnType="E_TestCTRL.Q0CILO1" prefix="Q1" lnClass="CILO" inst="1">
+						<ReportControl name="urcbA" buffered="false" bufTime="0" intgPd="0" confRev="1">
+							<TrgOps dchg="false" qchg="false" dupd="false" period="false" gi="false" />
+							<OptFields seqNum="false" timeStamp="false" dataSet="false" reasonCode="false" dataRef="false" entryID="false" configRef="false" />
+							<RptEnabled max="1" />
+						</ReportControl>
+						<ReportControl name="urcbB" buffered="false" bufTime="0" intgPd="0" confRev="1">
+							<TrgOps dchg="false" qchg="false" dupd="false" period="false" gi="false" />
+							<OptFields seqNum="false" timeStamp="false" dataSet="false" reasonCode="false" dataRef="false" entryID="false" configRef="false" />
+							<RptEnabled max="1" />
+						</ReportControl>
+						<DOI name="Mod">
+							<DAI name="ctlModel">
+								<Val>status-only</Val>
+							</DAI>
+						</DOI>
+						<DOI name="NamPlt">
+							<DAI name="vendor">
+								<Val>SIEMENS</Val>
+							</DAI>
+							<DAI name="swRev">
+								<Val>04.08.04</Val>
+							</DAI>
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+							<DAI name="configRev">
+								<Val>290326115100519</Val>
+							</DAI>
+						</DOI>
+					</LN>
+					<LN lnType="E_TestCTRL.Q0CSWI1" prefix="Q1" lnClass="CSWI" inst="1">
+						<ReportControl name="urcbA" buffered="false" bufTime="0" intgPd="0" confRev="1">
+							<TrgOps dchg="false" qchg="false" dupd="false" period="false" gi="false" />
+							<OptFields seqNum="false" timeStamp="false" dataSet="false" reasonCode="false" dataRef="false" entryID="false" configRef="false" />
+							<RptEnabled max="1" />
+						</ReportControl>
+						<ReportControl name="urcbB" buffered="false" bufTime="0" intgPd="0" confRev="1">
+							<TrgOps dchg="false" qchg="false" dupd="false" period="false" gi="false" />
+							<OptFields seqNum="false" timeStamp="false" dataSet="false" reasonCode="false" dataRef="false" entryID="false" configRef="false" />
+							<RptEnabled max="1" />
+						</ReportControl>
+						<DOI name="Mod">
+							<DAI name="ctlModel">
+								<Val>status-only</Val>
+							</DAI>
+						</DOI>
+						<DOI name="Pos">
+							<DAI name="ctlModel">
+								<Val>sbo-with-enhanced-security</Val>
+							</DAI>
+							<DAI name="sboTimeout">
+								<Val>300000</Val>
+							</DAI>
+							<DAI name="sboClass">
+								<Val>operate-once</Val>
+							</DAI>
+						</DOI>
+						<DOI name="NamPlt">
+							<DAI name="vendor">
+								<Val>SIEMENS</Val>
+							</DAI>
+							<DAI name="swRev">
+								<Val>04.08.04</Val>
+							</DAI>
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+							<DAI name="configRev">
+								<Val>290326115100519</Val>
+							</DAI>
+						</DOI>
+					</LN>
+					<LN lnType="E_TestCTRL.Q1XSWI1" prefix="Q1" lnClass="XSWI" inst="1">
+						<ReportControl name="urcbA" buffered="false" bufTime="0" intgPd="0" confRev="1">
+							<TrgOps dchg="false" qchg="false" dupd="false" period="false" gi="false" />
+							<OptFields seqNum="false" timeStamp="false" dataSet="false" reasonCode="false" dataRef="false" entryID="false" configRef="false" />
+							<RptEnabled max="1" />
+						</ReportControl>
+						<ReportControl name="urcbB" buffered="false" bufTime="0" intgPd="0" confRev="1">
+							<TrgOps dchg="false" qchg="false" dupd="false" period="false" gi="false" />
+							<OptFields seqNum="false" timeStamp="false" dataSet="false" reasonCode="false" dataRef="false" entryID="false" configRef="false" />
+							<RptEnabled max="1" />
+						</ReportControl>
+						<DOI name="Mod">
+							<DAI name="ctlModel">
+								<Val>status-only</Val>
+							</DAI>
+						</DOI>
+						<DOI name="Pos">
+							<DAI name="ctlModel">
+								<Val>status-only</Val>
+							</DAI>
+						</DOI>
+						<DOI name="BlkOpn">
+							<DAI name="ctlModel">
+								<Val>status-only</Val>
+							</DAI>
+						</DOI>
+						<DOI name="BlkCls">
+							<DAI name="ctlModel">
+								<Val>status-only</Val>
+							</DAI>
+						</DOI>
+						<DOI name="NamPlt">
+							<DAI name="vendor">
+								<Val>SIEMENS</Val>
+							</DAI>
+							<DAI name="swRev">
+								<Val>04.08.04</Val>
+							</DAI>
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+							<DAI name="configRev">
+								<Val>290326115100519</Val>
+							</DAI>
+						</DOI>
+					</LN>
+					<LN lnType="E_TestCTRL.Q0CILO1" prefix="Q2" lnClass="CILO" inst="1">
+						<ReportControl name="urcbA" buffered="false" bufTime="0" intgPd="0" confRev="1">
+							<TrgOps dchg="false" qchg="false" dupd="false" period="false" gi="false" />
+							<OptFields seqNum="false" timeStamp="false" dataSet="false" reasonCode="false" dataRef="false" entryID="false" configRef="false" />
+							<RptEnabled max="1" />
+						</ReportControl>
+						<ReportControl name="urcbB" buffered="false" bufTime="0" intgPd="0" confRev="1">
+							<TrgOps dchg="false" qchg="false" dupd="false" period="false" gi="false" />
+							<OptFields seqNum="false" timeStamp="false" dataSet="false" reasonCode="false" dataRef="false" entryID="false" configRef="false" />
+							<RptEnabled max="1" />
+						</ReportControl>
+						<DOI name="Mod">
+							<DAI name="ctlModel">
+								<Val>status-only</Val>
+							</DAI>
+						</DOI>
+						<DOI name="NamPlt">
+							<DAI name="vendor">
+								<Val>SIEMENS</Val>
+							</DAI>
+							<DAI name="swRev">
+								<Val>04.08.04</Val>
+							</DAI>
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+							<DAI name="configRev">
+								<Val>290326115115906</Val>
+							</DAI>
+						</DOI>
+					</LN>
+					<LN lnType="E_TestCTRL.Q0CSWI1" prefix="Q2" lnClass="CSWI" inst="1">
+						<ReportControl name="urcbA" buffered="false" bufTime="0" intgPd="0" confRev="1">
+							<TrgOps dchg="false" qchg="false" dupd="false" period="false" gi="false" />
+							<OptFields seqNum="false" timeStamp="false" dataSet="false" reasonCode="false" dataRef="false" entryID="false" configRef="false" />
+							<RptEnabled max="1" />
+						</ReportControl>
+						<ReportControl name="urcbB" buffered="false" bufTime="0" intgPd="0" confRev="1">
+							<TrgOps dchg="false" qchg="false" dupd="false" period="false" gi="false" />
+							<OptFields seqNum="false" timeStamp="false" dataSet="false" reasonCode="false" dataRef="false" entryID="false" configRef="false" />
+							<RptEnabled max="1" />
+						</ReportControl>
+						<DOI name="Mod">
+							<DAI name="ctlModel">
+								<Val>status-only</Val>
+							</DAI>
+						</DOI>
+						<DOI name="Pos">
+							<DAI name="ctlModel">
+								<Val>sbo-with-enhanced-security</Val>
+							</DAI>
+							<DAI name="sboTimeout">
+								<Val>300000</Val>
+							</DAI>
+							<DAI name="sboClass">
+								<Val>operate-once</Val>
+							</DAI>
+						</DOI>
+						<DOI name="NamPlt">
+							<DAI name="vendor">
+								<Val>SIEMENS</Val>
+							</DAI>
+							<DAI name="swRev">
+								<Val>04.08.04</Val>
+							</DAI>
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+							<DAI name="configRev">
+								<Val>290326115115906</Val>
+							</DAI>
+						</DOI>
+					</LN>
+					<LN lnType="E_TestCTRL.Q1XSWI1" prefix="Q2" lnClass="XSWI" inst="1">
+						<ReportControl name="urcbA" buffered="false" bufTime="0" intgPd="0" confRev="1">
+							<TrgOps dchg="false" qchg="false" dupd="false" period="false" gi="false" />
+							<OptFields seqNum="false" timeStamp="false" dataSet="false" reasonCode="false" dataRef="false" entryID="false" configRef="false" />
+							<RptEnabled max="1" />
+						</ReportControl>
+						<ReportControl name="urcbB" buffered="false" bufTime="0" intgPd="0" confRev="1">
+							<TrgOps dchg="false" qchg="false" dupd="false" period="false" gi="false" />
+							<OptFields seqNum="false" timeStamp="false" dataSet="false" reasonCode="false" dataRef="false" entryID="false" configRef="false" />
+							<RptEnabled max="1" />
+						</ReportControl>
+						<DOI name="Mod">
+							<DAI name="ctlModel">
+								<Val>status-only</Val>
+							</DAI>
+						</DOI>
+						<DOI name="Pos">
+							<DAI name="ctlModel">
+								<Val>status-only</Val>
+							</DAI>
+						</DOI>
+						<DOI name="BlkOpn">
+							<DAI name="ctlModel">
+								<Val>status-only</Val>
+							</DAI>
+						</DOI>
+						<DOI name="BlkCls">
+							<DAI name="ctlModel">
+								<Val>status-only</Val>
+							</DAI>
+						</DOI>
+						<DOI name="NamPlt">
+							<DAI name="vendor">
+								<Val>SIEMENS</Val>
+							</DAI>
+							<DAI name="swRev">
+								<Val>04.08.04</Val>
+							</DAI>
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+							<DAI name="configRev">
+								<Val>290326115115906</Val>
+							</DAI>
+						</DOI>
+					</LN>
+					<LN lnType="E_TestCTRL.Q0CILO1" prefix="Q8" lnClass="CILO" inst="1">
+						<ReportControl name="urcbA" buffered="false" bufTime="0" intgPd="0" confRev="1">
+							<TrgOps dchg="false" qchg="false" dupd="false" period="false" gi="false" />
+							<OptFields seqNum="false" timeStamp="false" dataSet="false" reasonCode="false" dataRef="false" entryID="false" configRef="false" />
+							<RptEnabled max="1" />
+						</ReportControl>
+						<ReportControl name="urcbB" buffered="false" bufTime="0" intgPd="0" confRev="1">
+							<TrgOps dchg="false" qchg="false" dupd="false" period="false" gi="false" />
+							<OptFields seqNum="false" timeStamp="false" dataSet="false" reasonCode="false" dataRef="false" entryID="false" configRef="false" />
+							<RptEnabled max="1" />
+						</ReportControl>
+						<DOI name="Mod">
+							<DAI name="ctlModel">
+								<Val>status-only</Val>
+							</DAI>
+						</DOI>
+						<DOI name="NamPlt">
+							<DAI name="vendor">
+								<Val>SIEMENS</Val>
+							</DAI>
+							<DAI name="swRev">
+								<Val>04.08.04</Val>
+							</DAI>
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+							<DAI name="configRev">
+								<Val>290326115130937</Val>
+							</DAI>
+						</DOI>
+					</LN>
+					<LN lnType="E_TestCTRL.Q0CSWI1" prefix="Q8" lnClass="CSWI" inst="1">
+						<ReportControl name="urcbA" buffered="false" bufTime="0" intgPd="0" confRev="1">
+							<TrgOps dchg="false" qchg="false" dupd="false" period="false" gi="false" />
+							<OptFields seqNum="false" timeStamp="false" dataSet="false" reasonCode="false" dataRef="false" entryID="false" configRef="false" />
+							<RptEnabled max="1" />
+						</ReportControl>
+						<ReportControl name="urcbB" buffered="false" bufTime="0" intgPd="0" confRev="1">
+							<TrgOps dchg="false" qchg="false" dupd="false" period="false" gi="false" />
+							<OptFields seqNum="false" timeStamp="false" dataSet="false" reasonCode="false" dataRef="false" entryID="false" configRef="false" />
+							<RptEnabled max="1" />
+						</ReportControl>
+						<DOI name="Mod">
+							<DAI name="ctlModel">
+								<Val>status-only</Val>
+							</DAI>
+						</DOI>
+						<DOI name="Pos">
+							<DAI name="ctlModel">
+								<Val>sbo-with-enhanced-security</Val>
+							</DAI>
+							<DAI name="sboTimeout">
+								<Val>300000</Val>
+							</DAI>
+							<DAI name="sboClass">
+								<Val>operate-once</Val>
+							</DAI>
+						</DOI>
+						<DOI name="NamPlt">
+							<DAI name="vendor">
+								<Val>SIEMENS</Val>
+							</DAI>
+							<DAI name="swRev">
+								<Val>04.08.04</Val>
+							</DAI>
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+							<DAI name="configRev">
+								<Val>290326115130937</Val>
+							</DAI>
+						</DOI>
+					</LN>
+					<LN lnType="E_TestCTRL.Q1XSWI1" prefix="Q8" lnClass="XSWI" inst="1">
+						<ReportControl name="urcbA" buffered="false" bufTime="0" intgPd="0" confRev="1">
+							<TrgOps dchg="false" qchg="false" dupd="false" period="false" gi="false" />
+							<OptFields seqNum="false" timeStamp="false" dataSet="false" reasonCode="false" dataRef="false" entryID="false" configRef="false" />
+							<RptEnabled max="1" />
+						</ReportControl>
+						<ReportControl name="urcbB" buffered="false" bufTime="0" intgPd="0" confRev="1">
+							<TrgOps dchg="false" qchg="false" dupd="false" period="false" gi="false" />
+							<OptFields seqNum="false" timeStamp="false" dataSet="false" reasonCode="false" dataRef="false" entryID="false" configRef="false" />
+							<RptEnabled max="1" />
+						</ReportControl>
+						<DOI name="Mod">
+							<DAI name="ctlModel">
+								<Val>status-only</Val>
+							</DAI>
+						</DOI>
+						<DOI name="Pos">
+							<DAI name="ctlModel">
+								<Val>status-only</Val>
+							</DAI>
+						</DOI>
+						<DOI name="BlkOpn">
+							<DAI name="ctlModel">
+								<Val>status-only</Val>
+							</DAI>
+						</DOI>
+						<DOI name="BlkCls">
+							<DAI name="ctlModel">
+								<Val>status-only</Val>
+							</DAI>
+						</DOI>
+						<DOI name="NamPlt">
+							<DAI name="vendor">
+								<Val>SIEMENS</Val>
+							</DAI>
+							<DAI name="swRev">
+								<Val>04.08.04</Val>
+							</DAI>
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+							<DAI name="configRev">
+								<Val>290326115130937</Val>
+							</DAI>
+						</DOI>
+					</LN>
+					<LN lnType="E_TestCTRL.Q0CILO1" prefix="Q9" lnClass="CILO" inst="1">
+						<ReportControl name="urcbA" buffered="false" bufTime="0" intgPd="0" confRev="1">
+							<TrgOps dchg="false" qchg="false" dupd="false" period="false" gi="false" />
+							<OptFields seqNum="false" timeStamp="false" dataSet="false" reasonCode="false" dataRef="false" entryID="false" configRef="false" />
+							<RptEnabled max="1" />
+						</ReportControl>
+						<ReportControl name="urcbB" buffered="false" bufTime="0" intgPd="0" confRev="1">
+							<TrgOps dchg="false" qchg="false" dupd="false" period="false" gi="false" />
+							<OptFields seqNum="false" timeStamp="false" dataSet="false" reasonCode="false" dataRef="false" entryID="false" configRef="false" />
+							<RptEnabled max="1" />
+						</ReportControl>
+						<DOI name="Mod">
+							<DAI name="ctlModel">
+								<Val>status-only</Val>
+							</DAI>
+						</DOI>
+						<DOI name="NamPlt">
+							<DAI name="vendor">
+								<Val>SIEMENS</Val>
+							</DAI>
+							<DAI name="swRev">
+								<Val>04.08.04</Val>
+							</DAI>
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+							<DAI name="configRev">
+								<Val>290326115146225</Val>
+							</DAI>
+						</DOI>
+					</LN>
+					<LN lnType="E_TestCTRL.Q0CSWI1" prefix="Q9" lnClass="CSWI" inst="1">
+						<ReportControl name="urcbA" buffered="false" bufTime="0" intgPd="0" confRev="1">
+							<TrgOps dchg="false" qchg="false" dupd="false" period="false" gi="false" />
+							<OptFields seqNum="false" timeStamp="false" dataSet="false" reasonCode="false" dataRef="false" entryID="false" configRef="false" />
+							<RptEnabled max="1" />
+						</ReportControl>
+						<ReportControl name="urcbB" buffered="false" bufTime="0" intgPd="0" confRev="1">
+							<TrgOps dchg="false" qchg="false" dupd="false" period="false" gi="false" />
+							<OptFields seqNum="false" timeStamp="false" dataSet="false" reasonCode="false" dataRef="false" entryID="false" configRef="false" />
+							<RptEnabled max="1" />
+						</ReportControl>
+						<DOI name="Mod">
+							<DAI name="ctlModel">
+								<Val>status-only</Val>
+							</DAI>
+						</DOI>
+						<DOI name="Pos">
+							<DAI name="ctlModel">
+								<Val>sbo-with-enhanced-security</Val>
+							</DAI>
+							<DAI name="sboTimeout">
+								<Val>300000</Val>
+							</DAI>
+							<DAI name="sboClass">
+								<Val>operate-once</Val>
+							</DAI>
+						</DOI>
+						<DOI name="NamPlt">
+							<DAI name="vendor">
+								<Val>SIEMENS</Val>
+							</DAI>
+							<DAI name="swRev">
+								<Val>04.08.04</Val>
+							</DAI>
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+							<DAI name="configRev">
+								<Val>290326115146225</Val>
+							</DAI>
+						</DOI>
+					</LN>
+					<LN lnType="E_TestCTRL.Q1XSWI1" prefix="Q9" lnClass="XSWI" inst="1">
+						<ReportControl name="urcbA" buffered="false" bufTime="0" intgPd="0" confRev="1">
+							<TrgOps dchg="false" qchg="false" dupd="false" period="false" gi="false" />
+							<OptFields seqNum="false" timeStamp="false" dataSet="false" reasonCode="false" dataRef="false" entryID="false" configRef="false" />
+							<RptEnabled max="1" />
+						</ReportControl>
+						<ReportControl name="urcbB" buffered="false" bufTime="0" intgPd="0" confRev="1">
+							<TrgOps dchg="false" qchg="false" dupd="false" period="false" gi="false" />
+							<OptFields seqNum="false" timeStamp="false" dataSet="false" reasonCode="false" dataRef="false" entryID="false" configRef="false" />
+							<RptEnabled max="1" />
+						</ReportControl>
+						<DOI name="Mod">
+							<DAI name="ctlModel">
+								<Val>status-only</Val>
+							</DAI>
+						</DOI>
+						<DOI name="Pos">
+							<DAI name="ctlModel">
+								<Val>status-only</Val>
+							</DAI>
+						</DOI>
+						<DOI name="BlkOpn">
+							<DAI name="ctlModel">
+								<Val>status-only</Val>
+							</DAI>
+						</DOI>
+						<DOI name="BlkCls">
+							<DAI name="ctlModel">
+								<Val>status-only</Val>
+							</DAI>
+						</DOI>
+						<DOI name="NamPlt">
+							<DAI name="vendor">
+								<Val>SIEMENS</Val>
+							</DAI>
+							<DAI name="swRev">
+								<Val>04.08.04</Val>
+							</DAI>
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+							<DAI name="configRev">
+								<Val>290326115146225</Val>
+							</DAI>
+						</DOI>
+					</LN>
+				</LDevice>
+				<LDevice inst="MEAS">
+					<LN0 lnType="E_TestMEAS.LLN0" lnClass="LLN0" inst="">
+						<DataSet name="DataSet">
+							<FCDA ldInst="CTRL" prefix="Q9" lnClass="CSWI" lnInst="1" doName="Pos" fc="ST" />
+							<FCDA ldInst="CTRL" prefix="Q8" lnClass="CSWI" lnInst="1" doName="Pos" fc="ST" />
+							<FCDA ldInst="CTRL" prefix="Q2" lnClass="CSWI" lnInst="1" doName="Pos" fc="ST" />
+							<FCDA ldInst="CTRL" prefix="Q1" lnClass="CSWI" lnInst="1" doName="Pos" fc="ST" />
+							<FCDA ldInst="CTRL" prefix="Q0" lnClass="CSWI" lnInst="1" doName="Pos" fc="ST" />
+							<FCDA ldInst="CTRL" prefix="" lnClass="GGIO" lnInst="1" doName="SPCSO1" fc="ST" />
+							<FCDA ldInst="CTRL" prefix="" lnClass="GGIO" lnInst="1" doName="SPCSO2" fc="ST" />
+							<FCDA ldInst="CTRL" prefix="" lnClass="GGIO" lnInst="1" doName="SPCSO3" fc="ST" />
+							<FCDA ldInst="CTRL" prefix="" lnClass="GGIO" lnInst="1" doName="SPCSO4" fc="ST" />
+							<FCDA ldInst="CTRL" prefix="" lnClass="GGIO" lnInst="1" doName="SPCSO5" fc="ST" />
+							<FCDA ldInst="CTRL" prefix="" lnClass="GGIO" lnInst="1" doName="SPCSO6" fc="ST" />
+							<FCDA ldInst="CTRL" prefix="" lnClass="GGIO" lnInst="1" doName="SPCSO7" fc="ST" />
+							<FCDA ldInst="CTRL" prefix="" lnClass="GGIO" lnInst="1" doName="SPCSO8" fc="ST" />
+							<FCDA ldInst="CTRL" prefix="" lnClass="GGIO" lnInst="1" doName="SPCSO9" fc="ST" />
+							<FCDA ldInst="CTRL" prefix="" lnClass="GGIO" lnInst="1" doName="SPCSO10" fc="ST" />
+							<FCDA ldInst="CTRL" prefix="" lnClass="GGIO" lnInst="1" doName="SPCSO11" fc="ST" />
+						</DataSet>
+						<ReportControl name="urcbA" rptID="E_TestMEAS/LLN0$RP$urcbA01" buffered="false" bufTime="100" datSet="DataSet" intgPd="0" confRev="20001">
+							<TrgOps dchg="true" qchg="true" dupd="true" period="true" gi="true" />
+							<OptFields seqNum="true" timeStamp="true" dataSet="true" reasonCode="true" dataRef="false" entryID="false" configRef="true" />
+							<RptEnabled max="1" />
+						</ReportControl>
+						<ReportControl name="urcbB" buffered="false" bufTime="0" intgPd="0" confRev="1">
+							<TrgOps dchg="false" qchg="false" dupd="false" period="false" gi="false" />
+							<OptFields seqNum="false" timeStamp="false" dataSet="false" reasonCode="false" dataRef="false" entryID="false" configRef="false" />
+							<RptEnabled max="1" />
+						</ReportControl>
+						<ReportControl name="urcbC" buffered="false" bufTime="0" intgPd="0" confRev="1">
+							<TrgOps dchg="false" qchg="false" dupd="false" period="false" gi="false" />
+							<OptFields seqNum="false" timeStamp="false" dataSet="false" reasonCode="false" dataRef="false" entryID="false" configRef="false" />
+							<RptEnabled max="1" />
+						</ReportControl>
+						<ReportControl name="urcbD" buffered="false" bufTime="0" intgPd="0" confRev="1">
+							<TrgOps dchg="false" qchg="false" dupd="false" period="false" gi="false" />
+							<OptFields seqNum="false" timeStamp="false" dataSet="false" reasonCode="false" dataRef="false" entryID="false" configRef="false" />
+							<RptEnabled max="1" />
+						</ReportControl>
+						<ReportControl name="urcbE" buffered="false" bufTime="0" intgPd="0" confRev="1">
+							<TrgOps dchg="false" qchg="false" dupd="false" period="false" gi="false" />
+							<OptFields seqNum="false" timeStamp="false" dataSet="false" reasonCode="false" dataRef="false" entryID="false" configRef="false" />
+							<RptEnabled max="1" />
+						</ReportControl>
+						<ReportControl name="urcbF" buffered="false" bufTime="0" intgPd="0" confRev="1">
+							<TrgOps dchg="false" qchg="false" dupd="false" period="false" gi="false" />
+							<OptFields seqNum="false" timeStamp="false" dataSet="false" reasonCode="false" dataRef="false" entryID="false" configRef="false" />
+							<RptEnabled max="1" />
+						</ReportControl>
+						<ReportControl name="urcbG" buffered="false" bufTime="0" intgPd="0" confRev="1">
+							<TrgOps dchg="false" qchg="false" dupd="false" period="false" gi="false" />
+							<OptFields seqNum="false" timeStamp="false" dataSet="false" reasonCode="false" dataRef="false" entryID="false" configRef="false" />
+							<RptEnabled max="1" />
+						</ReportControl>
+						<ReportControl name="urcbH" buffered="false" bufTime="0" intgPd="0" confRev="1">
+							<TrgOps dchg="false" qchg="false" dupd="false" period="false" gi="false" />
+							<OptFields seqNum="false" timeStamp="false" dataSet="false" reasonCode="false" dataRef="false" entryID="false" configRef="false" />
+							<RptEnabled max="1" />
+						</ReportControl>
+						<ReportControl name="urcbI" buffered="false" bufTime="0" intgPd="0" confRev="1">
+							<TrgOps dchg="false" qchg="false" dupd="false" period="false" gi="false" />
+							<OptFields seqNum="false" timeStamp="false" dataSet="false" reasonCode="false" dataRef="false" entryID="false" configRef="false" />
+							<RptEnabled max="1" />
+						</ReportControl>
+						<ReportControl name="urcbJ" buffered="false" bufTime="0" intgPd="0" confRev="1">
+							<TrgOps dchg="false" qchg="false" dupd="false" period="false" gi="false" />
+							<OptFields seqNum="false" timeStamp="false" dataSet="false" reasonCode="false" dataRef="false" entryID="false" configRef="false" />
+							<RptEnabled max="1" />
+						</ReportControl>
+						<ReportControl name="brcbA" rptID="E_TestMEAS/LLN0$BR$brcbA01" buffered="true" bufTime="0" intgPd="0" confRev="0">
+							<TrgOps dchg="false" qchg="false" dupd="false" period="false" gi="true" />
+							<OptFields seqNum="false" timeStamp="false" dataSet="false" reasonCode="false" dataRef="false" entryID="false" configRef="false" />
+							<RptEnabled max="1" />
+						</ReportControl>
+						<ReportControl name="brcbB" rptID="E_TestMEAS/LLN0$BR$brcbB01" buffered="true" bufTime="0" intgPd="0" confRev="0">
+							<TrgOps dchg="false" qchg="false" dupd="false" period="false" gi="true" />
+							<OptFields seqNum="false" timeStamp="false" dataSet="false" reasonCode="false" dataRef="false" entryID="false" configRef="false" />
+							<RptEnabled max="1" />
+						</ReportControl>
+						<DOI name="Mod">
+							<DAI name="ctlModel">
+								<Val>status-only</Val>
+							</DAI>
+						</DOI>
+						<DOI name="NamPlt">
+							<DAI name="vendor">
+								<Val>SIEMENS</Val>
+							</DAI>
+							<DAI name="swRev">
+								<Val>04.08.04</Val>
+							</DAI>
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+							<DAI name="configRev">
+								<Val>160304190901000</Val>
+							</DAI>
+							<DAI name="ldNs">
+								<Val>IEC 61850-7-4:2003</Val>
+							</DAI>
+						</DOI>
+					</LN0>
+					<LN lnType="E_TestMEAS.LPHD1" lnClass="LPHD" inst="1">
+						<ReportControl name="urcbA" buffered="false" bufTime="0" intgPd="0" confRev="1">
+							<TrgOps dchg="false" qchg="false" dupd="false" period="false" gi="false" />
+							<OptFields seqNum="false" timeStamp="false" dataSet="false" reasonCode="false" dataRef="false" entryID="false" configRef="false" />
+							<RptEnabled max="1" />
+						</ReportControl>
+						<ReportControl name="urcbB" buffered="false" bufTime="0" intgPd="0" confRev="1">
+							<TrgOps dchg="false" qchg="false" dupd="false" period="false" gi="false" />
+							<OptFields seqNum="false" timeStamp="false" dataSet="false" reasonCode="false" dataRef="false" entryID="false" configRef="false" />
+							<RptEnabled max="1" />
+						</ReportControl>
+						<DOI name="PhyNam">
+							<DAI name="vendor">
+								<Val>SIEMENS</Val>
+							</DAI>
+							<DAI name="hwRev">
+								<Val>63</Val>
+							</DAI>
+							<DAI name="swRev">
+								<Val>04.84.02</Val>
+							</DAI>
+							<DAI name="serNum">
+								<Val>BF1201140552</Val>
+							</DAI>
+							<DAI name="model">
+								<Val>6MD66414EB920AA0----0S----------</Val>
+							</DAI>
+							<DAI name="location">
+								<Val></Val>
+							</DAI>
+						</DOI>
+					</LN>
+					<LN lnType="E_TestMEAS.MMTR1" lnClass="MMTR" inst="1">
+						<ReportControl name="urcbA" buffered="false" bufTime="0" intgPd="0" confRev="1">
+							<TrgOps dchg="false" qchg="false" dupd="false" period="false" gi="false" />
+							<OptFields seqNum="false" timeStamp="false" dataSet="false" reasonCode="false" dataRef="false" entryID="false" configRef="false" />
+							<RptEnabled max="1" />
+						</ReportControl>
+						<ReportControl name="urcbB" buffered="false" bufTime="0" intgPd="0" confRev="1">
+							<TrgOps dchg="false" qchg="false" dupd="false" period="false" gi="false" />
+							<OptFields seqNum="false" timeStamp="false" dataSet="false" reasonCode="false" dataRef="false" entryID="false" configRef="false" />
+							<RptEnabled max="1" />
+						</ReportControl>
+						<DOI name="Mod">
+							<DAI name="ctlModel">
+								<Val>status-only</Val>
+							</DAI>
+						</DOI>
+						<DOI name="SupWh">
+							<SDI name="units">
+								<DAI name="SIUnit">
+									<Val>Wh</Val>
+								</DAI>
+								<DAI name="multiplier">
+									<Val>M</Val>
+								</DAI>
+							</SDI>
+							<DAI name="pulsQty">
+								<Val>0.191</Val>
+							</DAI>
+						</DOI>
+						<DOI name="SupVArh">
+							<SDI name="units">
+								<DAI name="SIUnit">
+									<Val>VArh</Val>
+								</DAI>
+								<DAI name="multiplier">
+									<Val>M</Val>
+								</DAI>
+							</SDI>
+							<DAI name="pulsQty">
+								<Val>0.191</Val>
+							</DAI>
+						</DOI>
+						<DOI name="DmdWh">
+							<SDI name="units">
+								<DAI name="SIUnit">
+									<Val>Wh</Val>
+								</DAI>
+								<DAI name="multiplier">
+									<Val>M</Val>
+								</DAI>
+							</SDI>
+							<DAI name="pulsQty">
+								<Val>0.191</Val>
+							</DAI>
+						</DOI>
+						<DOI name="DmdVArh">
+							<SDI name="units">
+								<DAI name="SIUnit">
+									<Val>VArh</Val>
+								</DAI>
+								<DAI name="multiplier">
+									<Val>M</Val>
+								</DAI>
+							</SDI>
+							<DAI name="pulsQty">
+								<Val>0.191</Val>
+							</DAI>
+						</DOI>
+						<DOI name="NamPlt">
+							<DAI name="vendor">
+								<Val>SIEMENS</Val>
+							</DAI>
+							<DAI name="swRev">
+								<Val>04.08.04</Val>
+							</DAI>
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+							<DAI name="configRev">
+								<Val>160304190901000</Val>
+							</DAI>
+						</DOI>
+					</LN>
+					<LN lnType="E_TestMEAS.MMXN1" lnClass="MMXN" inst="1">
+						<ReportControl name="urcbA" buffered="false" bufTime="0" intgPd="0" confRev="1">
+							<TrgOps dchg="false" qchg="false" dupd="false" period="false" gi="false" />
+							<OptFields seqNum="false" timeStamp="false" dataSet="false" reasonCode="false" dataRef="false" entryID="false" configRef="false" />
+							<RptEnabled max="1" />
+						</ReportControl>
+						<ReportControl name="urcbB" buffered="false" bufTime="0" intgPd="0" confRev="1">
+							<TrgOps dchg="false" qchg="false" dupd="false" period="false" gi="false" />
+							<OptFields seqNum="false" timeStamp="false" dataSet="false" reasonCode="false" dataRef="false" entryID="false" configRef="false" />
+							<RptEnabled max="1" />
+						</ReportControl>
+						<DOI name="Mod">
+							<DAI name="ctlModel">
+								<Val>status-only</Val>
+							</DAI>
+						</DOI>
+						<DOI name="Amp">
+							<SDI name="units">
+								<DAI name="SIUnit">
+									<Val>A</Val>
+								</DAI>
+								<DAI name="multiplier">
+									<Val></Val>
+								</DAI>
+							</SDI>
+							<DAI name="db">
+								<Val>10000</Val>
+							</DAI>
+						</DOI>
+						<DOI name="Vol">
+							<SDI name="units">
+								<DAI name="SIUnit">
+									<Val>V</Val>
+								</DAI>
+								<DAI name="multiplier">
+									<Val>k</Val>
+								</DAI>
+							</SDI>
+							<DAI name="db">
+								<Val>2000</Val>
+							</DAI>
+						</DOI>
+						<DOI name="Watt">
+							<SDI name="units">
+								<DAI name="SIUnit">
+									<Val>Watts</Val>
+								</DAI>
+								<DAI name="multiplier">
+									<Val>M</Val>
+								</DAI>
+							</SDI>
+							<DAI name="db">
+								<Val>10000</Val>
+							</DAI>
+						</DOI>
+						<DOI name="VolAmpr">
+							<SDI name="units">
+								<DAI name="SIUnit">
+									<Val>VAr</Val>
+								</DAI>
+								<DAI name="multiplier">
+									<Val>M</Val>
+								</DAI>
+							</SDI>
+							<DAI name="db">
+								<Val>10000</Val>
+							</DAI>
+						</DOI>
+						<DOI name="VolAmp">
+							<SDI name="units">
+								<DAI name="SIUnit">
+									<Val>VA</Val>
+								</DAI>
+								<DAI name="multiplier">
+									<Val>M</Val>
+								</DAI>
+							</SDI>
+							<DAI name="db">
+								<Val>10000</Val>
+							</DAI>
+						</DOI>
+						<DOI name="PwrFact">
+							<SDI name="units">
+								<DAI name="SIUnit">
+									<Val></Val>
+								</DAI>
+								<DAI name="multiplier">
+									<Val></Val>
+								</DAI>
+							</SDI>
+							<DAI name="db">
+								<Val>10000</Val>
+							</DAI>
+						</DOI>
+						<DOI name="Hz">
+							<SDI name="units">
+								<DAI name="SIUnit">
+									<Val>Hz</Val>
+								</DAI>
+								<DAI name="multiplier">
+									<Val></Val>
+								</DAI>
+							</SDI>
+							<DAI name="db">
+								<Val>100</Val>
+							</DAI>
+						</DOI>
+						<DOI name="NamPlt">
+							<DAI name="vendor">
+								<Val>SIEMENS</Val>
+							</DAI>
+							<DAI name="swRev">
+								<Val>04.08.04</Val>
+							</DAI>
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+							<DAI name="configRev">
+								<Val>160304190901000</Val>
+							</DAI>
+						</DOI>
+					</LN>
+					<LN lnType="E_TestMEAS.MMXU1" lnClass="MMXU" inst="1">
+						<ReportControl name="urcbA" buffered="false" bufTime="0" intgPd="0" confRev="1">
+							<TrgOps dchg="false" qchg="false" dupd="false" period="false" gi="false" />
+							<OptFields seqNum="false" timeStamp="false" dataSet="false" reasonCode="false" dataRef="false" entryID="false" configRef="false" />
+							<RptEnabled max="1" />
+						</ReportControl>
+						<ReportControl name="urcbB" buffered="false" bufTime="0" intgPd="0" confRev="1">
+							<TrgOps dchg="false" qchg="false" dupd="false" period="false" gi="false" />
+							<OptFields seqNum="false" timeStamp="false" dataSet="false" reasonCode="false" dataRef="false" entryID="false" configRef="false" />
+							<RptEnabled max="1" />
+						</ReportControl>
+						<DOI name="Mod">
+							<DAI name="ctlModel">
+								<Val>status-only</Val>
+							</DAI>
+						</DOI>
+						<DOI name="TotW">
+							<SDI name="units">
+								<DAI name="SIUnit">
+									<Val>Watts</Val>
+								</DAI>
+								<DAI name="multiplier">
+									<Val>M</Val>
+								</DAI>
+							</SDI>
+							<DAI name="db">
+								<Val>10000</Val>
+							</DAI>
+						</DOI>
+						<DOI name="TotVAr">
+							<SDI name="units">
+								<DAI name="SIUnit">
+									<Val>VAr</Val>
+								</DAI>
+								<DAI name="multiplier">
+									<Val>M</Val>
+								</DAI>
+							</SDI>
+							<DAI name="db">
+								<Val>10000</Val>
+							</DAI>
+						</DOI>
+						<DOI name="TotVA">
+							<SDI name="units">
+								<DAI name="SIUnit">
+									<Val>VA</Val>
+								</DAI>
+								<DAI name="multiplier">
+									<Val>M</Val>
+								</DAI>
+							</SDI>
+							<DAI name="db">
+								<Val>10000</Val>
+							</DAI>
+						</DOI>
+						<DOI name="TotPF">
+							<SDI name="units">
+								<DAI name="SIUnit">
+									<Val></Val>
+								</DAI>
+								<DAI name="multiplier">
+									<Val></Val>
+								</DAI>
+							</SDI>
+							<DAI name="db">
+								<Val>10000</Val>
+							</DAI>
+						</DOI>
+						<DOI name="Hz">
+							<SDI name="units">
+								<DAI name="SIUnit">
+									<Val>Hz</Val>
+								</DAI>
+								<DAI name="multiplier">
+									<Val></Val>
+								</DAI>
+							</SDI>
+							<DAI name="db">
+								<Val>100</Val>
+							</DAI>
+						</DOI>
+						<DOI name="PPV">
+							<SDI name="phsAB">
+								<SDI name="units">
+									<DAI name="SIUnit">
+										<Val>V</Val>
+									</DAI>
+									<DAI name="multiplier">
+										<Val>k</Val>
+									</DAI>
+								</SDI>
+								<DAI name="db">
+									<Val>2000</Val>
+								</DAI>
+							</SDI>
+							<SDI name="phsBC">
+								<SDI name="units">
+									<DAI name="SIUnit">
+										<Val>V</Val>
+									</DAI>
+									<DAI name="multiplier">
+										<Val>k</Val>
+									</DAI>
+								</SDI>
+								<DAI name="db">
+									<Val>2000</Val>
+								</DAI>
+							</SDI>
+							<SDI name="phsCA">
+								<SDI name="units">
+									<DAI name="SIUnit">
+										<Val>V</Val>
+									</DAI>
+									<DAI name="multiplier">
+										<Val>k</Val>
+									</DAI>
+								</SDI>
+								<DAI name="db">
+									<Val>2000</Val>
+								</DAI>
+							</SDI>
+						</DOI>
+						<DOI name="PhV">
+							<SDI name="phsA">
+								<SDI name="units">
+									<DAI name="SIUnit">
+										<Val>V</Val>
+									</DAI>
+									<DAI name="multiplier">
+										<Val>k</Val>
+									</DAI>
+								</SDI>
+								<DAI name="db">
+									<Val>2000</Val>
+								</DAI>
+							</SDI>
+							<SDI name="phsB">
+								<SDI name="units">
+									<DAI name="SIUnit">
+										<Val>V</Val>
+									</DAI>
+									<DAI name="multiplier">
+										<Val>k</Val>
+									</DAI>
+								</SDI>
+								<DAI name="db">
+									<Val>2000</Val>
+								</DAI>
+							</SDI>
+							<SDI name="phsC">
+								<SDI name="units">
+									<DAI name="SIUnit">
+										<Val>V</Val>
+									</DAI>
+									<DAI name="multiplier">
+										<Val>k</Val>
+									</DAI>
+								</SDI>
+								<DAI name="db">
+									<Val>2000</Val>
+								</DAI>
+							</SDI>
+							<SDI name="neut">
+								<SDI name="units">
+									<DAI name="SIUnit">
+										<Val>V</Val>
+									</DAI>
+									<DAI name="multiplier">
+										<Val>k</Val>
+									</DAI>
+								</SDI>
+								<DAI name="db">
+									<Val>2000</Val>
+								</DAI>
+							</SDI>
+						</DOI>
+						<DOI name="A">
+							<SDI name="phsA">
+								<SDI name="units">
+									<DAI name="SIUnit">
+										<Val>A</Val>
+									</DAI>
+									<DAI name="multiplier">
+										<Val></Val>
+									</DAI>
+								</SDI>
+								<DAI name="db">
+									<Val>10000</Val>
+								</DAI>
+							</SDI>
+							<SDI name="phsB">
+								<SDI name="units">
+									<DAI name="SIUnit">
+										<Val>A</Val>
+									</DAI>
+									<DAI name="multiplier">
+										<Val></Val>
+									</DAI>
+								</SDI>
+								<DAI name="db">
+									<Val>10000</Val>
+								</DAI>
+							</SDI>
+							<SDI name="phsC">
+								<SDI name="units">
+									<DAI name="SIUnit">
+										<Val>A</Val>
+									</DAI>
+									<DAI name="multiplier">
+										<Val></Val>
+									</DAI>
+								</SDI>
+								<DAI name="db">
+									<Val>10000</Val>
+								</DAI>
+							</SDI>
+							<SDI name="neut">
+								<SDI name="units">
+									<DAI name="SIUnit">
+										<Val>A</Val>
+									</DAI>
+									<DAI name="multiplier">
+										<Val></Val>
+									</DAI>
+								</SDI>
+								<DAI name="db">
+									<Val>10000</Val>
+								</DAI>
+							</SDI>
+						</DOI>
+						<DOI name="NamPlt">
+							<DAI name="vendor">
+								<Val>SIEMENS</Val>
+							</DAI>
+							<DAI name="swRev">
+								<Val>04.08.04</Val>
+							</DAI>
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+							<DAI name="configRev">
+								<Val>160304190901000</Val>
+							</DAI>
+						</DOI>
+					</LN>
+				</LDevice>
+			</Server>
+		</AccessPoint>
+	</IED>
+	<DataTypeTemplates>
+		<LNodeType id="E_TestCTRL.GGIO1" lnClass="GGIO">
+			<DO name="Mod" type="E_TestCTRL.LLN0.Mod" />
+			<DO name="Beh" type="E_TestCTRL.LLN0.Beh" />
+			<DO name="Health" type="E_TestCTRL.LLN0.Health" />
+			<DO name="SPCSO1" type="E_TestCTRL.GGIO1.SPCSO1" />
+			<DO name="SPCSO2" type="E_TestCTRL.GGIO1.SPCSO1" />
+			<DO name="SPCSO3" type="E_TestCTRL.GGIO1.SPCSO1" />
+			<DO name="SPCSO4" type="E_TestCTRL.GGIO1.SPCSO1" />
+			<DO name="SPCSO5" type="E_TestCTRL.GGIO1.SPCSO1" />
+			<DO name="SPCSO6" type="E_TestCTRL.GGIO1.SPCSO1" />
+			<DO name="SPCSO7" type="E_TestCTRL.GGIO1.SPCSO1" />
+			<DO name="SPCSO8" type="E_TestCTRL.GGIO1.SPCSO1" />
+			<DO name="SPCSO9" type="E_TestCTRL.LLN0.LEDRs" />
+			<DO name="SPCSO10" type="E_TestCTRL.GGIO1.SPCSO1" />
+			<DO name="SPCSO11" type="E_TestCTRL.GGIO1.SPCSO1" />
+			<DO name="NamPlt" type="E_TestCTRL.CALH1.NamPlt" />
+		</LNodeType>
+		<LNodeType id="E_TestCTRL.LLN0" lnClass="LLN0">
+			<DO name="Mod" type="E_TestCTRL.LLN0.Mod" />
+			<DO name="Beh" type="E_TestCTRL.LLN0.Beh" />
+			<DO name="Health" type="E_TestCTRL.LLN0.Health" />
+			<DO name="Loc" type="E_TestCTRL.LLN0.Loc" />
+			<DO name="LEDRs" type="E_TestCTRL.LLN0.LEDRs" />
+			<DO name="NamPlt" type="E_TestCTRL.LLN0.NamPlt" />
+		</LNodeType>
+		<LNodeType id="E_TestMEAS.LLN0" lnClass="LLN0">
+			<DO name="Mod" type="E_TestCTRL.LLN0.Mod" />
+			<DO name="Beh" type="E_TestCTRL.LLN0.Beh" />
+			<DO name="Health" type="E_TestCTRL.LLN0.Health" />
+			<DO name="NamPlt" type="E_TestCTRL.LLN0.NamPlt" />
+		</LNodeType>
+		<LNodeType id="E_TestCTRL.LPHD1" lnClass="LPHD">
+			<DO name="PhyHealth" type="E_TestCTRL.LLN0.Health" />
+			<DO name="Proxy" type="E_TestCTRL.LLN0.Loc" />
+			<DO name="PhyNam" type="E_TestCTRL.LPHD1.PhyNam" />
+			<DO name="DevStr" type="E_TestCTRL.LPHD1.DevStr" />
+			<DO name="CtlNum" type="E_TestCTRL.LPHD1.DevStr" />
+		</LNodeType>
+		<LNodeType id="E_TestMEAS.LPHD1" lnClass="LPHD">
+			<DO name="PhyHealth" type="E_TestCTRL.LLN0.Health" />
+			<DO name="Proxy" type="E_TestCTRL.LLN0.Loc" />
+			<DO name="PhyNam" type="E_TestCTRL.LPHD1.PhyNam" />
+		</LNodeType>
+		<LNodeType id="E_TestMEAS.MMTR1" lnClass="MMTR">
+			<DO name="Mod" type="E_TestCTRL.LLN0.Mod" />
+			<DO name="Beh" type="E_TestCTRL.LLN0.Beh" />
+			<DO name="Health" type="E_TestCTRL.LLN0.Health" />
+			<DO name="SupWh" type="E_TestMEAS.MMTR1.SupWh" />
+			<DO name="SupVArh" type="E_TestMEAS.MMTR1.SupWh" />
+			<DO name="DmdWh" type="E_TestMEAS.MMTR1.SupWh" />
+			<DO name="DmdVArh" type="E_TestMEAS.MMTR1.SupWh" />
+			<DO name="NamPlt" type="E_TestCTRL.CALH1.NamPlt" />
+		</LNodeType>
+		<LNodeType id="E_TestMEAS.MMXN1" lnClass="MMXN">
+			<DO name="Mod" type="E_TestCTRL.LLN0.Mod" />
+			<DO name="Beh" type="E_TestCTRL.LLN0.Beh" />
+			<DO name="Amp" type="E_TestMEAS.MMXN1.Amp" />
+			<DO name="Vol" type="E_TestMEAS.MMXN1.Amp" />
+			<DO name="Watt" type="E_TestMEAS.MMXN1.Amp" />
+			<DO name="VolAmpr" type="E_TestMEAS.MMXN1.Amp" />
+			<DO name="VolAmp" type="E_TestMEAS.MMXN1.Amp" />
+			<DO name="PwrFact" type="E_TestMEAS.MMXN1.Amp" />
+			<DO name="Hz" type="E_TestMEAS.MMXN1.Amp" />
+			<DO name="Health" type="E_TestCTRL.LLN0.Health" />
+			<DO name="NamPlt" type="E_TestCTRL.CALH1.NamPlt" />
+		</LNodeType>
+		<LNodeType id="E_TestMEAS.MMXU1" lnClass="MMXU">
+			<DO name="Mod" type="E_TestCTRL.LLN0.Mod" />
+			<DO name="Beh" type="E_TestCTRL.LLN0.Beh" />
+			<DO name="TotW" type="E_TestMEAS.MMXN1.Amp" />
+			<DO name="TotVAr" type="E_TestMEAS.MMXN1.Amp" />
+			<DO name="TotVA" type="E_TestMEAS.MMXN1.Amp" />
+			<DO name="TotPF" type="E_TestMEAS.MMXN1.Amp" />
+			<DO name="Hz" type="E_TestMEAS.MMXN1.Amp" />
+			<DO name="PPV" type="E_TestMEAS.MMXU1.PPV" />
+			<DO name="PhV" type="E_TestMEAS.MMXU1.PhV" />
+			<DO name="A" type="E_TestMEAS.MMXU1.PhV" />
+			<DO name="Health" type="E_TestCTRL.LLN0.Health" />
+			<DO name="NamPlt" type="E_TestCTRL.CALH1.NamPlt" />
+		</LNodeType>
+		<LNodeType id="E_TestCTRL.Q0XCBR1" lnClass="XCBR">
+			<DO name="Mod" type="E_TestCTRL.LLN0.Mod" />
+			<DO name="Beh" type="E_TestCTRL.LLN0.Beh" />
+			<DO name="Health" type="E_TestCTRL.LLN0.Health" />
+			<DO name="Loc" type="E_TestCTRL.LLN0.Loc" />
+			<DO name="OpCnt" type="E_TestCTRL.Q0XCBR1.OpCnt" />
+			<DO name="Pos" type="E_TestCTRL.Q0XCBR1.Pos" />
+			<DO name="BlkOpn" type="E_TestCTRL.GGIO1.SPCSO1" />
+			<DO name="BlkCls" type="E_TestCTRL.GGIO1.SPCSO1" />
+			<DO name="CBOpCap" type="E_TestCTRL.Q0XCBR1.CBOpCap" />
+			<DO name="NamPlt" type="E_TestCTRL.CALH1.NamPlt" />
+		</LNodeType>
+		<LNodeType id="E_TestCTRL.Q1XSWI1" lnClass="XSWI">
+			<DO name="Mod" type="E_TestCTRL.LLN0.Mod" />
+			<DO name="Beh" type="E_TestCTRL.LLN0.Beh" />
+			<DO name="Health" type="E_TestCTRL.LLN0.Health" />
+			<DO name="Loc" type="E_TestCTRL.LLN0.Loc" />
+			<DO name="OpCnt" type="E_TestCTRL.Q0XCBR1.OpCnt" />
+			<DO name="Pos" type="E_TestCTRL.Q0XCBR1.Pos" />
+			<DO name="BlkOpn" type="E_TestCTRL.GGIO1.SPCSO1" />
+			<DO name="BlkCls" type="E_TestCTRL.GGIO1.SPCSO1" />
+			<DO name="SwTyp" type="E_TestCTRL.Q1XSWI1.SwTyp" />
+			<DO name="SwOpCap" type="E_TestCTRL.Q1XSWI1.SwOpCap" />
+			<DO name="NamPlt" type="E_TestCTRL.CALH1.NamPlt" />
+		</LNodeType>
+		<LNodeType id="E_TestCTRL.CALH1" lnClass="CALH">
+			<DO name="Mod" type="E_TestCTRL.LLN0.Mod" />
+			<DO name="Beh" type="E_TestCTRL.LLN0.Beh" />
+			<DO name="Health" type="E_TestCTRL.LLN0.Health" />
+			<DO name="GrAlm" type="E_TestCTRL.LLN0.Loc" />
+			<DO name="NamPlt" type="E_TestCTRL.CALH1.NamPlt" />
+			<DO name="ErrBoard1" type="E_TestCTRL.CALH1.ErrBoard1" />
+			<DO name="ErrBoard2" type="E_TestCTRL.CALH1.ErrBoard1" />
+			<DO name="ErrBoard3" type="E_TestCTRL.CALH1.ErrBoard1" />
+			<DO name="ErrBoard4" type="E_TestCTRL.CALH1.ErrBoard1" />
+			<DO name="ErrBoard5" type="E_TestCTRL.CALH1.ErrBoard1" />
+		</LNodeType>
+		<LNodeType id="E_TestCTRL.Q0CILO1" lnClass="CILO">
+			<DO name="Mod" type="E_TestCTRL.LLN0.Mod" />
+			<DO name="Beh" type="E_TestCTRL.LLN0.Beh" />
+			<DO name="Health" type="E_TestCTRL.LLN0.Health" />
+			<DO name="EnaOpn" type="E_TestCTRL.LLN0.Loc" />
+			<DO name="EnaCls" type="E_TestCTRL.LLN0.Loc" />
+			<DO name="NamPlt" type="E_TestCTRL.CALH1.NamPlt" />
+		</LNodeType>
+		<LNodeType id="E_TestCTRL.Q0CSWI1" lnClass="CSWI">
+			<DO name="Mod" type="E_TestCTRL.LLN0.Mod" />
+			<DO name="Beh" type="E_TestCTRL.LLN0.Beh" />
+			<DO name="Health" type="E_TestCTRL.LLN0.Health" />
+			<DO name="Loc" type="E_TestCTRL.LLN0.Loc" />
+			<DO name="Pos" type="E_TestCTRL.Q0CSWI1.Pos" />
+			<DO name="NamPlt" type="E_TestCTRL.CALH1.NamPlt" />
+		</LNodeType>
+		<DOType id="E_TestMEAS.MMTR1.SupWh" cdc="BCR">
+			<DA name="actVal" fc="ST" bType="INT32" />
+			<DA name="q" fc="ST" bType="Quality" />
+			<DA name="t" fc="ST" bType="Timestamp" />
+			<DA name="units" fc="CF" bType="Struct" type="E_TestMEAS.MMTR1.SupWh.units" />
+			<DA name="pulsQty" fc="CF" bType="FLOAT32" />
+		</DOType>
+		<DOType id="E_TestMEAS.MMXU1.PPV.phsAB" cdc="CMV">
+			<DA name="instCVal" fc="MX" bType="Struct" type="E_TestMEAS.MMXU1.PPV.phsAB.instCVal" />
+			<DA name="cVal" fc="MX" bType="Struct" type="E_TestMEAS.MMXU1.PPV.phsAB.instCVal" />
+			<DA name="q" fc="MX" bType="Quality" />
+			<DA name="t" fc="MX" bType="Timestamp" />
+			<DA name="units" fc="CF" bType="Struct" type="E_TestMEAS.MMTR1.SupWh.units" />
+			<DA name="db" fc="CF" bType="INT32U" />
+		</DOType>
+		<DOType id="E_TestMEAS.MMXU1.PPV" cdc="DEL">
+			<SDO name="phsAB" type="E_TestMEAS.MMXU1.PPV.phsAB" />
+			<SDO name="phsBC" type="E_TestMEAS.MMXU1.PPV.phsAB" />
+			<SDO name="phsCA" type="E_TestMEAS.MMXU1.PPV.phsAB" />
+		</DOType>
+		<DOType id="E_TestCTRL.Q0CSWI1.Pos" cdc="DPC">
+			<DA name="origin" fc="ST" bType="Struct" type="E_TestCTRL.LLN0.LEDRs.origin" />
+			<DA name="ctlNum" fc="ST" bType="INT8U" />
+			<DA name="stVal" fc="ST" bType="Dbpos" />
+			<DA name="q" fc="ST" bType="Quality" />
+			<DA name="t" fc="ST" bType="Timestamp" />
+			<DA name="stSeld" fc="ST" bType="BOOLEAN" />
+			<DA name="SBOw" fc="CO" bType="Struct" type="E_TestCTRL.LLN0.LEDRs.Oper" />
+			<DA name="Oper" fc="CO" bType="Struct" type="E_TestCTRL.LLN0.LEDRs.Oper" />
+			<DA name="Cancel" fc="CO" bType="Struct" type="E_TestCTRL.Q0CSWI1.Pos.Cancel" />
+			<DA name="ctlModel" fc="CF" bType="Enum" type="ctlModel" />
+			<DA name="sboTimeout" fc="CF" bType="INT32U" />
+			<DA name="sboClass" fc="CF" bType="Enum" type="sboClass" />
+		</DOType>
+		<DOType id="E_TestCTRL.Q0XCBR1.Pos" cdc="DPC">
+			<DA name="stVal" fc="ST" bType="Dbpos" />
+			<DA name="q" fc="ST" bType="Quality" />
+			<DA name="t" fc="ST" bType="Timestamp" />
+			<DA name="ctlModel" fc="CF" bType="Enum" type="ctlModel" />
+		</DOType>
+		<DOType id="E_TestCTRL.LPHD1.PhyNam" cdc="DPL">
+			<DA name="vendor" fc="DC" bType="VisString255" />
+			<DA name="hwRev" fc="DC" bType="VisString255" />
+			<DA name="swRev" fc="DC" bType="VisString255" />
+			<DA name="serNum" fc="DC" bType="VisString255" />
+			<DA name="model" fc="DC" bType="VisString255" />
+			<DA name="location" fc="DC" bType="VisString255" />
+		</DOType>
+		<DOType id="E_TestCTRL.LLN0.Mod" cdc="INC">
+			<DA name="stVal" fc="ST" bType="Enum" type="Mod" />
+			<DA name="q" fc="ST" bType="Quality" />
+			<DA name="t" fc="ST" bType="Timestamp" />
+			<DA name="ctlModel" fc="CF" bType="Enum" type="ctlModel" />
+		</DOType>
+		<DOType id="E_TestCTRL.LLN0.Beh" cdc="INS">
+			<DA name="stVal" fc="ST" bType="Enum" type="Beh" />
+			<DA name="q" fc="ST" bType="Quality" />
+			<DA name="t" fc="ST" bType="Timestamp" />
+		</DOType>
+		<DOType id="E_TestCTRL.LLN0.Health" cdc="INS">
+			<DA name="stVal" fc="ST" bType="Enum" type="Health" />
+			<DA name="q" fc="ST" bType="Quality" />
+			<DA name="t" fc="ST" bType="Timestamp" />
+		</DOType>
+		<DOType id="E_TestCTRL.LPHD1.DevStr" cdc="INS">
+			<DA name="stVal" fc="ST" bType="INT32" />
+			<DA name="q" fc="ST" bType="Quality" />
+			<DA name="t" fc="ST" bType="Timestamp" />
+			<DA name="d" fc="DC" bType="VisString255" />
+			<DA name="dataNs" fc="EX" bType="VisString255" />
+		</DOType>
+		<DOType id="E_TestCTRL.Q0XCBR1.OpCnt" cdc="INS">
+			<DA name="stVal" fc="ST" bType="INT32" />
+			<DA name="q" fc="ST" bType="Quality" />
+			<DA name="t" fc="ST" bType="Timestamp" />
+		</DOType>
+		<DOType id="E_TestCTRL.Q0XCBR1.CBOpCap" cdc="INS">
+			<DA name="stVal" fc="ST" bType="Enum" type="CBOpCap" />
+			<DA name="q" fc="ST" bType="Quality" />
+			<DA name="t" fc="ST" bType="Timestamp" />
+		</DOType>
+		<DOType id="E_TestCTRL.Q1XSWI1.SwTyp" cdc="INS">
+			<DA name="stVal" fc="ST" bType="Enum" type="SwTyp" />
+			<DA name="q" fc="ST" bType="Quality" />
+			<DA name="t" fc="ST" bType="Timestamp" />
+		</DOType>
+		<DOType id="E_TestCTRL.Q1XSWI1.SwOpCap" cdc="INS">
+			<DA name="stVal" fc="ST" bType="Enum" type="SwOpCap" />
+			<DA name="q" fc="ST" bType="Quality" />
+			<DA name="t" fc="ST" bType="Timestamp" />
+		</DOType>
+		<DOType id="E_TestCTRL.LLN0.NamPlt" cdc="LPL">
+			<DA name="vendor" fc="DC" bType="VisString255" />
+			<DA name="swRev" fc="DC" bType="VisString255" />
+			<DA name="d" fc="DC" bType="VisString255" />
+			<DA name="configRev" fc="DC" bType="VisString255" />
+			<DA name="ldNs" fc="EX" bType="VisString255" />
+		</DOType>
+		<DOType id="E_TestCTRL.CALH1.NamPlt" cdc="LPL">
+			<DA name="vendor" fc="DC" bType="VisString255" />
+			<DA name="swRev" fc="DC" bType="VisString255" />
+			<DA name="d" fc="DC" bType="VisString255" />
+			<DA name="configRev" fc="DC" bType="VisString255" />
+		</DOType>
+		<DOType id="E_TestMEAS.MMXN1.Amp" cdc="MV">
+			<DA name="instMag" fc="MX" bType="Struct" type="E_TestMEAS.MMXN1.Amp.instMag" />
+			<DA name="mag" fc="MX" bType="Struct" type="E_TestMEAS.MMXN1.Amp.instMag" />
+			<DA name="q" fc="MX" bType="Quality" />
+			<DA name="t" fc="MX" bType="Timestamp" />
+			<DA name="units" fc="CF" bType="Struct" type="E_TestMEAS.MMTR1.SupWh.units" />
+			<DA name="db" fc="CF" bType="INT32U" />
+		</DOType>
+		<DOType id="E_TestCTRL.LLN0.LEDRs" cdc="SPC">
+			<DA name="origin" fc="ST" bType="Struct" type="E_TestCTRL.LLN0.LEDRs.origin" />
+			<DA name="ctlNum" fc="ST" bType="INT8U" />
+			<DA name="stVal" fc="ST" bType="BOOLEAN" />
+			<DA name="q" fc="ST" bType="Quality" />
+			<DA name="t" fc="ST" bType="Timestamp" />
+			<DA name="Oper" fc="CO" bType="Struct" type="E_TestCTRL.LLN0.LEDRs.Oper" />
+			<DA name="ctlModel" fc="CF" bType="Enum" type="ctlModel" />
+		</DOType>
+		<DOType id="E_TestCTRL.GGIO1.SPCSO1" cdc="SPC">
+			<DA name="stVal" fc="ST" bType="BOOLEAN" />
+			<DA name="q" fc="ST" bType="Quality" />
+			<DA name="t" fc="ST" bType="Timestamp" />
+			<DA name="ctlModel" fc="CF" bType="Enum" type="ctlModel" />
+		</DOType>
+		<DOType id="E_TestCTRL.LLN0.Loc" cdc="SPS">
+			<DA name="stVal" fc="ST" bType="BOOLEAN" />
+			<DA name="q" fc="ST" bType="Quality" />
+			<DA name="t" fc="ST" bType="Timestamp" />
+		</DOType>
+		<DOType id="E_TestCTRL.CALH1.ErrBoard1" cdc="SPS">
+			<DA name="stVal" fc="ST" bType="BOOLEAN" />
+			<DA name="q" fc="ST" bType="Quality" />
+			<DA name="t" fc="ST" bType="Timestamp" />
+			<DA name="d" fc="DC" bType="VisString255" />
+			<DA name="dataNs" fc="EX" bType="VisString255" />
+		</DOType>
+		<DOType id="E_TestMEAS.MMXU1.PhV" cdc="WYE">
+			<SDO name="phsA" type="E_TestMEAS.MMXU1.PPV.phsAB" />
+			<SDO name="phsB" type="E_TestMEAS.MMXU1.PPV.phsAB" />
+			<SDO name="phsC" type="E_TestMEAS.MMXU1.PPV.phsAB" />
+			<SDO name="neut" type="E_TestMEAS.MMXU1.PPV.phsAB" />
+		</DOType>
+		<DAType id="E_TestMEAS.MMXN1.Amp.instMag">
+			<BDA name="f" bType="FLOAT32" />
+		</DAType>
+		<DAType id="E_TestCTRL.LLN0.LEDRs.origin">
+			<BDA name="orCat" bType="Enum" type="orCategory" />
+			<BDA name="orIdent" bType="Octet64" />
+		</DAType>
+		<DAType id="E_TestCTRL.LLN0.LEDRs.Oper.origin">
+			<BDA name="orCat" bType="Enum" type="orCategory" />
+			<BDA name="orIdent" bType="Octet64" />
+		</DAType>
+		<DAType id="E_TestMEAS.MMTR1.SupWh.units">
+			<BDA name="SIUnit" bType="Enum" type="SIUnit" />
+			<BDA name="multiplier" bType="Enum" type="multiplier" />
+		</DAType>
+		<DAType id="E_TestMEAS.MMXU1.PPV.phsAB.instCVal">
+			<BDA name="mag" bType="Struct" type="E_TestMEAS.MMXN1.Amp.instMag" />
+		</DAType>
+		<DAType id="E_TestCTRL.LLN0.LEDRs.Oper">
+			<BDA name="ctlVal" bType="BOOLEAN" />
+			<BDA name="origin" bType="Struct" type="E_TestCTRL.LLN0.LEDRs.Oper.origin" />
+			<BDA name="ctlNum" bType="INT8U" />
+			<BDA name="T" bType="Timestamp" />
+			<BDA name="Test" bType="BOOLEAN" />
+			<BDA name="Check" bType="Check" />
+		</DAType>
+		<DAType id="E_TestCTRL.Q0CSWI1.Pos.Cancel">
+			<BDA name="ctlVal" bType="BOOLEAN" />
+			<BDA name="origin" bType="Struct" type="E_TestCTRL.LLN0.LEDRs.Oper.origin" />
+			<BDA name="ctlNum" bType="INT8U" />
+			<BDA name="T" bType="Timestamp" />
+			<BDA name="Test" bType="BOOLEAN" />
+		</DAType>
+		<EnumType id="ctlModel">
+			<!--Source: IEC 61850-7-3:2003-->
+			<EnumVal ord="0">status-only</EnumVal>
+			<EnumVal ord="1">direct-with-normal-security</EnumVal>
+			<EnumVal ord="2">sbo-with-normal-security</EnumVal>
+			<EnumVal ord="3">direct-with-enhanced-security</EnumVal>
+			<EnumVal ord="4">sbo-with-enhanced-security</EnumVal>
+		</EnumType>
+		<EnumType id="sboClass">
+			<!--Source: IEC 61850-7-3:2003-->
+			<EnumVal ord="0">operate-once</EnumVal>
+			<EnumVal ord="1">operate-many</EnumVal>
+		</EnumType>
+		<EnumType id="orCategory">
+			<!--Source: IEC 61850-7-3:2003-->
+			<EnumVal ord="0">not-supported</EnumVal>
+			<EnumVal ord="1">bay-control</EnumVal>
+			<EnumVal ord="2">station-control</EnumVal>
+			<EnumVal ord="3">remote-control</EnumVal>
+			<EnumVal ord="4">automatic-bay</EnumVal>
+			<EnumVal ord="5">automatic-station</EnumVal>
+			<EnumVal ord="6">automatic-remote</EnumVal>
+			<EnumVal ord="7">maintenance</EnumVal>
+			<EnumVal ord="8">process</EnumVal>
+		</EnumType>
+		<EnumType id="multiplier">
+			<!--Source: IEC 61850-7-3:2003-->
+			<EnumVal ord="-24">y</EnumVal>
+			<EnumVal ord="-21">z</EnumVal>
+			<EnumVal ord="-18">a</EnumVal>
+			<EnumVal ord="-15">f</EnumVal>
+			<EnumVal ord="-12">p</EnumVal>
+			<EnumVal ord="-9">n</EnumVal>
+			<EnumVal ord="-6">µ</EnumVal>
+			<EnumVal ord="-3">m</EnumVal>
+			<EnumVal ord="-2">c</EnumVal>
+			<EnumVal ord="-1">d</EnumVal>
+			<EnumVal ord="0"></EnumVal>
+			<EnumVal ord="1">da</EnumVal>
+			<EnumVal ord="2">h</EnumVal>
+			<EnumVal ord="3">k</EnumVal>
+			<EnumVal ord="6">M</EnumVal>
+			<EnumVal ord="9">G</EnumVal>
+			<EnumVal ord="12">T</EnumVal>
+			<EnumVal ord="15">P</EnumVal>
+			<EnumVal ord="18">E</EnumVal>
+			<EnumVal ord="21">Z</EnumVal>
+			<EnumVal ord="24">Y</EnumVal>
+		</EnumType>
+		<EnumType id="SIUnit">
+			<!--Source: IEC 61850-7-3:2003-->
+			<EnumVal ord="1"></EnumVal>
+			<EnumVal ord="2">m</EnumVal>
+			<EnumVal ord="3">kg</EnumVal>
+			<EnumVal ord="4">s</EnumVal>
+			<EnumVal ord="5">A</EnumVal>
+			<EnumVal ord="6">K</EnumVal>
+			<EnumVal ord="7">mol</EnumVal>
+			<EnumVal ord="8">cd</EnumVal>
+			<EnumVal ord="9">deg</EnumVal>
+			<EnumVal ord="10">rad</EnumVal>
+			<EnumVal ord="11">sr</EnumVal>
+			<EnumVal ord="21">Gy</EnumVal>
+			<EnumVal ord="22">q</EnumVal>
+			<EnumVal ord="23">°C</EnumVal>
+			<EnumVal ord="24">Sv</EnumVal>
+			<EnumVal ord="25">F</EnumVal>
+			<EnumVal ord="26">C</EnumVal>
+			<EnumVal ord="27">S</EnumVal>
+			<EnumVal ord="28">H</EnumVal>
+			<EnumVal ord="29">V</EnumVal>
+			<EnumVal ord="30">ohm</EnumVal>
+			<EnumVal ord="31">J</EnumVal>
+			<EnumVal ord="32">N</EnumVal>
+			<EnumVal ord="33">Hz</EnumVal>
+			<EnumVal ord="34">lx</EnumVal>
+			<EnumVal ord="35">Lm</EnumVal>
+			<EnumVal ord="36">Wb</EnumVal>
+			<EnumVal ord="37">T</EnumVal>
+			<EnumVal ord="38">W</EnumVal>
+			<EnumVal ord="39">Pa</EnumVal>
+			<EnumVal ord="41">m²</EnumVal>
+			<EnumVal ord="42">m³</EnumVal>
+			<EnumVal ord="43">m/s</EnumVal>
+			<EnumVal ord="44">m/s²</EnumVal>
+			<EnumVal ord="45">m³/s</EnumVal>
+			<EnumVal ord="46">m/m³</EnumVal>
+			<EnumVal ord="47">M</EnumVal>
+			<EnumVal ord="48">kg/m³</EnumVal>
+			<EnumVal ord="49">m²/s</EnumVal>
+			<EnumVal ord="50">W/m K</EnumVal>
+			<EnumVal ord="51">J/K</EnumVal>
+			<EnumVal ord="52">ppm</EnumVal>
+			<EnumVal ord="53">1/s</EnumVal>
+			<EnumVal ord="54">rad/s</EnumVal>
+			<EnumVal ord="61">VA</EnumVal>
+			<EnumVal ord="62">Watts</EnumVal>
+			<EnumVal ord="63">VAr</EnumVal>
+			<EnumVal ord="64">phi</EnumVal>
+			<EnumVal ord="65">cos(phi)</EnumVal>
+			<EnumVal ord="66">Vs</EnumVal>
+			<EnumVal ord="67">V²</EnumVal>
+			<EnumVal ord="68">As</EnumVal>
+			<EnumVal ord="69">A²</EnumVal>
+			<EnumVal ord="70">A²t</EnumVal>
+			<EnumVal ord="71">VAh</EnumVal>
+			<EnumVal ord="72">Wh</EnumVal>
+			<EnumVal ord="73">VArh</EnumVal>
+			<EnumVal ord="74">V/Hz</EnumVal>
+		</EnumType>
+		<EnumType id="Beh">
+			<!--Source: IEC 61850-7-4:2003-->
+			<EnumVal ord="1">on</EnumVal>
+			<EnumVal ord="2">blocked</EnumVal>
+			<EnumVal ord="3">test</EnumVal>
+			<EnumVal ord="4">test/blocked</EnumVal>
+			<EnumVal ord="5">off</EnumVal>
+		</EnumType>
+		<EnumType id="CBOpCap">
+			<!--Source: IEC 61850-7-4:2003-->
+			<EnumVal ord="1">None</EnumVal>
+			<EnumVal ord="2">Open</EnumVal>
+			<EnumVal ord="3">Close-Open</EnumVal>
+			<EnumVal ord="4">Open-Close-Open</EnumVal>
+			<EnumVal ord="5">Close-Open-Close-Open</EnumVal>
+		</EnumType>
+		<EnumType id="Health">
+			<!--Source: IEC 61850-7-4:2003-->
+			<EnumVal ord="1">Ok</EnumVal>
+			<EnumVal ord="2">Warning</EnumVal>
+			<EnumVal ord="3">Alarm</EnumVal>
+		</EnumType>
+		<EnumType id="Mod">
+			<!--Source: IEC 61850-7-4:2003-->
+			<EnumVal ord="1">on</EnumVal>
+			<EnumVal ord="2">blocked</EnumVal>
+			<EnumVal ord="3">test</EnumVal>
+			<EnumVal ord="4">test/blocked</EnumVal>
+			<EnumVal ord="5">off</EnumVal>
+		</EnumType>
+		<EnumType id="SwOpCap">
+			<!--Source: IEC 61850-7-4:2003-->
+			<EnumVal ord="1">None</EnumVal>
+			<EnumVal ord="2">Open</EnumVal>
+			<EnumVal ord="3">Close</EnumVal>
+			<EnumVal ord="4">Open and Close</EnumVal>
+		</EnumType>
+		<EnumType id="SwTyp">
+			<!--Source: IEC 61850-7-4:2003-->
+			<EnumVal ord="1">Load Break</EnumVal>
+			<EnumVal ord="2">Disconnector</EnumVal>
+			<EnumVal ord="3">Earthing Switch</EnumVal>
+			<EnumVal ord="4">High Speed Earthing Switch</EnumVal>
+		</EnumType>
+	</DataTypeTemplates>
+</SCL>
